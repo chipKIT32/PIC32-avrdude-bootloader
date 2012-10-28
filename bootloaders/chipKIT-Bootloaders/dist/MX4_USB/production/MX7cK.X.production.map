@@ -82,8 +82,8 @@ Discarded input sections
  .pdr           0x00000000       0xe0 build/MX4_USB/production/_ext/1472/cdcacm.o
  .reginfo       0x00000000       0x18 build/MX4_USB/production/_ext/1472/usb.o
  .pdr           0x00000000      0x160 build/MX4_USB/production/_ext/1472/usb.o
- .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
- .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .reginfo       0x00000000       0x18 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .pdr           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
 
 Memory Configuration
 
@@ -112,7 +112,7 @@ LOAD build/MX4_USB/production/_ext/1472/usb.o
                 0x00000001                __MPLAB_BUILD = 0x1
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
                 0x00000000                PROVIDE (_min_heap_size, 0x0)
-LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
                 0x00000001                PROVIDE (_vector_spacing, 0x1)
                 0xbfc00000                _ebase_address = 0xbfc00000
                 0xbfc00000                _RESET_ADDR = _ebase_address
@@ -314,12 +314,12 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
  .debug_pubnames
                 0x000000a7      0x177 build/MX4_USB/production/_ext/1472/usb.o
 
-.debug_info     0x00000000     0x2ece
+.debug_info     0x00000000     0x2e16
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x147c build/MX4_USB/production/_ext/1472/main.o
- .debug_info    0x0000147c       0xa5 build/MX4_USB/production/_ext/1472/crt0.o
- .debug_info    0x00001521      0x934 build/MX4_USB/production/_ext/1472/cdcacm.o
- .debug_info    0x00001e55     0x1079 build/MX4_USB/production/_ext/1472/usb.o
+ .debug_info    0x00000000     0x144e build/MX4_USB/production/_ext/1472/main.o
+ .debug_info    0x0000144e       0x77 build/MX4_USB/production/_ext/1472/crt0.o
+ .debug_info    0x000014c5      0x906 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_info    0x00001dcb     0x104b build/MX4_USB/production/_ext/1472/usb.o
 
 .debug_abbrev   0x00000000      0x968
  *(.debug_abbrev)
@@ -328,12 +328,12 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
  .debug_abbrev  0x00000353      0x2d9 build/MX4_USB/production/_ext/1472/cdcacm.o
  .debug_abbrev  0x0000062c      0x33c build/MX4_USB/production/_ext/1472/usb.o
 
-.debug_line     0x00000000      0x806
+.debug_line     0x00000000      0x7f1
  *(.debug_line)
- .debug_line    0x00000000      0x317 build/MX4_USB/production/_ext/1472/main.o
- .debug_line    0x00000317       0xa2 build/MX4_USB/production/_ext/1472/crt0.o
- .debug_line    0x000003b9      0x1e3 build/MX4_USB/production/_ext/1472/cdcacm.o
- .debug_line    0x0000059c      0x26a build/MX4_USB/production/_ext/1472/usb.o
+ .debug_line    0x00000000      0x310 build/MX4_USB/production/_ext/1472/main.o
+ .debug_line    0x00000310       0xa2 build/MX4_USB/production/_ext/1472/crt0.o
+ .debug_line    0x000003b2      0x1dc build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_line    0x0000058e      0x263 build/MX4_USB/production/_ext/1472/usb.o
 
 .debug_frame    0x00000000      0x2c0
  *(.debug_frame)
@@ -401,10 +401,10 @@ LOAD data_init
  .bss           0xa0001800      0x200 build/MX4_USB/production/_ext/1472/usb.o
 
 .bss%z1         0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .bss           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
 
 .data%z2        0x00000000        0x0
- .data          0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .data          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
 
 .mdebug.abi32%z3
                 0x00000000        0x0
@@ -466,4 +466,4 @@ LOAD data_init
  .rodata        0x9fc01794        0xc build/MX4_USB/production/_ext/1472/main.o
 
 .text%z11       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .text          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o

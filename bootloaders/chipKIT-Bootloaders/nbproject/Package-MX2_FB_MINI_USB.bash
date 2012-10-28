@@ -6,7 +6,7 @@
 
 # Macros
 TOP=`pwd`
-CND_CONF=MX2_MINI_USB
+CND_CONF=MX2_FB_MINI_USB
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging

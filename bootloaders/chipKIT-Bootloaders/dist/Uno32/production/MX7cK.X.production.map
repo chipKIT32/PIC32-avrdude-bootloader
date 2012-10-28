@@ -54,12 +54,12 @@ stack                   0xa0000fa0         0x1058        4184  Reserved for stac
 
 Discarded input sections
 
- .reginfo       0x00000000       0x18 build/Uno32/production/_ext/1472/main.o
- .pdr           0x00000000      0x160 build/Uno32/production/_ext/1472/main.o
- .reginfo       0x00000000       0x18 build/Uno32/production/_ext/1472/crt0.o
- .pdr           0x00000000       0x60 build/Uno32/production/_ext/1472/crt0.o
- .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
- .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
+ .reginfo       0x00000000       0x18 build/UNO32/production/_ext/1472/main.o
+ .pdr           0x00000000      0x160 build/UNO32/production/_ext/1472/main.o
+ .reginfo       0x00000000       0x18 build/UNO32/production/_ext/1472/crt0.o
+ .pdr           0x00000000       0x60 build/UNO32/production/_ext/1472/crt0.o
+ .reginfo       0x00000000       0x18 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
+ .pdr           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
 
 Memory Configuration
 
@@ -81,12 +81,12 @@ configsfrs       0xbfc02ff0         0x00000010
 
 Linker script and memory map
 
-LOAD build/Uno32/production/_ext/1472/main.o
-LOAD build/Uno32/production/_ext/1472/crt0.o
+LOAD build/UNO32/production/_ext/1472/main.o
+LOAD build/UNO32/production/_ext/1472/crt0.o
                 0x00000001                __MPLAB_BUILD = 0x1
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
                 0x00000000                PROVIDE (_min_heap_size, 0x0)
-LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
+LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
                 0x00000001                PROVIDE (_vector_spacing, 0x1)
                 0xbfc00000                _ebase_address = 0xbfc00000
                 0xbfc00000                _RESET_ADDR = _ebase_address
@@ -101,27 +101,27 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
                 0xbfc02ff4        0x4
  *(.config_BFC02FF4)
  .config_BFC02FF4
-                0xbfc02ff4        0x4 build/Uno32/production/_ext/1472/main.o
+                0xbfc02ff4        0x4 build/UNO32/production/_ext/1472/main.o
 
 .config_BFC02FF8
                 0xbfc02ff8        0x4
  *(.config_BFC02FF8)
  .config_BFC02FF8
-                0xbfc02ff8        0x4 build/Uno32/production/_ext/1472/main.o
+                0xbfc02ff8        0x4 build/UNO32/production/_ext/1472/main.o
 
 .config_BFC02FFC
                 0xbfc02ffc        0x4
  *(.config_BFC02FFC)
  .config_BFC02FFC
-                0xbfc02ffc        0x4 build/Uno32/production/_ext/1472/main.o
+                0xbfc02ffc        0x4 build/UNO32/production/_ext/1472/main.o
 
 .reset          0xbfc00000      0x10c
  *(.reset)
- .reset         0xbfc00000       0x10 build/Uno32/production/_ext/1472/crt0.o
+ .reset         0xbfc00000       0x10 build/UNO32/production/_ext/1472/crt0.o
                 0xbfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0xbfc00010       0xfc build/Uno32/production/_ext/1472/crt0.o
+                0xbfc00010       0xfc build/UNO32/production/_ext/1472/crt0.o
 
 .text
  *(.stub .gnu.linkonce.t.*)
@@ -172,7 +172,7 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
 .sdata          0xa0000600       0x20
                 0xa0000600                _sdata_begin = .
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0xa0000600       0x20 build/Uno32/production/_ext/1472/main.o
+ .sdata         0xa0000600       0x20 build/UNO32/production/_ext/1472/main.o
                 0xa0000620                _sdata_end = .
 
 .lit8
@@ -188,7 +188,7 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
                 0xa0000620                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0xa0000620       0x40 build/Uno32/production/_ext/1472/main.o
+ .sbss          0xa0000620       0x40 build/UNO32/production/_ext/1472/main.o
  *(.scommon)
                 0xa0000660                _sbss_end = .
 
@@ -232,7 +232,7 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
 
 .comment        0x00000000       0x51
  *(.comment)
- .comment       0x00000000       0x51 build/Uno32/production/_ext/1472/main.o
+ .comment       0x00000000       0x51 build/UNO32/production/_ext/1472/main.o
                                  0x52 (size before relaxing)
 
 .debug
@@ -250,42 +250,42 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
 .debug_aranges  0x00000000       0x50
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x20 build/Uno32/production/_ext/1472/main.o
+                0x00000000       0x20 build/UNO32/production/_ext/1472/main.o
  .debug_aranges
-                0x00000020       0x30 build/Uno32/production/_ext/1472/crt0.o
+                0x00000020       0x30 build/UNO32/production/_ext/1472/crt0.o
 
 .debug_pubnames
                 0x00000000       0x33
  *(.debug_pubnames)
  .debug_pubnames
-                0x00000000       0x33 build/Uno32/production/_ext/1472/main.o
+                0x00000000       0x33 build/UNO32/production/_ext/1472/main.o
 
-.debug_info     0x00000000     0x1721
+.debug_info     0x00000000     0x16c5
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x167c build/Uno32/production/_ext/1472/main.o
- .debug_info    0x0000167c       0xa5 build/Uno32/production/_ext/1472/crt0.o
+ .debug_info    0x00000000     0x164e build/UNO32/production/_ext/1472/main.o
+ .debug_info    0x0000164e       0x77 build/UNO32/production/_ext/1472/crt0.o
 
 .debug_abbrev   0x00000000      0x384
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x372 build/Uno32/production/_ext/1472/main.o
- .debug_abbrev  0x00000372       0x12 build/Uno32/production/_ext/1472/crt0.o
+ .debug_abbrev  0x00000000      0x372 build/UNO32/production/_ext/1472/main.o
+ .debug_abbrev  0x00000372       0x12 build/UNO32/production/_ext/1472/crt0.o
 
-.debug_line     0x00000000      0x3c6
+.debug_line     0x00000000      0x3bf
  *(.debug_line)
- .debug_line    0x00000000      0x324 build/Uno32/production/_ext/1472/main.o
- .debug_line    0x00000324       0xa2 build/Uno32/production/_ext/1472/crt0.o
+ .debug_line    0x00000000      0x31d build/UNO32/production/_ext/1472/main.o
+ .debug_line    0x0000031d       0xa2 build/UNO32/production/_ext/1472/crt0.o
 
 .debug_frame    0x00000000      0x10c
  *(.debug_frame)
- .debug_frame   0x00000000      0x10c build/Uno32/production/_ext/1472/main.o
+ .debug_frame   0x00000000      0x10c build/UNO32/production/_ext/1472/main.o
 
 .debug_str      0x00000000       0xc8
  *(.debug_str)
- .debug_str     0x00000000       0xc8 build/Uno32/production/_ext/1472/main.o
+ .debug_str     0x00000000       0xc8 build/UNO32/production/_ext/1472/main.o
 
 .debug_loc      0x00000000      0x5c7
  *(.debug_loc)
- .debug_loc     0x00000000      0x5c7 build/Uno32/production/_ext/1472/main.o
+ .debug_loc     0x00000000      0x5c7 build/UNO32/production/_ext/1472/main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -306,16 +306,16 @@ LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5
                 0x00000000       0xc5
  *(.debug_pubtypes)
  .debug_pubtypes
-                0x00000000       0xc5 build/Uno32/production/_ext/1472/main.o
+                0x00000000       0xc5 build/UNO32/production/_ext/1472/main.o
 
 .debug_ranges   0x00000000       0xb8
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x90 build/Uno32/production/_ext/1472/main.o
- .debug_ranges  0x00000090       0x28 build/Uno32/production/_ext/1472/crt0.o
+ .debug_ranges  0x00000000       0x90 build/UNO32/production/_ext/1472/main.o
+ .debug_ranges  0x00000090       0x28 build/UNO32/production/_ext/1472/crt0.o
 
 .gnu.attributes
  *(.gnu.attributes)
-OUTPUT(dist/Uno32/production/chipKIT-Bootloaders.production.elf elf32-tradlittlemips)
+OUTPUT(dist/UNO32/production/chipKIT-Bootloaders.production.elf elf32-tradlittlemips)
 LOAD stack
 LOAD data_init
 
@@ -323,29 +323,29 @@ LOAD data_init
  .stack         0xa0000fa0      0x400 stack
 
 .bss            0xa0000660      0x920
- .bss           0xa0000660      0x920 build/Uno32/production/_ext/1472/main.o
+ .bss           0xa0000660      0x920 build/UNO32/production/_ext/1472/main.o
 
 .bss%z1         0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
+ .bss           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
 
 .data%z2        0x00000000        0x0
- .data          0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
+ .data          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
 
 .bss%z3         0x00000000        0x0
- .bss           0x00000000        0x0 build/Uno32/production/_ext/1472/crt0.o
+ .bss           0x00000000        0x0 build/UNO32/production/_ext/1472/crt0.o
 
 .data%z4        0x00000000        0x0
- .data          0x00000000        0x0 build/Uno32/production/_ext/1472/crt0.o
+ .data          0x00000000        0x0 build/UNO32/production/_ext/1472/crt0.o
 
 .mdebug.abi32%z5
                 0x00000000        0x0
- .mdebug.abi32  0x00000000        0x0 build/Uno32/production/_ext/1472/main.o
+ .mdebug.abi32  0x00000000        0x0 build/UNO32/production/_ext/1472/main.o
 
 .data%z6        0x00000000        0x0
- .data          0x00000000        0x0 build/Uno32/production/_ext/1472/main.o
+ .data          0x00000000        0x0 build/UNO32/production/_ext/1472/main.o
 
 .text           0x9fc00498      0x884
- .text          0x9fc00498      0x884 build/Uno32/production/_ext/1472/main.o
+ .text          0x9fc00498      0x884 build/UNO32/production/_ext/1472/main.o
                 0x9fc00af1                avrbl_state_machine
                 0x9fc00b99                main
 
@@ -353,11 +353,11 @@ LOAD data_init
  .dinit         0x9fc00d1c       0x48 data_init
 
 .text           0x9fc00d64       0x10
- .text          0x9fc00d64       0x10 build/Uno32/production/_ext/1472/crt0.o
+ .text          0x9fc00d64       0x10 build/UNO32/production/_ext/1472/crt0.o
                 0x9fc00d6c                __crt0_exit
 
 .rodata         0x9fc00d74        0xc
- .rodata        0x9fc00d74        0xc build/Uno32/production/_ext/1472/main.o
+ .rodata        0x9fc00d74        0xc build/UNO32/production/_ext/1472/main.o
 
 .text%z7        0x00000000        0x0
- .text          0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o
+ .text          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX320F128H\processor.o

@@ -10,8 +10,8 @@
 # Include project Makefile
 include Makefile
 # Include makefile containing local settings
-ifeq "$(wildcard nbproject/Makefile-local-Uno32.mk)" "nbproject/Makefile-local-Uno32.mk"
-include nbproject/Makefile-local-Uno32.mk
+ifeq "$(wildcard nbproject/Makefile-local-UNO32.mk)" "nbproject/Makefile-local-UNO32.mk"
+include nbproject/Makefile-local-UNO32.mk
 endif
 
 # Environment
@@ -21,7 +21,7 @@ MV=mv
 CP=cp 
 
 # Macros
-CND_CONF=Uno32
+CND_CONF=UNO32
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
@@ -62,7 +62,7 @@ LDLIBSOPTIONS=
 FIXDEPS=fixDeps
 
 .build-conf:  ${BUILD_SUBPROJECTS}
-	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-Uno32.mk dist/${CND_CONF}/${IMAGE_TYPE}/chipKIT-Bootloaders.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-UNO32.mk dist/${CND_CONF}/${IMAGE_TYPE}/chipKIT-Bootloaders.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=32MX320F128H
 MP_LINKER_FILE_OPTION=,--script="..\MX3-7-boot-linkerscript.ld"
@@ -129,8 +129,8 @@ endif
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r build/Uno32
-	${RM} -r dist/Uno32
+	${RM} -r build/UNO32
+	${RM} -r dist/UNO32
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

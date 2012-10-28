@@ -1,245 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="62">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>14</defaultConf>
+  <defaultConf>17</defaultConf>
   <confs>
+    <conf name="UNO32" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
     <conf name="MAX32" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX7cK" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=8108:=0002:=Digilent:=CerebotMX7ck:=D404332:=x:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX7_UART" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX7_USB" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=8108:=0002:=Digilent:=CerebotMX7ck:=D404332:=x:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX7cK_USB_SPLIT_FLASH" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=8108:=0002:=Digilent:=CerebotMX7ck:=D404332:=x:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX4cK" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=8108:=0002:=Digilent:=CerebotMX4ck:=D404984:=x:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX4_UART" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX4_USB" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=8108:=0002:=Digilent:=CerebotMX4ck:=D404984:=x:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX4_SD_USB" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="Uno32" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX3cK_128" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR111090020:=x:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX3cK_512" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="uC32" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="MX2_MINI_USB" type="2">
-      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=BUR111090839:=x:=en</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -257,7 +41,277 @@
     </conf>
     <conf name="MX1_EXAMPLE_UART" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX2_EBBV3_USB" type="2">
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=DEFAULT_PK3 :=x:=en</platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX2_FB_MINI_USB" type="2">
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=DEFAULT_PK3 :=x:=en</platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX3cK_128" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX3cK_512" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX4_USB" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX4_UART" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX4_UBW32_USB" type="2">
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=DEFAULT_PK3 :=x:=en</platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX4_FB_SD_USB" type="2">
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=DEFAULT_PK3 :=x:=en</platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="uC32" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX4cK" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX7cK" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX7_UART" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX7_USB" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX7cK_USB_SPLIT_FLASH" type="2">
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
+      <mdbdebugger version="1">
+        <placeholder1>place holder 1</placeholder1>
+        <placeholder2>place holder 2</placeholder2>
+      </mdbdebugger>
+      <runprofile version="6">
+        <args></args>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>0</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="MX7_UWB32_USB" type="2">
+      <platformToolSN>:=MPLABCommUSB:=04D8:=900A:=0002:=Microchip Technology Inc.:=PICkit 3:=DEFAULT_PK3 :=x:=en</platformToolSN>
+      <languageToolchainDir>C:\Program Files\Microchip\mplabc32\v2.02\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
