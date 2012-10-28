@@ -1,0 +1,469 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+bulk_out_ep         0x1               build/MX4_USB/production/_ext/1472/usb.o
+cdc_attached        0x1               build/MX4_USB/production/_ext/1472/usb.o
+scsi_attached_count
+                    0x4               build/MX4_USB/production/_ext/1472/usb.o
+endpoints           0x180             build/MX4_USB/production/_ext/1472/usb.o
+other_attached      0x1               build/MX4_USB/production/_ext/1472/usb.o
+int_ep              0x1               build/MX4_USB/production/_ext/1472/usb.o
+cdcacm_attached     0x1               build/MX4_USB/production/_ext/1472/usb.o
+cdcacm_attached_count
+                    0x4               build/MX4_USB/production/_ext/1472/usb.o
+bulk_in_ep          0x1               build/MX4_USB/production/_ext/1472/usb.o
+cdcacm_active       0x1               build/MX4_USB/production/_ext/1472/cdcacm.o
+scsi_attached       0x1               build/MX4_USB/production/_ext/1472/usb.o
+
+Microchip PIC32 Memory-Usage Report
+
+kseg0 Program-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.text                   0x9fc00498         0x11c4        4548  App's exec code 
+.dinit                  0x9fc0165c           0x98         152   
+.rodata                 0x9fc016f4           0x90         144  Read-only const 
+.text                   0x9fc01784           0x10          16  App's exec code 
+.rodata                 0x9fc01794            0xc          12  Read-only const 
+      Total kseg0_program_mem used  :      0x1308        4872  69.5% of 0x1b60
+
+kseg0 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+         Total kseg0_boot_mem used  :           0           0  
+
+Exception-Memory Usage 
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+          Total exception_mem used  :           0           0  <1% of 0x10
+
+kseg1 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.reset                  0xbfc00000          0x10c         268  Reset handler 
+         Total kseg1_boot_mem used  :       0x10c         268  29.9% of 0x380
+        --------------------------------------------------------------------------
+         Total Program Memory used  :      0x1414        5140  64.9% of 0x1ef0
+        --------------------------------------------------------------------------
+
+
+kseg1 Data-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.dbg_data               0xa0000000          0x200         512   
+.skip_ram_space         0xa0000200          0x400        1024   
+.sdata                  0xa0000600           0x28          40  Small init data 
+.sbss                   0xa0000628           0x96         150  Small uninit data 
+.bss                    0xa00006c0          0x180         384  Uninitialized data 
+.bss                    0xa0000840          0xdf0        3568  Uninitialized data 
+.bss                    0xa0001800          0x200         512  Uninitialized data 
+         Total kseg1_data_mem used  :      0x182e        6190  75.6% of 0x2000
+        --------------------------------------------------------------------------
+            Total Data Memory used  :      0x182e        6190  75.6% of 0x2000
+        --------------------------------------------------------------------------
+
+
+Dynamic Data-Memory Reservation
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+heap                    0xa0001a08              0           0  Reserved for heap 
+stack                   0xa0001a20          0x5d8        1496  Reserved for stack 
+
+        --------------------------------------------------------------------------
+
+Discarded input sections
+
+ .reginfo       0x00000000       0x18 build/MX4_USB/production/_ext/1472/main.o
+ .pdr           0x00000000      0x160 build/MX4_USB/production/_ext/1472/main.o
+ .reginfo       0x00000000       0x18 build/MX4_USB/production/_ext/1472/crt0.o
+ .pdr           0x00000000       0x60 build/MX4_USB/production/_ext/1472/crt0.o
+ .reginfo       0x00000000       0x18 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .pdr           0x00000000       0xe0 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .reginfo       0x00000000       0x18 build/MX4_USB/production/_ext/1472/usb.o
+ .pdr           0x00000000      0x160 build/MX4_USB/production/_ext/1472/usb.o
+ .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+kseg1_boot_mem   0xbfc00000         0x00000380
+debug_vectors    0xbfc00380         0x00000110
+kseg0_boot_mem   0x9fc00490         0x00000000
+kseg0_program_mem 0x9fc00490         0x00001b60         xr
+exception_mem    0xbfc01ff0         0x00000010
+debug_exec_mem   0xbfc02000         0x00000ff0
+config3          0xbfc02ff0         0x00000004
+config2          0xbfc02ff4         0x00000004
+config1          0xbfc02ff8         0x00000004
+config0          0xbfc02ffc         0x00000004
+kseg1_data_mem   0xa0000000         0x00002000         w !x
+sfrs             0xbf800000         0x00100000
+configsfrs       0xbfc02ff0         0x00000010
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/MX4_USB/production/_ext/1472/main.o
+LOAD build/MX4_USB/production/_ext/1472/crt0.o
+LOAD build/MX4_USB/production/_ext/1472/cdcacm.o
+LOAD build/MX4_USB/production/_ext/1472/usb.o
+                0x00000001                __MPLAB_BUILD = 0x1
+                0x00000400                PROVIDE (_min_stack_size, 0x400)
+                0x00000000                PROVIDE (_min_heap_size, 0x0)
+LOAD c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+                0x00000001                PROVIDE (_vector_spacing, 0x1)
+                0xbfc00000                _ebase_address = 0xbfc00000
+                0xbfc00000                _RESET_ADDR = _ebase_address
+                0xbfc01ff0                _DBG_EXCPT_ADDR = 0xbfc01ff0
+                0xbfc02000                _DBG_CODE_ADDR = 0xbfc02000
+                0x00000600                _RAM_SKIP_SIZE = 0x600
+
+.config_BFC02FF0
+ *(.config_BFC02FF0)
+
+.config_BFC02FF4
+                0xbfc02ff4        0x4
+ *(.config_BFC02FF4)
+ .config_BFC02FF4
+                0xbfc02ff4        0x4 build/MX4_USB/production/_ext/1472/main.o
+
+.config_BFC02FF8
+                0xbfc02ff8        0x4
+ *(.config_BFC02FF8)
+ .config_BFC02FF8
+                0xbfc02ff8        0x4 build/MX4_USB/production/_ext/1472/main.o
+
+.config_BFC02FFC
+                0xbfc02ffc        0x4
+ *(.config_BFC02FFC)
+ .config_BFC02FFC
+                0xbfc02ffc        0x4 build/MX4_USB/production/_ext/1472/main.o
+
+.reset          0xbfc00000      0x10c
+ *(.reset)
+ .reset         0xbfc00000       0x10 build/MX4_USB/production/_ext/1472/crt0.o
+                0xbfc00000                _reset
+ *(.reset.startup)
+ .reset.startup
+                0xbfc00010       0xfc build/MX4_USB/production/_ext/1472/crt0.o
+
+.text
+ *(.stub .gnu.linkonce.t.*)
+ *(.text.*personality*)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+ *(.gnu.warning)
+
+.rodata         0x9fc00490        0x0
+ *(.rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x9fc00490                . = ALIGN (0x4)
+
+.sdata2         0xbfc0010c        0x0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0xbfc0010c                . = ALIGN (0x4)
+
+.sbss2          0xbfc0010c        0x0
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+                0xbfc0010c                . = ALIGN (0x4)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.dbg_data       0xa0000000      0x200
+                0xa0000000                _skip_ram_space_addr = .
+                0xa0000200                . = (. + 0x200)
+ *fill*         0xa0000000      0x200 00
+
+.skip_ram_space
+                0xa0000200      0x400
+                0xa0000600                . = (. + (_RAM_SKIP_SIZE - SIZEOF (.dbg_data)))
+ *fill*         0xa0000200      0x400 00
+                0xa0000600                _skip_ram_space_end_adder = .
+
+.eh_frame
+ *(.eh_frame)
+                0xa0000600                . = .
+                0xa00085f0                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.sdata          0xa0000600       0x28
+                0xa0000600                _sdata_begin = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0xa0000600       0x20 build/MX4_USB/production/_ext/1472/main.o
+ .sdata         0xa0000620        0x8 build/MX4_USB/production/_ext/1472/cdcacm.o
+                0xa0000628                _sdata_end = .
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0xa0000628                . = ALIGN (0x4)
+                0xa0000628                _data_end = .
+                0xa0000628                _bss_begin = .
+
+.sbss           0xa0000628       0x96
+                0xa0000628                _sbss_begin = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0xa0000628       0x40 build/MX4_USB/production/_ext/1472/main.o
+ .sbss          0xa0000668        0x8 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .sbss          0xa0000670       0x38 build/MX4_USB/production/_ext/1472/usb.o
+ *(.scommon)
+ .scommon       0xa00006a8        0x1 build/MX4_USB/production/_ext/1472/cdcacm.o
+                0xa00006a8                cdcacm_active
+ *fill*         0xa00006a9        0x3 00
+ .scommon       0xa00006ac       0x12 build/MX4_USB/production/_ext/1472/usb.o
+                0xa00006ac                bulk_out_ep
+                0xa00006ad                cdc_attached
+                0xa00006b0                scsi_attached_count
+                0xa00006b4                other_attached
+                0xa00006b5                int_ep
+                0xa00006b6                cdcacm_attached
+                0xa00006b8                cdcacm_attached_count
+                0xa00006bc                bulk_in_ep
+                0xa00006bd                scsi_attached
+                0xa00006be                _sbss_end = .
+
+.bss            0xa00006c0      0x180
+ *(.dynbss)
+ *(COMMON)
+ COMMON         0xa00006c0      0x180 build/MX4_USB/production/_ext/1472/usb.o
+                0xa00006c0                endpoints
+                0xa0000840                . = ALIGN (0x4)
+                0xa0000840                . = ALIGN (0x4)
+                0xa0000840                _end = .
+                0xa0000840                _bss_end = .
+                0x00002000                _bmxdudba_address = 0x2000
+                0x00002000                _bmxdupba_address = 0x2000
+
+/DISCARD/
+ *(.pdr)
+ *(.reginfo)
+ *(.rel.dyn)
+ *(.note.GNU-stack)
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.discard)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x51
+ *(.comment)
+ .comment       0x00000000       0x51 build/MX4_USB/production/_ext/1472/main.o
+                                 0x52 (size before relaxing)
+ .comment       0x00000000       0x52 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .comment       0x00000000       0x52 build/MX4_USB/production/_ext/1472/usb.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x90
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 build/MX4_USB/production/_ext/1472/main.o
+ .debug_aranges
+                0x00000020       0x30 build/MX4_USB/production/_ext/1472/crt0.o
+ .debug_aranges
+                0x00000050       0x20 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_aranges
+                0x00000070       0x20 build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_pubnames
+                0x00000000      0x21e
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x33 build/MX4_USB/production/_ext/1472/main.o
+ .debug_pubnames
+                0x00000033       0x74 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_pubnames
+                0x000000a7      0x177 build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_info     0x00000000     0x2ece
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x147c build/MX4_USB/production/_ext/1472/main.o
+ .debug_info    0x0000147c       0xa5 build/MX4_USB/production/_ext/1472/crt0.o
+ .debug_info    0x00001521      0x934 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_info    0x00001e55     0x1079 build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_abbrev   0x00000000      0x968
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x341 build/MX4_USB/production/_ext/1472/main.o
+ .debug_abbrev  0x00000341       0x12 build/MX4_USB/production/_ext/1472/crt0.o
+ .debug_abbrev  0x00000353      0x2d9 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_abbrev  0x0000062c      0x33c build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_line     0x00000000      0x806
+ *(.debug_line)
+ .debug_line    0x00000000      0x317 build/MX4_USB/production/_ext/1472/main.o
+ .debug_line    0x00000317       0xa2 build/MX4_USB/production/_ext/1472/crt0.o
+ .debug_line    0x000003b9      0x1e3 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_line    0x0000059c      0x26a build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_frame    0x00000000      0x2c0
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x114 build/MX4_USB/production/_ext/1472/main.o
+ .debug_frame   0x00000114       0xb0 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_frame   0x000001c4       0xfc build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_str      0x00000000      0x1cd
+ *(.debug_str)
+ .debug_str     0x00000000       0xd4 build/MX4_USB/production/_ext/1472/main.o
+ .debug_str     0x000000d4       0x55 build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_str     0x00000129       0xa4 build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_loc      0x00000000     0x114e
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x5c8 build/MX4_USB/production/_ext/1472/main.o
+ .debug_loc     0x000005c8      0x44f build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_loc     0x00000a17      0x737 build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+                0x00000000      0x1b8
+ *(.debug_pubtypes)
+ .debug_pubtypes
+                0x00000000       0xc5 build/MX4_USB/production/_ext/1472/main.o
+ .debug_pubtypes
+                0x000000c5       0x4e build/MX4_USB/production/_ext/1472/cdcacm.o
+ .debug_pubtypes
+                0x00000113       0xa5 build/MX4_USB/production/_ext/1472/usb.o
+
+.debug_ranges   0x00000000      0x138
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x80 build/MX4_USB/production/_ext/1472/main.o
+ .debug_ranges  0x00000080       0x28 build/MX4_USB/production/_ext/1472/crt0.o
+ .debug_ranges  0x000000a8       0x90 build/MX4_USB/production/_ext/1472/cdcacm.o
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(dist/MX4_USB/production/chipKIT-Bootloaders.production.elf elf32-tradlittlemips)
+LOAD stack
+LOAD data_init
+
+.stack          0xa0001a20      0x400
+ .stack         0xa0001a20      0x400 stack
+
+.bss            0xa0000840      0xdf0
+ .bss           0xa0000840      0x980 build/MX4_USB/production/_ext/1472/main.o
+ .bss           0xa00011c0      0x470 build/MX4_USB/production/_ext/1472/cdcacm.o
+
+.bss            0xa0001800      0x200
+ .bss           0xa0001800      0x200 build/MX4_USB/production/_ext/1472/usb.o
+
+.bss%z1         0x00000000        0x0
+ .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+
+.data%z2        0x00000000        0x0
+ .data          0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+
+.mdebug.abi32%z3
+                0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 build/MX4_USB/production/_ext/1472/usb.o
+
+.data%z4        0x00000000        0x0
+ .data          0x00000000        0x0 build/MX4_USB/production/_ext/1472/usb.o
+
+.mdebug.abi32%z5
+                0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 build/MX4_USB/production/_ext/1472/cdcacm.o
+
+.data%z6        0x00000000        0x0
+ .data          0x00000000        0x0 build/MX4_USB/production/_ext/1472/cdcacm.o
+
+.bss%z7         0x00000000        0x0
+ .bss           0x00000000        0x0 build/MX4_USB/production/_ext/1472/crt0.o
+
+.data%z8        0x00000000        0x0
+ .data          0x00000000        0x0 build/MX4_USB/production/_ext/1472/crt0.o
+
+.mdebug.abi32%z9
+                0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 build/MX4_USB/production/_ext/1472/main.o
+
+.data%z10       0x00000000        0x0
+ .data          0x00000000        0x0 build/MX4_USB/production/_ext/1472/main.o
+
+.text           0x9fc00498     0x11c4
+ .text          0x9fc00498      0x830 build/MX4_USB/production/_ext/1472/main.o
+                0x9fc00acd                main
+                0x9fc00c21                avrbl_state_machine
+ .text          0x9fc00cc8      0x6e0 build/MX4_USB/production/_ext/1472/usb.o
+                0x9fc00de5                usb_device_enqueue
+                0x9fc00e8d                usb_isr
+                0x9fc01239                usb_register
+                0x9fc01249                usb_device_descriptor
+                0x9fc01255                usb_configuration_descriptor
+                0x9fc01261                usb_string_descriptor
+                0x9fc0126d                usb_uninitialize
+                0x9fc01345                usb_initialize
+ .text          0x9fc013a8      0x2b4 build/MX4_USB/production/_ext/1472/cdcacm.o
+                0x9fc014e1                cdcacm_print
+                0x9fc015d5                cdcacm_command_ack
+                0x9fc015fd                cdcacm_register
+                0x9fc01659                null_reset_cbfn
+
+.dinit          0x9fc0165c       0x98
+ .dinit         0x9fc0165c       0x98 data_init
+
+.rodata         0x9fc016f4       0x90
+ .rodata        0x9fc016f4       0x90 build/MX4_USB/production/_ext/1472/cdcacm.o
+
+.text           0x9fc01784       0x10
+ .text          0x9fc01784       0x10 build/MX4_USB/production/_ext/1472/crt0.o
+                0x9fc0178c                __crt0_exit
+
+.rodata         0x9fc01794        0xc
+ .rodata        0x9fc01794        0xc build/MX4_USB/production/_ext/1472/main.o
+
+.text%z11       0x00000000        0x0
+ .text          0x00000000        0x0 c:/program files (x86)/microchip/mplab c32 suite/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o

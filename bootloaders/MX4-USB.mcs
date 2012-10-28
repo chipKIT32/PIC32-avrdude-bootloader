@@ -1,0 +1,85 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=C:\Users\KeithV.KeithsOfficePC\Documents\Digitent\Bootloaders\chipKIT-Bootloader-Projects\chipKIT\main.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=..\MPLAB C32 Suite\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|main.c|crt0.S|cdcacm.c|usb.c||<obj>||<lib>||<lkr>|MX3-7-boot-linkerscript.ld||
+SuiteArgsString=-nostartfiles
+ToolArgsString=-g -mips16 -mno-float -D_BOARD_CEREBOT_32MX4_USB_ -Os
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=C:\Users\KeithV.KeithsOfficePC\Documents\Digitent\Bootloaders\chipKIT-Bootloader-Projects\chipKIT\crt0.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
+LanguageToolLocation=..\MPLAB C32 Suite\bin\\pic32-as.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|main.c|crt0.S|cdcacm.c|usb.c||<obj>||<lib>||<lkr>|MX3-7-boot-linkerscript.ld||
+SuiteArgsString=-nostartfiles
+ToolArgsString=
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=C:\Users\KeithV.KeithsOfficePC\Documents\Digitent\Bootloaders\chipKIT-Bootloader-Projects\chipKIT\cdcacm.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=..\MPLAB C32 Suite\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|main.c|crt0.S|cdcacm.c|usb.c||<obj>||<lib>||<lkr>|MX3-7-boot-linkerscript.ld||
+SuiteArgsString=-nostartfiles
+ToolArgsString=-g -mips16 -mno-float -D_BOARD_CEREBOT_32MX4_USB_ -Os
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=C:\Users\KeithV.KeithsOfficePC\Documents\Digitent\Bootloaders\chipKIT-Bootloader-Projects\chipKIT\usb.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=..\MPLAB C32 Suite\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|main.c|crt0.S|cdcacm.c|usb.c||<obj>||<lib>||<lkr>|MX3-7-boot-linkerscript.ld||
+SuiteArgsString=-nostartfiles
+ToolArgsString=-g -mips16 -mno-float -D_BOARD_CEREBOT_32MX4_USB_ -Os
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=C:\Users\KeithV.KeithsOfficePC\Documents\Digitent\Bootloaders\chipKIT-Bootloader-Projects\chipKIT\MX4-USB.elf
+Folder=Output
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=..\MPLAB C32 Suite\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|main.c|crt0.S|cdcacm.c|usb.c||<obj>||<lib>||<lkr>|MX3-7-boot-linkerscript.ld||
+SuiteArgsString=-nostartfiles
+ToolArgsString=-Map="$(BINDIR_)$(TARGETBASE).map" -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Os -nostdlib -mips16 -mno-float
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=C:\Users\KeithV.KeithsOfficePC\Documents\Digitent\Bootloaders\chipKIT-Bootloader-Projects\chipKIT\MX4-USB.hex
+Folder=Output
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=..\MPLAB C32 Suite\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|main.c|crt0.S|cdcacm.c|usb.c||<obj>||<lib>||<lkr>|MX3-7-boot-linkerscript.ld||
+SuiteArgsString=-nostartfiles
+ToolArgsString=-Map="$(BINDIR_)$(TARGETBASE).map" -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Os -nostdlib -mips16 -mno-float
+TraceCmdString=
+DebugOptions=
+[TOOL_LOC_STAMPS]
+tool_loc{92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}=..\MPLAB C32 Suite\bin\\pic32-as.exe
+tool_loc{430F471F-7ECB-4852-A80D-DEF9A5C8E751}=..\MPLAB C32 Suite\bin\pic32-gcc.exe
+tool_loc{C68E5105-1196-4333-A0BF-3DC57271E614}=..\MPLAB C32 Suite\bin\pic32-ld.exe
