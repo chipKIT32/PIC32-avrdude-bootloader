@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="62">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>17</defaultConf>
+  <defaultConf>10</defaultConf>
   <confs>
     <conf name="UNO32" type="2">
       <platformToolSN></platformToolSN>
