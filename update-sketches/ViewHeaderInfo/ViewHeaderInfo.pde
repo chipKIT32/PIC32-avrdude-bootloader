@@ -42,8 +42,8 @@ void setup() {
   
     Serial.begin(9600);
 
-    #if defined(_BOARD_FUBARINO_SD_) || defined(_BOARD_FUBARINO_MINI_)
-    // the 3 second delay is put in for the Furbario USB to allow time to open the serial monitor
+    #if defined(_USE_USB_FOR_SERIAL_)
+    // the 3 second delay is put in for boards that use USB serial to allow time to open the serial monitor
     delay(3000);
     #endif
 
