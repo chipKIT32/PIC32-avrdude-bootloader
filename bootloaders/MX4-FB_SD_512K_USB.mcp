@@ -1,7 +1,7 @@
 [HEADER]
 magic_cookie={66E99B07-E706-4689-9E80-9B2582898A13}
 file_version=1.0
-device=PIC32MX460F512L
+device=PIC32MX440F256H
 [PATH_INFO]
 BuildDirPolicy=BuildDirIsProjectDir
 dir_src=
@@ -61,19 +61,19 @@ file_000=main.c
 file_001=crt0.S
 file_002=cdcacm.c
 file_003=usb.c
-file_004=BoardConfig.h
-file_005=main.h
-file_006=cdcacm.h
-file_007=usb.h
-file_008=util.h
+file_004=util.h
+file_005=BoardConfig.h
+file_006=main.h
+file_007=cdcacm.h
+file_008=usb.h
 file_009=MX3-7-boot-linkerscript.ld
 [SUITE_INFO]
 suite_guid={14495C23-81F8-43F3-8A44-859C583D7760}
 suite_state=-nostartfiles
 [TOOL_SETTINGS]
-TS{CB0AF4B8-4022-429D-8F99-8A56782B2C6D}=
-TS{9C698E0A-CBC9-4EFF-AE7D-B569F93E7322}=-g -mips16 -mno-float -D_BOARD_UBW32_MX460_USB_ -Os
-TS{77F59DA1-3C53-4677-AC5F-A03EB0125170}=-Map="$(BINDIR_)$(TARGETBASE).map" -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Os -nostdlib -mips16 -mno-float
+TS{CB0AF4B8-4022-429D-8F99-8A56782B2C6D}=-mno-float
+TS{9C698E0A-CBC9-4EFF-AE7D-B569F93E7322}=-g -mips16 -mno-float -D_BOARD_FUBARINO_SD_512K_USB_ -Os
+TS{77F59DA1-3C53-4677-AC5F-A03EB0125170}=--no-check-sections --gc-sections -Map="$(BINDIR_)$(TARGETBASE).map" -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Os -nostdlib -mips16 -mno-float
 TS{0396C0A1-9052-4E4F-8B84-EF0162B1B4E9}=
 [INSTRUMENTED_TRACE]
 enable=0

@@ -21,12 +21,12 @@ Microchip PIC32 Memory-Usage Report
 kseg0 Program-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-.text                   0x9fc00498         0x11ac        4524  App's exec code 
-.dinit                  0x9fc01644           0x98         152   
-.rodata                 0x9fc016dc           0x90         144  Read-only const 
-.text                   0x9fc0176c           0x10          16  App's exec code 
-.rodata                 0x9fc0177c            0xc          12  Read-only const 
-      Total kseg0_program_mem used  :      0x12f0        4848  69.2% of 0x1b60
+.text                   0x9fc00498         0x1178        4472  App's exec code 
+.dinit                  0x9fc01610           0x98         152   
+.rodata                 0x9fc016a8           0x90         144  Read-only const 
+.text                   0x9fc01738           0x10          16  App's exec code 
+.rodata                 0x9fc01748            0xc          12  Read-only const 
+      Total kseg0_program_mem used  :      0x12bc        4796  68.4% of 0x1b60
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -44,7 +44,7 @@ section                    address  length [bytes]      (dec)  Description
 .reset                  0xbfc00000          0x10c         268  Reset handler 
          Total kseg1_boot_mem used  :       0x10c         268  29.9% of 0x380
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x13fc        5116  64.6% of 0x1ef0
+         Total Program Memory used  :      0x13c8        5064  63.9% of 0x1ef0
         --------------------------------------------------------------------------
 
 
@@ -74,16 +74,27 @@ stack                   0xa0001a20          0x5d8        1496  Reserved for stac
 
 Discarded input sections
 
+ .data          0x00000000        0x0 main.o
  .reginfo       0x00000000       0x18 main.o
  .pdr           0x00000000      0x160 main.o
+ .mdebug.abi32  0x00000000        0x0 main.o
+ .data          0x00000000        0x0 crt0.o
+ .bss           0x00000000        0x0 crt0.o
  .reginfo       0x00000000       0x18 crt0.o
  .pdr           0x00000000       0x60 crt0.o
+ .data          0x00000000        0x0 cdcacm.o
  .reginfo       0x00000000       0x18 cdcacm.o
  .pdr           0x00000000       0xe0 cdcacm.o
+ .mdebug.abi32  0x00000000        0x0 cdcacm.o
+ .data          0x00000000        0x0 usb.o
  .reginfo       0x00000000       0x18 usb.o
  .pdr           0x00000000      0x160 usb.o
- .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
- .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+ .mdebug.abi32  0x00000000        0x0 usb.o
+ .text          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .data          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
 
 Memory Configuration
 
@@ -111,7 +122,7 @@ LOAD cdcacm.o
 LOAD usb.o
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
                 0x00000000                PROVIDE (_min_heap_size, 0x0)
-LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
                 0x00000001                PROVIDE (_vector_spacing, 0x1)
                 0xbfc00000                _ebase_address = 0xbfc00000
                 0xbfc00000                _RESET_ADDR = _ebase_address
@@ -311,11 +322,11 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
  .debug_pubnames
                 0x000000a7      0x177 usb.o
 
-.debug_info     0x00000000     0x2d33
+.debug_info     0x00000000     0x2cc3
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x1410 main.o
- .debug_info    0x00001410      0x8ef cdcacm.o
- .debug_info    0x00001cff     0x1034 usb.o
+ .debug_info    0x00000000     0x13a0 main.o
+ .debug_info    0x000013a0      0x8ef cdcacm.o
+ .debug_info    0x00001c8f     0x1034 usb.o
 
 .debug_abbrev   0x00000000      0x947
  *(.debug_abbrev)
@@ -323,11 +334,11 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
  .debug_abbrev  0x00000332      0x2d9 cdcacm.o
  .debug_abbrev  0x0000060b      0x33c usb.o
 
-.debug_line     0x00000000      0x724
+.debug_line     0x00000000      0x70f
  *(.debug_line)
- .debug_line    0x00000000      0x2fa main.o
- .debug_line    0x000002fa      0x1d0 cdcacm.o
- .debug_line    0x000004ca      0x25a usb.o
+ .debug_line    0x00000000      0x2e8 main.o
+ .debug_line    0x000002e8      0x1d0 cdcacm.o
+ .debug_line    0x000004b8      0x257 usb.o
 
 .debug_frame    0x00000000      0x2c0
  *(.debug_frame)
@@ -372,15 +383,15 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
  .debug_pubtypes
                 0x00000113       0xa5 usb.o
 
-.debug_ranges   0x00000000       0xf8
+.debug_ranges   0x00000000       0xf0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x68 main.o
- .debug_ranges  0x00000068       0x90 cdcacm.o
+ .debug_ranges  0x00000000       0x60 main.o
+ .debug_ranges  0x00000060       0x90 cdcacm.o
 
 .gnu.attributes
  *(.gnu.attributes)
                 0x00000001                __MPLAB_BUILD = 0x1
-OUTPUT(MX4-USB-UBW32.elf elf32-tradlittlemips)
+OUTPUT(MX4-FB_SD_512K_USB.elf elf32-tradlittlemips)
 LOAD stack
 LOAD data_init
 
@@ -394,70 +405,34 @@ LOAD data_init
 .bss            0xa0001800      0x200
  .bss           0xa0001800      0x200 usb.o
 
-.bss%z1         0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+.text           0x9fc00498     0x1178
+ .text          0x9fc00498      0x7f8 main.o
+                0x9fc00aa9                main
+                0x9fc00be9                avrbl_state_machine
+ .text          0x9fc00c90      0x6cc usb.o
+                0x9fc00dad                usb_device_enqueue
+                0x9fc00e55                usb_isr
+                0x9fc01201                usb_register
+                0x9fc01211                usb_device_descriptor
+                0x9fc0121d                usb_configuration_descriptor
+                0x9fc01229                usb_string_descriptor
+                0x9fc01235                usb_uninitialize
+                0x9fc012f9                usb_initialize
+ .text          0x9fc0135c      0x2b4 cdcacm.o
+                0x9fc01495                cdcacm_print
+                0x9fc01589                cdcacm_command_ack
+                0x9fc015b1                cdcacm_register
+                0x9fc0160d                null_reset_cbfn
 
-.data%z2        0x00000000        0x0
- .data          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+.dinit          0x9fc01610       0x98
+ .dinit         0x9fc01610       0x98 data_init
 
-.mdebug.abi32%z3
-                0x00000000        0x0
- .mdebug.abi32  0x00000000        0x0 usb.o
+.rodata         0x9fc016a8       0x90
+ .rodata        0x9fc016a8       0x90 cdcacm.o
 
-.data%z4        0x00000000        0x0
- .data          0x00000000        0x0 usb.o
+.text           0x9fc01738       0x10
+ .text          0x9fc01738       0x10 crt0.o
+                0x9fc01740                __crt0_exit
 
-.mdebug.abi32%z5
-                0x00000000        0x0
- .mdebug.abi32  0x00000000        0x0 cdcacm.o
-
-.data%z6        0x00000000        0x0
- .data          0x00000000        0x0 cdcacm.o
-
-.bss%z7         0x00000000        0x0
- .bss           0x00000000        0x0 crt0.o
-
-.data%z8        0x00000000        0x0
- .data          0x00000000        0x0 crt0.o
-
-.mdebug.abi32%z9
-                0x00000000        0x0
- .mdebug.abi32  0x00000000        0x0 main.o
-
-.data%z10       0x00000000        0x0
- .data          0x00000000        0x0 main.o
-
-.text           0x9fc00498     0x11ac
- .text          0x9fc00498      0x81c main.o
-                0x9fc00ac5                main
-                0x9fc00c0d                avrbl_state_machine
- .text          0x9fc00cb4      0x6dc usb.o
-                0x9fc00dd1                usb_device_enqueue
-                0x9fc00e79                usb_isr
-                0x9fc01225                usb_register
-                0x9fc01235                usb_device_descriptor
-                0x9fc01241                usb_configuration_descriptor
-                0x9fc0124d                usb_string_descriptor
-                0x9fc01259                usb_uninitialize
-                0x9fc0132d                usb_initialize
- .text          0x9fc01390      0x2b4 cdcacm.o
-                0x9fc014c9                cdcacm_print
-                0x9fc015bd                cdcacm_command_ack
-                0x9fc015e5                cdcacm_register
-                0x9fc01641                null_reset_cbfn
-
-.dinit          0x9fc01644       0x98
- .dinit         0x9fc01644       0x98 data_init
-
-.rodata         0x9fc016dc       0x90
- .rodata        0x9fc016dc       0x90 cdcacm.o
-
-.text           0x9fc0176c       0x10
- .text          0x9fc0176c       0x10 crt0.o
-                0x9fc01774                __crt0_exit
-
-.rodata         0x9fc0177c        0xc
- .rodata        0x9fc0177c        0xc main.o
-
-.text%z11       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX460F512L\processor.o
+.rodata         0x9fc01748        0xc
+ .rodata        0x9fc01748        0xc main.o

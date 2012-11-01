@@ -82,8 +82,8 @@ Discarded input sections
  .pdr           0x00000000       0xe0 cdcacm.o
  .reginfo       0x00000000       0x18 usb.o
  .pdr           0x00000000      0x160 usb.o
- .reginfo       0x00000000       0x18 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
- .pdr           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
+ .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
+ .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
 
 Memory Configuration
 
@@ -111,7 +111,7 @@ LOAD cdcacm.o
 LOAD usb.o
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
                 0x00000000                PROVIDE (_min_heap_size, 0x0)
-LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
+LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
                 0x00000001                PROVIDE (_vector_spacing, 0x1)
                 0xbfc00000                _ebase_address = 0xbfc00000
                 0xbfc00000                _RESET_ADDR = _ebase_address
@@ -326,11 +326,11 @@ LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../.
  .debug_abbrev  0x00000332      0x2d9 cdcacm.o
  .debug_abbrev  0x0000060b      0x33c usb.o
 
-.debug_line     0x00000000      0x712
+.debug_line     0x00000000      0x724
  *(.debug_line)
- .debug_line    0x00000000      0x2f4 main.o
- .debug_line    0x000002f4      0x1ca cdcacm.o
- .debug_line    0x000004be      0x254 usb.o
+ .debug_line    0x00000000      0x2fa main.o
+ .debug_line    0x000002fa      0x1d0 cdcacm.o
+ .debug_line    0x000004ca      0x25a usb.o
 
 .debug_frame    0x00000000      0x2c0
  *(.debug_frame)
@@ -398,10 +398,10 @@ LOAD data_init
  .bss           0xa0001800      0x200 usb.o
 
 .bss%z1         0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
 
 .data%z2        0x00000000        0x0
- .data          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
+ .data          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
 
 .mdebug.abi32%z3
                 0x00000000        0x0
@@ -463,4 +463,4 @@ LOAD data_init
  .rodata        0x9fc0177c        0xc main.o
 
 .text%z11       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
+ .text          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
