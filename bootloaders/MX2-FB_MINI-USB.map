@@ -21,12 +21,12 @@ Microchip PIC32 Memory-Usage Report
 kseg0 Program-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-.text                   0x9fc00208          0x7dc        2012  App's exec code 
-.dinit                  0x9fc009e4           0x98         152   
-.rodata                 0x9fc00a7c           0x90         144  Read-only const 
-.text                   0x9fc00b0c           0x10          16  App's exec code 
-.rodata                 0x9fc00b1c            0xc          12  Read-only const 
-      Total kseg0_program_mem used  :       0x920        2336  91.8% of 0x9f0
+.text                   0x9fc00208          0x808        2056  App's exec code 
+.dinit                  0x9fc00a10           0x98         152   
+.rodata                 0x9fc00aa8           0x90         144  Read-only const 
+.text                   0x9fc00b38           0x10          16  App's exec code 
+.rodata                 0x9fc00b48            0xc          12  Read-only const 
+      Total kseg0_program_mem used  :       0x94c        2380  93.6% of 0x9f0
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -44,7 +44,7 @@ section                    address  length [bytes]      (dec)  Description
 .reset                  0xbfc00000          0x10c         268  Reset handler 
          Total kseg1_boot_mem used  :       0x10c         268  52.3% of 0x200
         --------------------------------------------------------------------------
-         Total Program Memory used  :       0xa2c        2604  85.2% of 0xbf0
+         Total Program Memory used  :       0xa58        2648  86.6% of 0xbf0
         --------------------------------------------------------------------------
 
 
@@ -333,23 +333,23 @@ LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../.
  .debug_pubnames
                 0x000000a7      0x177 usb.o
 
-.debug_info     0x00000000     0x2d0d
+.debug_info     0x00000000     0x2fa1
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x1394 main.o
- .debug_info    0x00001394      0x90f cdcacm.o
- .debug_info    0x00001ca3     0x106a usb.o
+ .debug_info    0x00000000     0x1470 main.o
+ .debug_info    0x00001470      0x9eb cdcacm.o
+ .debug_info    0x00001e5b     0x1146 usb.o
 
-.debug_abbrev   0x00000000      0x938
+.debug_abbrev   0x00000000      0x98a
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x323 main.o
- .debug_abbrev  0x00000323      0x2d9 cdcacm.o
- .debug_abbrev  0x000005fc      0x33c usb.o
+ .debug_abbrev  0x00000000      0x332 main.o
+ .debug_abbrev  0x00000332      0x31c cdcacm.o
+ .debug_abbrev  0x0000064e      0x33c usb.o
 
-.debug_line     0x00000000      0x6fb
+.debug_line     0x00000000      0x70d
  *(.debug_line)
- .debug_line    0x00000000      0x2e0 main.o
- .debug_line    0x000002e0      0x1ca cdcacm.o
- .debug_line    0x000004aa      0x251 usb.o
+ .debug_line    0x00000000      0x2f2 main.o
+ .debug_line    0x000002f2      0x1ca cdcacm.o
+ .debug_line    0x000004bc      0x251 usb.o
 
 .debug_frame    0x00000000      0x2c0
  *(.debug_frame)
@@ -357,11 +357,11 @@ LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../.
  .debug_frame   0x00000114       0xb0 cdcacm.o
  .debug_frame   0x000001c4       0xfc usb.o
 
-.debug_str      0x00000000      0x1b9
+.debug_str      0x00000000      0x1da
  *(.debug_str)
- .debug_str     0x00000000       0xc0 main.o
- .debug_str     0x000000c0       0x55 cdcacm.o
- .debug_str     0x00000115       0xa4 usb.o
+ .debug_str     0x00000000       0xcb main.o
+ .debug_str     0x000000cb       0x60 cdcacm.o
+ .debug_str     0x0000012b       0xaf usb.o
 
 .debug_loc      0x00000000     0x114e
  *(.debug_loc)
@@ -385,19 +385,19 @@ LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../.
  *(.debug_varnames)
 
 .debug_pubtypes
-                0x00000000      0x1b8
+                0x00000000      0x1f1
  *(.debug_pubtypes)
  .debug_pubtypes
-                0x00000000       0xc5 main.o
+                0x00000000       0xd8 main.o
  .debug_pubtypes
-                0x000000c5       0x4e cdcacm.o
+                0x000000d8       0x61 cdcacm.o
  .debug_pubtypes
-                0x00000113       0xa5 usb.o
+                0x00000139       0xb8 usb.o
 
-.debug_ranges   0x00000000       0xf0
+.debug_ranges   0x00000000      0x108
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x60 main.o
- .debug_ranges  0x00000060       0x90 cdcacm.o
+ .debug_ranges  0x00000000       0x78 main.o
+ .debug_ranges  0x00000078       0x90 cdcacm.o
 
 .gnu.attributes
  *(.gnu.attributes)
@@ -449,23 +449,23 @@ LOAD data_init
 .data%z10       0x00000000        0x0
  .data          0x00000000        0x0 main.o
 
-.text           0x9fc00208      0x7dc
- .text          0x9fc00208      0x7dc main.o
+.text           0x9fc00208      0x808
+ .text          0x9fc00208      0x808 main.o
                 0x9fc007ed                main
-                0x9fc0093d                avrbl_state_machine
+                0x9fc00969                avrbl_state_machine
 
-.dinit          0x9fc009e4       0x98
- .dinit         0x9fc009e4       0x98 data_init
+.dinit          0x9fc00a10       0x98
+ .dinit         0x9fc00a10       0x98 data_init
 
-.rodata         0x9fc00a7c       0x90
- .rodata        0x9fc00a7c       0x90 cdcacm.o
+.rodata         0x9fc00aa8       0x90
+ .rodata        0x9fc00aa8       0x90 cdcacm.o
 
-.text           0x9fc00b0c       0x10
- .text          0x9fc00b0c       0x10 crt0.o
-                0x9fc00b14                __crt0_exit
+.text           0x9fc00b38       0x10
+ .text          0x9fc00b38       0x10 crt0.o
+                0x9fc00b40                __crt0_exit
 
-.rodata         0x9fc00b1c        0xc
- .rodata        0x9fc00b1c        0xc main.o
+.rodata         0x9fc00b48        0xc
+ .rodata        0x9fc00b48        0xc main.o
 
 .text%z11       0x00000000        0x0
  .text          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128D\processor.o

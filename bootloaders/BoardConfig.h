@@ -30,6 +30,7 @@
 /*    6/17/2012(KeithV): Added Just In Time Flash Erase                 */
 /*    6/17/2012(KeithV): Added header information                       */
 /*    6/25/2012(KeithV): Added Vendor ID and Product IDs                */
+/*    1/15/2013(BrianS): Added PPS unlock for MX1/MX2 devices           */
 /*                                                                      */
 /************************************************************************/
 
@@ -1476,6 +1477,8 @@
     (__32MX250F128C__)  ||      \
     (__32MX250F128D__)          )
 
+	#define PPS_IN_USE		1		// indicate that this is a PPS type processor
+
     #if ((CAPABILITIES & blCapUARTInterface) == blCapUARTInterface)
 
         // must define what pins the UART goes on
@@ -1643,6 +1646,18 @@
 */
 static inline void __attribute__((always_inline)) InitLEDsAndButtons(void)
 {
+	// We assume the processor is unlocked, so let's just assert that here
+    // While the processor comes up in the unlocked state after reset it is
+    // possible that the rest code was jumped to after someone locked the system
+    // and we need to re-assert the unlock.
+    SYSKEY = 0;
+    SYSKEY = 0xAA996655;
+    SYSKEY = 0x556699AA;
+ 
+    #ifdef PPS_IN_USE
+		CFGCONbits.IOLOCK = 0;            // unlock PPS; same reasoning as explicitly unlocking the processor
+    #endif
+
     // define all analog pins as digital
     #ifdef _ANSELA_w_POSITION
         ANSELA = 0;

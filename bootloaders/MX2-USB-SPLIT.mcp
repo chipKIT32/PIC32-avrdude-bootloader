@@ -94,7 +94,7 @@ Post-Build=
 Post-BuildEnabled=1
 [TOOL_LOCKING]
 ToolsAreLocked=1
-T{92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}=..\MPLAB C32 Suite\bin\\pic32-as.exe
-T{430F471F-7ECB-4852-A80D-DEF9A5C8E751}=..\MPLAB C32 Suite\bin\pic32-gcc.exe
-T{C68E5105-1196-4333-A0BF-3DC57271E614}=..\MPLAB C32 Suite\bin\pic32-ld.exe
-T{64EFB0AB-375F-4A36-B8F3-BFFE44B756FB}=..\MPLAB C32 Suite\bin\pic32-ar.exe
+T{92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}=C:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-as.exe
+T{430F471F-7ECB-4852-A80D-DEF9A5C8E751}=C:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-gcc.exe
+T{C68E5105-1196-4333-A0BF-3DC57271E614}=C:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-ld.exe
+T{64EFB0AB-375F-4A36-B8F3-BFFE44B756FB}=C:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-ar.exe
