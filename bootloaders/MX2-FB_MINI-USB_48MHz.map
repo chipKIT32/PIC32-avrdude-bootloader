@@ -1,0 +1,471 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+bulk_out_ep         0x1               usb.o
+cdc_attached        0x1               usb.o
+scsi_attached_count
+                    0x4               usb.o
+endpoints           0x180             usb.o
+other_attached      0x1               usb.o
+int_ep              0x1               usb.o
+cdcacm_attached     0x1               usb.o
+cdcacm_attached_count
+                    0x4               usb.o
+bulk_in_ep          0x1               usb.o
+cdcacm_active       0x1               cdcacm.o
+scsi_attached       0x1               usb.o
+
+Microchip PIC32 Memory-Usage Report
+
+kseg0 Program-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.text                   0x9fc00208          0x808        2056  App's exec code 
+.dinit                  0x9fc00a10           0x98         152   
+.rodata                 0x9fc00aa8           0x90         144  Read-only const 
+.text                   0x9fc00b38           0x10          16  App's exec code 
+.rodata                 0x9fc00b48            0xc          12  Read-only const 
+      Total kseg0_program_mem used  :       0x94c        2380  93.6% of 0x9f0
+
+kseg0 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+         Total kseg0_boot_mem used  :           0           0  
+
+Exception-Memory Usage 
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+          Total exception_mem used  :           0           0  
+
+kseg1 Boot-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.reset                  0xbfc00000          0x10c         268  Reset handler 
+         Total kseg1_boot_mem used  :       0x10c         268  52.3% of 0x200
+        --------------------------------------------------------------------------
+         Total Program Memory used  :       0xa58        2648  86.6% of 0xbf0
+        --------------------------------------------------------------------------
+
+
+kseg1 Data-Memory Usage
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+.dbg_data               0xa0000000          0x200         512   
+.skip_ram_space         0xa0000200          0x400        1024   
+.sdata                  0xa0000600           0x28          40  Small init data 
+.sbss                   0xa0000628           0x96         150  Small uninit data 
+.bss                    0xa00006c0          0x180         384  Uninitialized data 
+.bss                    0xa0000840          0xdec        3564  Uninitialized data 
+.bss                    0xa0001800          0x200         512  Uninitialized data 
+         Total kseg1_data_mem used  :      0x182a        6186  75.5% of 0x2000
+        --------------------------------------------------------------------------
+            Total Data Memory used  :      0x182a        6186  75.5% of 0x2000
+        --------------------------------------------------------------------------
+
+
+Dynamic Data-Memory Reservation
+section                    address  length [bytes]      (dec)  Description
+-------                 ----------  -------------------------  -----------
+heap                    0xa0001a08              0           0  Reserved for heap 
+stack                   0xa0001a20          0x5d8        1496  Reserved for stack 
+
+        --------------------------------------------------------------------------
+
+Discarded input sections
+
+ .reginfo       0x00000000       0x18 main.o
+ .pdr           0x00000000      0x160 main.o
+ .reginfo       0x00000000       0x18 crt0.o
+ .pdr           0x00000000       0x60 crt0.o
+ .reginfo       0x00000000       0x18 cdcacm.o
+ .pdr           0x00000000       0xe0 cdcacm.o
+ .reginfo       0x00000000       0x18 usb.o
+ .pdr           0x00000000      0x160 usb.o
+ .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128D\processor.o
+ .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128D\processor.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+kseg1_boot_mem   0xbfc00000         0x00000200
+kseg0_boot_mem   0x9fc00200         0x00000000
+kseg0_program_mem 0x9fc00200         0x000009f0         xr
+split_program_mem 0x9d01f000         0x00001000         xr
+exception_mem    0x9fc00480         0x00000000
+debug_exec_mem   0x9fc00490         0x00000000
+config3          0xbfc00bf0         0x00000004
+config2          0xbfc00bf4         0x00000004
+config1          0xbfc00bf8         0x00000004
+config0          0xbfc00bfc         0x00000004
+kseg1_data_mem   0xa0000000         0x00002000         w !x
+sfrs             0xbf800000         0x00100000
+configsfrs       0xbfc00bf0         0x00000010
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD main.o
+LOAD crt0.o
+LOAD cdcacm.o
+LOAD usb.o
+                0x00000400                PROVIDE (_min_stack_size, 0x400)
+                0x00000000                PROVIDE (_min_heap_size, 0x0)
+LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128D\processor.o
+                0x00000001                PROVIDE (_vector_spacing, 0x1)
+                0x9fc00000                _ebase_address = 0x9fc00000
+                0xbfc00000                _ebase_address = 0xbfc00000
+                0xbfc00000                _RESET_ADDR = _ebase_address
+                0x9fc00480                //_DBG_EXCPT_ADDR = 0x9fc00480
+                0x9fc00490                //_DBG_CODE_ADDR = 0x9fc00490
+                0x00000600                _RAM_SKIP_SIZE = 0x600
+
+.config_BFC00BF0
+                0xbfc00bf0        0x4
+ *(.config_BFC00BF0)
+ .config_BFC00BF0
+                0xbfc00bf0        0x4 main.o
+
+.config_BFC00BF4
+                0xbfc00bf4        0x4
+ *(.config_BFC00BF4)
+ .config_BFC00BF4
+                0xbfc00bf4        0x4 main.o
+
+.config_BFC00BF8
+                0xbfc00bf8        0x4
+ *(.config_BFC00BF8)
+ .config_BFC00BF8
+                0xbfc00bf8        0x4 main.o
+
+.config_BFC00BFC
+                0xbfc00bfc        0x4
+ *(.config_BFC00BFC)
+ .config_BFC00BFC
+                0xbfc00bfc        0x4 main.o
+
+.reset          0xbfc00000      0x10c
+ *(.reset)
+ .reset         0xbfc00000       0x10 crt0.o
+                0xbfc00000                _reset
+ *(.reset.startup)
+ .reset.startup
+                0xbfc00010       0xfc crt0.o
+
+.splittext      0x9d01f000      0x984
+ *\cdcacm.o(.text)
+ .text          0x9d01f000      0x2b4 cdcacm.o
+                0x9d01f139                cdcacm_print
+                0x9d01f22d                cdcacm_command_ack
+                0x9d01f255                cdcacm_register
+                0x9d01f2b1                null_reset_cbfn
+ *\usb.o(.text)
+ .text          0x9d01f2b4      0x6d0 usb.o
+                0x9d01f3d1                usb_device_enqueue
+                0x9d01f479                usb_isr
+                0x9d01f825                usb_register
+                0x9d01f835                usb_device_descriptor
+                0x9d01f841                usb_configuration_descriptor
+                0x9d01f84d                usb_string_descriptor
+                0x9d01f859                usb_uninitialize
+                0x9d01f921                usb_initialize
+
+.text
+ *(.stub .gnu.linkonce.t.*)
+ *(EXCLUDE_FILE(usb.o cdcacm.o) .text.*personality*)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+ *(.gnu.warning)
+
+.rodata         0x9fc00200        0x0
+ *(.rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x9fc00200                . = ALIGN (0x4)
+
+.sdata2         0x9fc00200        0x0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x9fc00200                . = ALIGN (0x4)
+
+.sbss2          0x9fc00200        0x0
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+                0x9fc00200                . = ALIGN (0x4)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.dbg_data       0xa0000000      0x200
+                0xa0000000                _skip_ram_space_addr = .
+                0xa0000200                . = (. + 0x200)
+ *fill*         0xa0000000      0x200 00
+
+.skip_ram_space
+                0xa0000200      0x400
+                0xa0000600                . = (. + (_RAM_SKIP_SIZE - SIZEOF (.dbg_data)))
+ *fill*         0xa0000200      0x400 00
+                0xa0000600                _skip_ram_space_end_adder = .
+
+.eh_frame
+ *(.eh_frame)
+                0xa0000600                . = .
+                0xa00085f0                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.sdata          0xa0000600       0x28
+                0xa0000600                _sdata_begin = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0xa0000600       0x20 main.o
+ .sdata         0xa0000620        0x8 cdcacm.o
+                0xa0000628                _sdata_end = .
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0xa0000628                . = ALIGN (0x4)
+                0xa0000628                _data_end = .
+                0xa0000628                _bss_begin = .
+
+.sbss           0xa0000628       0x96
+                0xa0000628                _sbss_begin = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0xa0000628       0x40 main.o
+ .sbss          0xa0000668        0x8 cdcacm.o
+ .sbss          0xa0000670       0x38 usb.o
+ *(.scommon)
+ .scommon       0xa00006a8        0x1 cdcacm.o
+                0xa00006a8                cdcacm_active
+ *fill*         0xa00006a9        0x3 00
+ .scommon       0xa00006ac       0x12 usb.o
+                0xa00006ac                bulk_out_ep
+                0xa00006ad                cdc_attached
+                0xa00006b0                scsi_attached_count
+                0xa00006b4                other_attached
+                0xa00006b5                int_ep
+                0xa00006b6                cdcacm_attached
+                0xa00006b8                cdcacm_attached_count
+                0xa00006bc                bulk_in_ep
+                0xa00006bd                scsi_attached
+                0xa00006be                _sbss_end = .
+
+.bss            0xa00006c0      0x180
+ *(.dynbss)
+ *(COMMON)
+ COMMON         0xa00006c0      0x180 usb.o
+                0xa00006c0                endpoints
+                0xa0000840                . = ALIGN (0x4)
+                0xa0000840                . = ALIGN (0x4)
+                0xa0000840                _end = .
+                0xa0000840                _bss_end = .
+                0x00002000                _bmxdudba_address = 0x2000
+                0x00002000                _bmxdupba_address = 0x2000
+
+/DISCARD/
+ *(.pdr)
+ *(.reginfo)
+ *(.rel.dyn)
+ *(.note.GNU-stack)
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.discard)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x51
+ *(.comment)
+ .comment       0x00000000       0x51 main.o
+                                 0x52 (size before relaxing)
+ .comment       0x00000000       0x52 cdcacm.o
+ .comment       0x00000000       0x52 usb.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x60
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 cdcacm.o
+ .debug_aranges
+                0x00000040       0x20 usb.o
+
+.debug_pubnames
+                0x00000000      0x21e
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x33 main.o
+ .debug_pubnames
+                0x00000033       0x74 cdcacm.o
+ .debug_pubnames
+                0x000000a7      0x177 usb.o
+
+.debug_info     0x00000000     0x2f98
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x146d main.o
+ .debug_info    0x0000146d      0x9e8 cdcacm.o
+ .debug_info    0x00001e55     0x1143 usb.o
+
+.debug_abbrev   0x00000000      0x98a
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x332 main.o
+ .debug_abbrev  0x00000332      0x31c cdcacm.o
+ .debug_abbrev  0x0000064e      0x33c usb.o
+
+.debug_line     0x00000000      0x71f
+ *(.debug_line)
+ .debug_line    0x00000000      0x2f8 main.o
+ .debug_line    0x000002f8      0x1d0 cdcacm.o
+ .debug_line    0x000004c8      0x257 usb.o
+
+.debug_frame    0x00000000      0x2c0
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x114 main.o
+ .debug_frame   0x00000114       0xb0 cdcacm.o
+ .debug_frame   0x000001c4       0xfc usb.o
+
+.debug_str      0x00000000      0x1da
+ *(.debug_str)
+ .debug_str     0x00000000       0xcb main.o
+ .debug_str     0x000000cb       0x60 cdcacm.o
+ .debug_str     0x0000012b       0xaf usb.o
+
+.debug_loc      0x00000000     0x114e
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x5c8 main.o
+ .debug_loc     0x000005c8      0x44f cdcacm.o
+ .debug_loc     0x00000a17      0x737 usb.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+                0x00000000      0x1f1
+ *(.debug_pubtypes)
+ .debug_pubtypes
+                0x00000000       0xd8 main.o
+ .debug_pubtypes
+                0x000000d8       0x61 cdcacm.o
+ .debug_pubtypes
+                0x00000139       0xb8 usb.o
+
+.debug_ranges   0x00000000      0x108
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x78 main.o
+ .debug_ranges  0x00000078       0x90 cdcacm.o
+
+.gnu.attributes
+ *(.gnu.attributes)
+                0x00000001                __MPLAB_BUILD = 0x1
+OUTPUT(MX2-FB_MINI-USB_48MHz.elf elf32-tradlittlemips)
+LOAD stack
+LOAD data_init
+
+.stack          0xa0001a20      0x400
+ .stack         0xa0001a20      0x400 stack
+
+.bss            0xa0000840      0xdec
+ .bss           0xa0000840      0x97c main.o
+ .bss           0xa00011bc      0x470 cdcacm.o
+
+.bss            0xa0001800      0x200
+ .bss           0xa0001800      0x200 usb.o
+
+.bss%z1         0x00000000        0x0
+ .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128D\processor.o
+
+.data%z2        0x00000000        0x0
+ .data          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128D\processor.o
+
+.mdebug.abi32%z3
+                0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 usb.o
+
+.data%z4        0x00000000        0x0
+ .data          0x00000000        0x0 usb.o
+
+.mdebug.abi32%z5
+                0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 cdcacm.o
+
+.data%z6        0x00000000        0x0
+ .data          0x00000000        0x0 cdcacm.o
+
+.bss%z7         0x00000000        0x0
+ .bss           0x00000000        0x0 crt0.o
+
+.data%z8        0x00000000        0x0
+ .data          0x00000000        0x0 crt0.o
+
+.mdebug.abi32%z9
+                0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 main.o
+
+.data%z10       0x00000000        0x0
+ .data          0x00000000        0x0 main.o
+
+.text           0x9fc00208      0x808
+ .text          0x9fc00208      0x808 main.o
+                0x9fc007ed                main
+                0x9fc00969                avrbl_state_machine
+
+.dinit          0x9fc00a10       0x98
+ .dinit         0x9fc00a10       0x98 data_init
+
+.rodata         0x9fc00aa8       0x90
+ .rodata        0x9fc00aa8       0x90 cdcacm.o
+
+.text           0x9fc00b38       0x10
+ .text          0x9fc00b38       0x10 crt0.o
+                0x9fc00b40                __crt0_exit
+
+.rodata         0x9fc00b48        0xc
+ .rodata        0x9fc00b48        0xc main.o
+
+.text%z11       0x00000000        0x0
+ .text          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128D\processor.o

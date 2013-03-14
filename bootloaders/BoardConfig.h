@@ -73,7 +73,7 @@
 #define     prodFubarinoSD      0x0001
 #define     prodFubarinoMini    0x0002
 #define     prodFubarinoSD_512K 0x0003
-#define     prodFubarinoMini50MHz 0x0004
+#define     prodFubarinoMini48MHz 0x0004
 
 // *****************************************************************************
 // *****************************************************************************
@@ -1373,7 +1373,7 @@
     #define FLASH_PAGE_SIZE             1024						// In bytes
 
 //************************************************************************
-#elif defined(_BOARD_FUBARINO_MINI_USB_50MHZ_)
+#elif defined(_BOARD_FUBARINO_MINI_USB_48MHZ_)
  
 #if defined(PUT_CONFIG_BITS_HERE)
 
@@ -1381,7 +1381,7 @@
     #pragma config FNOSC    = PRIPLL                                // Oscillator selection
     #pragma config POSCMOD  = XT                                    // Primary oscillator mode
     #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
-    #pragma config FPLLMUL  = MUL_25                                // PLL multiplier
+    #pragma config FPLLMUL  = MUL_24                                // PLL multiplier
     #pragma config FPLLODIV = DIV_2                                 // PLL output divider
     #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
     #pragma config FSOSCEN  = OFF                                   // Secondary oscillator enable
@@ -1430,7 +1430,7 @@
   
     #define _CPU_NAME_                  "32MX250F128D"
     #define VEND                        vendFubarino
-    #define PROD                        prodFubarinoMini50MHz
+    #define PROD                        prodFubarinoMini48MHz
     #define F_CPU                       50000000UL
     #define F_PBUS                      F_CPU
 
