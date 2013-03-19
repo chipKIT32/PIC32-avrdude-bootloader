@@ -31,6 +31,7 @@
 /*    6/17/2012(KeithV): Added header information                       */
 /*    6/25/2012(KeithV): Added Vendor ID and Product IDs                */
 /*    1/15/2013(BrianS): Added PPS unlock for MX1/MX2 devices           */
+/*    3/18/2013(BrianS): Added 48Mhz FB Mini device, fixed USBID and VBUSON */
 /*                                                                      */
 /************************************************************************/
 
@@ -1210,8 +1211,6 @@
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
     #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
-    #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
-    #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
     
     //* Other Peripheral Device settings
     #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
@@ -1302,7 +1301,7 @@
     #define fLoadFromAVRDudeViaVirtualProgramButton (LATEbits.LATE7 == 1)
     #define ClearVirtualProgramButton()             (LATECLR = (1 << 7))
 
-    #define _CPU_NAME_                  "32MX440F256H"
+    #define _CPU_NAME_                  "32MX795F512H"
     #define VEND                        vendFubarino
     #define PROD                        prodFubarinoSD_512K
     #define F_CPU                       80000000UL
