@@ -74,6 +74,7 @@
 #define     prodFubarinoMini    0x0002
 #define     prodFubarinoSD_512K 0x0003
 #define     prodFubarinoMini48MHz 0x0004
+#define     prodFubarinoMini50MHz 0x0005
 
 // *****************************************************************************
 // *****************************************************************************
@@ -1209,6 +1210,8 @@
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
     #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
+    #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
+    #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
     
     //* Other Peripheral Device settings
     #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
@@ -1269,6 +1272,8 @@
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
     #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
+    #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
+    #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
 
     //* Other Peripheral Device settings
     #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
@@ -1329,6 +1334,8 @@
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
     #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
+    #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
+    #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
     
     //* Other Peripheral Device settings
     #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
@@ -1394,6 +1401,8 @@
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
     #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
+    #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
+    #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
     
     //* Other Peripheral Device settings
     #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
@@ -1459,6 +1468,8 @@
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
     #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
+    #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
+    #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
     
     //* Other Peripheral Device settings
     #pragma config FWDTEN   = OFF                                   // Watchdog timer enable

@@ -333,11 +333,11 @@ LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../.
  .debug_pubnames
                 0x000000a7      0x177 usb.o
 
-.debug_info     0x00000000     0x2fa1
+.debug_info     0x00000000     0x2f98
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x1470 main.o
- .debug_info    0x00001470      0x9eb cdcacm.o
- .debug_info    0x00001e5b     0x1146 usb.o
+ .debug_info    0x00000000     0x146d main.o
+ .debug_info    0x0000146d      0x9e8 cdcacm.o
+ .debug_info    0x00001e55     0x1143 usb.o
 
 .debug_abbrev   0x00000000      0x98a
  *(.debug_abbrev)
