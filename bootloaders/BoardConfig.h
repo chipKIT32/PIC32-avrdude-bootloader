@@ -32,6 +32,7 @@
 /*    6/25/2012(KeithV): Added Vendor ID and Product IDs                */
 /*    1/15/2013(BrianS): Added PPS unlock for MX1/MX2 devices           */
 /*    3/18/2013(BrianS): Added 48Mhz FB Mini device, fixed USBID and VBUSON */
+/*    22/5/2013(gmtii):  Added Olimex PIC32 Pinguino board		*/
 /*                                                                      */
 /************************************************************************/
 
