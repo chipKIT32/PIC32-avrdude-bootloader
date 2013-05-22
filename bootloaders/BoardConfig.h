@@ -48,7 +48,7 @@
 #define     vendMicrochip       0x0002
 #define     vendFubarino        0x0003
 #define     vendSchmalzHausLLC  0x0004
-#define     vendOlimex		0x0005
+#define     vendOlimex          0x0005
 
 
 // *****************************************************************************
