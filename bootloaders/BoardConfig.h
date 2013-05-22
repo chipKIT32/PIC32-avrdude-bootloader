@@ -47,6 +47,8 @@
 #define     vendMicrochip       0x0002
 #define     vendFubarino        0x0003
 #define     vendSchmalzHausLLC  0x0004
+#define     vendOlimex		0x0005
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -85,6 +87,13 @@
 #define     prodEBBv3      		0x0001
 #define     prodUBW32MX460 		0x0002
 #define     prodUBW32MX795 		0x0003
+
+// *****************************************************************************
+// *****************************************************************************
+//                    Olimex Product IDs
+// *****************************************************************************
+// *****************************************************************************
+#define     prodOlimex_PIC32_Pinguino   0x0001
 
 // Bootloader Capability bits
 // The first 4 bits define what type of STK500 interface is used
@@ -1564,8 +1573,8 @@
     #define ClearVirtualProgramButton()             (LATDCLR = (1 << 0))
  
     #define _CPU_NAME_                  "32MX440F256H"
-    #define VEND                        vendFubarino
-    #define PROD                        prodFubarinoSD
+    #define VEND                        vendOlimex
+    #define PROD                        proOlimex_PIC32_Pinguino
     #define F_CPU                       80000000UL
     #define F_PBUS                      F_CPU
 
