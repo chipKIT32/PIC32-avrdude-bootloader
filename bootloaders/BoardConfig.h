@@ -1575,7 +1575,7 @@
  
     #define _CPU_NAME_                  "32MX440F256H"
     #define VEND                        vendOlimex
-    #define PROD                        proOlimex_PIC32_Pinguino
+    #define PROD                        prodOlimex_PIC32_Pinguino
     #define F_CPU                       80000000UL
     #define F_PBUS                      F_CPU
 
