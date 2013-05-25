@@ -1383,7 +1383,7 @@
     #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
     #pragma config FPLLODIV = DIV_2                                 // PLL output divider
     #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                                    // Secondary oscillator enable
+    #pragma config FSOSCEN  = OFF                                   // Secondary oscillator enable
     
     //* Clock control settings
     #pragma config IESO     = OFF                                   // Internal/external clock switchover
