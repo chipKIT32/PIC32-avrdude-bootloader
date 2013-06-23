@@ -32,7 +32,8 @@
 /*    6/25/2012(KeithV): Added Vendor ID and Product IDs                */
 /*    1/15/2013(BrianS): Added PPS unlock for MX1/MX2 devices           */
 /*    3/18/2013(BrianS): Added 48Mhz FB Mini device, fixed USBID and VBUSON */
-/*    22/5/2013(gmtii):  Added Olimex PIC32 Pinguino board		*/
+/*    22/5/2013(gmtii):  Added Olimex PIC32 Pinguino board		        */
+/*    6/2302/13(BrianS): Added DP32                                     */
 /*                                                                      */
 /************************************************************************/
 
@@ -50,7 +51,7 @@
 #define     vendSchmalzHausLLC  0x0004
 #define     vendOlimex          0x0005
 #define		vendElement14		0x0006
-
+#define     vendExperimental    0x8000
 
 // *****************************************************************************
 // *****************************************************************************
@@ -69,6 +70,7 @@
 #define     prodCerebotMX4cK    0x0204
 #define     prodCerebotMX7cK    0x0205
 #define     prodCerebotMX3cK512 0x0206
+#define     prodChipKITDP32     0x0401
 
 // *****************************************************************************
 // *****************************************************************************
@@ -1726,6 +1728,78 @@
     #define FLASH_BYTES                 (0x8000)		    // Leave room one flash block (for bootloader!)
     #define FLASH_PAGE_SIZE             1024				// In bytes
 
+#elif defined(_BOARD_CHIPKIT_DP32_)
+
+#if defined(PUT_CONFIG_BITS_HERE)
+	
+	//* Oscillator Settings
+	#pragma config FNOSC = PRIPLL // Oscillator selection
+	#pragma config POSCMOD = XT // Primary oscillator mode
+	#pragma config FPLLIDIV = DIV_2 // PLL input divider
+	#pragma config FPLLMUL = MUL_20 // PLL multiplier
+	#pragma config FPLLODIV = DIV_2 // PLL output divider
+	#pragma config FPBDIV = DIV_1 // Peripheral bus clock divider
+	#pragma config FSOSCEN = OFF // Secondary oscillator enable
+	
+	//* Clock control settings
+	#pragma config IESO = OFF // Internal/external clock switchover
+	#pragma config FCKSM = CSECME // Clock switching (CSx)/Clock monitor (CMx)
+	#pragma config OSCIOFNC = OFF // Clock output on OSCO pin enable
+	
+	//* USB Settings
+	#pragma config UPLLEN = ON // USB PLL enable
+	#pragma config UPLLIDIV = DIV_2 // USB PLL input divider
+	#pragma config FVBUSONIO = OFF // Make VBUSON a GPIO pin
+	#pragma config FUSBIDIO = OFF // Controlled by port function
+	
+	//* Other Peripheral Device settings
+	#pragma config FWDTEN = OFF // Watchdog timer enable
+	#pragma config WDTPS = PS1024 // Watchdog timer postscaler
+	#pragma config WINDIS = OFF
+	#pragma config JTAGEN = OFF // JTAG port disabled
+	
+	//* Code Protection settings
+	#pragma config CP = OFF // Code protection
+	#pragma config BWP = OFF // Boot flash write protect
+	#pragma config PWP = OFF // Program flash write protect
+	
+	//* Debug settings
+	#pragma config ICESEL = ICS_PGx1 // ICE/ICD Comm Channel Select
+	//#pragma config DEBUG = ON // DO NOT SET THIS CONFIG BIT, it will break debugging
+	
+	#pragma config PMDL1WAY = OFF // Allow multiple reconfigurations
+	#pragma config IOL1WAY = OFF // Allow multiple reconfigurations
+#endif
+	
+	#define CAPABILITIES (blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+	
+	// Boot LED
+	#define EnableBootLED() (TRISBCLR = (1 << 3))
+	#define DisableBootLED() (TRISBSET = (1 << 3))
+	#define BootLED_Toggle() (LATBINV = (1 << 3))
+	#define BootLED_On() (LATBSET = (1 << 3))
+	#define BootLED_Off() (LATBCLR = (1 << 3))
+	
+	// Download LED
+	#define EnableDownLoadLED() (TRISBCLR = (1 << 2))
+	#define DisableDownLoadLED() (TRISBSET = (1 << 2))
+	#define DownloadLED_Toggle() (LATBINV = (1 << 2))
+	#define DownloadLED_On() (LATBSET = (1 << 2))
+	#define DownloadLED_Off() (LATBCLR = (1 << 2))
+	
+	// Other capabilities
+	#define fLoadFromAVRDudeViaProgramButton (PORTBbits.RB4 == 1)
+	#define fLoadFromAVRDudeViaVirtualProgramButton (LATBbits.LATB4 == 1)
+	#define ClearVirtualProgramButton() (LATBCLR = (1 << 4))
+	
+	#define _CPU_NAME_ "32MX250F128B"
+	#define VEND vendDigilent
+	#define PROD prodChipKITDP32
+	#define F_CPU 40000000UL
+	#define F_PBUS F_CPU
+	
+	#define FLASH_BYTES (0x20000-0x1000)	 // Leave room 4 pages (for bootloader!)
+	#define FLASH_PAGE_SIZE 1024 // In bytes
 
 #else
     #error    Board/CPU combination not defined
