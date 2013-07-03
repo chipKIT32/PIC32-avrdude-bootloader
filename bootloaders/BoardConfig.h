@@ -1704,29 +1704,44 @@
     #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
 #endif
 
-	// NOTE: We can't use CAPCOMMON here because this board does not have a BootLED (which is part of CAPCOMMON)
-//    #define CAPABILITIES    (blCapDownloadLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-    #define CAPABILITIES    (blCapUARTInterface | blCapLkInstrFullFlashEraseLess4KEEProm | blCapLkInstrJustInTimeFlashErase | blCapLkInstrFlashErase | blCapLkInstrFullFlashErase | blCapLkInstrExecutionJumpAddress | blCapLkInstrExecutionJumpToFirstInFlash | blCapSupportsRamHeaderAndPersistentData)
+	// Red LED on RA0
+	// Yellow LED on RA1
+	// Boot button on RB9
+    #define CAPABILITIES    (blCapDownloadLED | blCapBootLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
 
     // Other capabilities
-//    #define fLoadFromAVRDudeViaVirtualProgramButton (LATBbits.LATB9 == 1)
-//    #define fLoadFromAVRDudeViaProgramButton        (PORTBbits.RB9 == 1)
-//    #define ClearVirtualProgramButton()             (LATBCLR = (1 << 9))
+    #define fLoadFromAVRDudeViaVirtualProgramButton (LATBbits.LATB9 == 1)
+    #define fLoadFromAVRDudeViaProgramButton        (PORTBbits.RB9 == 1)
+    #define ClearVirtualProgramButton()             (LATBCLR = (1 << 9))
+
+    // Boot LED (Red)
+    #define EnableBootLED()             (TRISACLR = (1 << 0))
+    #define DisableBootLED()            (TRISASET = (1 << 0))
+    #define BootLED_Toggle()            (LATAINV = (1 << 0))
+    #define BootLED_On()                (LATASET = (1 << 0))
+    #define BootLED_Off()               (LATACLR = (1 << 0))
+
+    // Download LED (Yellow)
+    #define EnableDownLoadLED()         (TRISACLR = (1 << 1))
+    #define DisableDownLoadLED()        (TRISASET = (1 << 1))
+    #define DownloadLED_Toggle()        (LATAINV = (1 << 1))    
+    #define DownloadLED_On()            (LATASET = (1 << 1))
+    #define DownloadLED_Off()           (LATACLR = (1 << 1))
 
     // Other capabilities
-    #define _USE_UART1_FOR_BOOTLOADER_                      // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
+    #define _USE_UART1_FOR_BOOTLOADER_                      		// avrdude program UART
+    #define BAUDRATE                    115200              		// avrdude baudrate
     #define UARTMapRX()                 (U1RXR = 0x2)
     #define UARTMapTX()                 (RPB4R = 0x1)
 
-    #define _CPU_NAME_                  "32MX220F032B"
+    #define _CPU_NAME_                  "32MX250F128B"
     #define VEND                        vendElement14
     #define PROD                        prodChipkitPi
     #define F_CPU                       40000000UL
     #define F_PBUS                      F_CPU
 
-    #define FLASH_BYTES                 (0x8000)		    // Leave room one flash block (for bootloader!)
-    #define FLASH_PAGE_SIZE             1024				// In bytes
+    #define FLASH_BYTES                 (0x20000-0x1000)		    // Leave room one flash block (for bootloader!)
+    #define FLASH_PAGE_SIZE             1024						// In bytes
 
 #elif defined(_BOARD_CHIPKIT_DP32_)
 
