@@ -58,8 +58,8 @@ Discarded input sections
  .pdr           0x00000000      0x160 main.o
  .reginfo       0x00000000       0x18 crt0.o
  .pdr           0x00000000       0x60 crt0.o
- .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
- .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
+ .reginfo       0x00000000       0x18 f:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
+ .pdr           0x00000000        0x0 f:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
 
 Memory Configuration
 
@@ -84,7 +84,7 @@ LOAD main.o
 LOAD crt0.o
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
                 0x00000000                PROVIDE (_min_heap_size, 0x0)
-LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
+LOAD f:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
                 0x00000001                PROVIDE (_vector_spacing, 0x1)
                 0x9fc00000                _ebase_address = 0x9fc00000
                 0xbfc00000                _ebase_address = 0xbfc00000
@@ -268,9 +268,9 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x372 main.o
 
-.debug_line     0x00000000      0x325
+.debug_line     0x00000000      0x316
  *(.debug_line)
- .debug_line    0x00000000      0x325 main.o
+ .debug_line    0x00000000      0x316 main.o
 
 .debug_frame    0x00000000      0x10c
  *(.debug_frame)
@@ -305,9 +305,9 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
  .debug_pubtypes
                 0x00000000       0xea main.o
 
-.debug_ranges   0x00000000       0xb0
+.debug_ranges   0x00000000       0xa8
  *(.debug_ranges)
- .debug_ranges  0x00000000       0xb0 main.o
+ .debug_ranges  0x00000000       0xa8 main.o
 
 .gnu.attributes
  *(.gnu.attributes)
@@ -323,10 +323,10 @@ LOAD data_init
  .bss           0xa0000660      0x97c main.o
 
 .bss%z1         0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
+ .bss           0x00000000        0x0 f:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
 
 .data%z2        0x00000000        0x0
- .data          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
+ .data          0x00000000        0x0 f:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
 
 .bss%z3         0x00000000        0x0
  .bss           0x00000000        0x0 crt0.o
@@ -357,4 +357,4 @@ LOAD data_init
  .rodata        0x9fc00ae4        0xc main.o
 
 .text%z7        0x00000000        0x0
- .text          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o
+ .text          0x00000000        0x0 f:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX250F128B\processor.o

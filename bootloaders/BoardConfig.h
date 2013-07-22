@@ -1711,7 +1711,7 @@
 
     // Other capabilities
     #define fLoadFromAVRDudeViaVirtualProgramButton (LATBbits.LATB9 == 1)
-    #define fLoadFromAVRDudeViaProgramButton        (PORTBbits.RB9 == 1)
+    #define fLoadFromAVRDudeViaProgramButton        (PORTBbits.RB9 == 0)
     #define ClearVirtualProgramButton()             (LATBCLR = (1 << 9))
 
     // Boot LED (Red)
@@ -1729,10 +1729,10 @@
     #define DownloadLED_Off()           (LATACLR = (1 << 1))
 
     // Other capabilities
-    #define _USE_UART1_FOR_BOOTLOADER_                      		// avrdude program UART
+    #define _USE_UART2_FOR_BOOTLOADER_                      		// avrdude program UART
     #define BAUDRATE                    115200              		// avrdude baudrate
-    #define UARTMapRX()                 (U1RXR = 0x2)
-    #define UARTMapTX()                 (RPB4R = 0x1)
+    #define UARTMapRX()                 (U2RXR = 0x2)
+    #define UARTMapTX()                 (RPB0R = 0x2)
 
     #define _CPU_NAME_                  "32MX250F128B"
     #define VEND                        vendElement14
