@@ -1662,13 +1662,14 @@
 
 //************************************************************************
 #elif defined(_BOARD_CHIPKIT_PI_)
+// NOTE: As of 8/20/2013 the crystal on the board (v3.37 and above) is now 8MHz, so this bootloader has been updated
 
 #if defined(PUT_CONFIG_BITS_HERE)
 
     //* Oscillator Settings
     #pragma config FNOSC    = PRIPLL                                // Oscillator selection
     #pragma config POSCMOD  = HS                                    // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_4                                 // PLL input divider
+    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
     #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
     #pragma config FPLLODIV = DIV_2                                 // PLL output divider
     #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
@@ -1681,7 +1682,7 @@
 
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
-    #pragma config UPLLIDIV = DIV_4                                 // USB PLL input divider
+    #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
     #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
     #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
 
