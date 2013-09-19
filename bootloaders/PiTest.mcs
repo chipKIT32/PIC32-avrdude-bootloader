@@ -1,0 +1,45 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=D:\Projects\PIC32-avrdude-bootloader\bootloaders\test.o
+Folder=Intermediary
+DeviceName=PIC32MX220F032B
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
+LanguageToolLocation=F:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc32\v2.02\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -O3
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=D:\Projects\PIC32-avrdude-bootloader\bootloaders\PiTest.elf
+Folder=Output
+DeviceName=PIC32MX220F032B
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=F:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc32\v2.02\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Map="$(BINDIR_)$(TARGETBASE).map" -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)"
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=D:\Projects\PIC32-avrdude-bootloader\bootloaders\PiTest.hex
+Folder=Output
+DeviceName=PIC32MX220F032B
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=F:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc32\v2.02\pic32mx\lib||$(LKRDIR)||
+SOLK=<src>|test.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Map="$(BINDIR_)$(TARGETBASE).map" -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)"
+TraceCmdString=
+DebugOptions=
+[TOOL_LOC_STAMPS]
+tool_loc{430F471F-7ECB-4852-A80D-DEF9A5C8E751}=F:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-gcc.exe
+tool_loc{C68E5105-1196-4333-A0BF-3DC57271E614}=F:\Program Files\Microchip\mplabc32\v2.02\bin\pic32-ld.exe

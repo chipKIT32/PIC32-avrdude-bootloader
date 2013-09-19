@@ -402,7 +402,7 @@ LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../.
 .gnu.attributes
  *(.gnu.attributes)
                 0x00000001                __MPLAB_BUILD = 0x1
-OUTPUT(MX2-FB_MINI-USB.elf elf32-tradlittlemips)
+OUTPUT(MX2-FB_MINI-USB_50MHz.elf elf32-tradlittlemips)
 LOAD stack
 LOAD data_init
 
