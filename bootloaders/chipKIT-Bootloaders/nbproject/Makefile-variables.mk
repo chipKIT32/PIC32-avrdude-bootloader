@@ -137,3 +137,10 @@ CND_ARTIFACT_PATH_MX7_UWB32_USB=dist/MX7_UWB32_USB/production/chipKIT-Bootloader
 CND_PACKAGE_DIR_MX7_UWB32_USB=${CND_DISTDIR}/MX7_UWB32_USB/package
 CND_PACKAGE_NAME_MX7_UWB32_USB=chipkit-bootloaders.tar
 CND_PACKAGE_PATH_MX7_UWB32_USB=${CND_DISTDIR}/MX7_UWB32_USB/package/chipkit-bootloaders.tar
+# MX2_chipKIT_PI_USB configuration
+CND_ARTIFACT_DIR_MX2_chipKIT_PI_USB=dist/MX2_chipKIT_PI_USB/production
+CND_ARTIFACT_NAME_MX2_chipKIT_PI_USB=chipKIT-Bootloaders.production.hex
+CND_ARTIFACT_PATH_MX2_chipKIT_PI_USB=dist/MX2_chipKIT_PI_USB/production/chipKIT-Bootloaders.production.hex
+CND_PACKAGE_DIR_MX2_chipKIT_PI_USB=${CND_DISTDIR}/MX2_chipKIT_PI_USB/package
+CND_PACKAGE_NAME_MX2_chipKIT_PI_USB=chipkit-bootloaders.tar
+CND_PACKAGE_PATH_MX2_chipKIT_PI_USB=${CND_DISTDIR}/MX2_chipKIT_PI_USB/package/chipkit-bootloaders.tar
