@@ -52,6 +52,7 @@
 #define     vendOlimex          0x0005
 #define		vendElement14		0x0006
 #define     vendPontech         0x0007
+#define     vendSeeed           0x0008
 #define     vendExperimental    0x8000
 
 // *****************************************************************************
@@ -113,6 +114,13 @@
 // *****************************************************************************
 // *****************************************************************************
 #define     prodQuick240                0x0001
+
+// *****************************************************************************
+// *****************************************************************************
+//                    Seeed Product IDs
+// *****************************************************************************
+// *****************************************************************************
+#define     prodCUI32Stem               0x0001
 
 // Bootloader Capability bits
 // The first 4 bits define what type of STK500 interface is used
@@ -1830,6 +1838,75 @@
 
 #if defined(PUT_CONFIG_BITS_HERE)
 
+    //*    Oscillator Settings
+    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
+    #pragma config POSCMOD      = XT                                // Primary oscillator mode
+    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
+    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
+    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
+    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
+    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
+
+    //*    Clock control settings
+    #pragma config IESO         = OFF                               // Internal/external clock switchover
+    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
+    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
+
+    //*    Other Peripheral Device settings
+    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
+    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
+
+    //*    Code Protection settings
+    #pragma config CP           = OFF                               // Code protection
+    #pragma config BWP          = OFF                               // Boot flash write protect
+    #pragma config PWP          = OFF                               // Program flash write protect
+
+    //*    Debug settings
+    #pragma config ICESEL       = ICS_PGx2                          // ICE pin selection
+
+    //*    Other Peripheral Device settings
+    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
+    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
+    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
+    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
+
+    //*    USB Settings
+    #pragma config UPLLEN       = ON                                // USB PLL enable
+    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
+    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
+    #pragma config FUSBIDIO     = OFF                               // USBID pin control
+
+#endif
+
+    #define CAPABILITIES    (blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+
+    // Boot LED
+    #define EnableBootLED()             (TRISECLR = (1 << 0))
+    #define DisableBootLED()            (TRISESET = (1 << 0))
+    #define BootLED_Toggle()            (LATEINV = (1 << 0))
+    #define BootLED_On()                (LATESET = (1 << 0))
+    #define BootLED_Off()               (LATECLR = (1 << 0))
+
+    // Other capabilities
+    #define fLoadFromAVRDudeViaProgramButton        (PORTGbits.RG15 == 0)
+    #define fLoadFromAVRDudeViaVirtualProgramButton (LATGbits.LATG15 == 1)
+    #define ClearVirtualProgramButton()             (LATGCLR = (1 << 15))
+
+    #define _CPU_NAME_                  "32MX795F512L"
+    #define VEND                        vendPontech
+    #define PROD                        prodQuick240
+    #define F_CPU                       80000000UL
+    #define F_PBUS                      F_CPU
+
+    #define FLASH_BYTES                 0x80000                     // 512K
+    #define FLASH_PAGE_SIZE             4096
+    #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
+
+//************************************************************************
+#elif defined(_BOARD_CUI32STEM_)
+
+#if defined(PUT_CONFIG_BITS_HERE)
+
     //* Oscillator Settings
     #pragma config FNOSC    = PRIPLL                                // Oscillator selection
     #pragma config POSCMOD  = HS                                    // Primary oscillator mode
@@ -1873,13 +1950,13 @@
     #define BootLED_Off()               (LATECLR = (1 << 0))
 
     // Other capabilities
-    #define fLoadFromAVRDudeViaProgramButton        (PORTGbits.RG15 == 0)
-    #define fLoadFromAVRDudeViaVirtualProgramButton (LATGbits.LATG15 == 1)
-    #define ClearVirtualProgramButton()             (LATGCLR = (1 << 15))
+    #define fLoadFromAVRDudeViaProgramButton        (PORTEbits.RE7 == 0)
+    #define fLoadFromAVRDudeViaVirtualProgramButton (LATEbits.LATE7 == 1)
+    #define ClearVirtualProgramButton()             (LATECLR = (1 << 7))
 
     #define _CPU_NAME_                  "32MX795F512H"
-    #define VEND                        vendPontech
-    #define PROD                        prodQuick240
+    #define VEND                        vendSeeed
+    #define PROD                        prodCUI32Stem
     #define F_CPU                       80000000UL
     #define F_PBUS                      F_CPU
 
