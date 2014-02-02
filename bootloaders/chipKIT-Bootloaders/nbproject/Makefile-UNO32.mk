@@ -13,8 +13,8 @@ ifeq "${IGNORE_LOCAL}" "TRUE"
 else
 include Makefile
 # Include makefile containing local settings
-ifeq "$(wildcard nbproject/Makefile-local-MX7_USB.mk)" "nbproject/Makefile-local-MX7_USB.mk"
-include nbproject/Makefile-local-MX7_USB.mk
+ifeq "$(wildcard nbproject/Makefile-local-UNO32.mk)" "nbproject/Makefile-local-UNO32.mk"
+include nbproject/Makefile-local-UNO32.mk
 endif
 endif
 
@@ -25,7 +25,7 @@ MV=mv
 CP=cp 
 
 # Macros
-CND_CONF=MX7_USB
+CND_CONF=UNO32
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../main.c ../crt0.S ../cdcacm.c ../usb.c
+SOURCEFILES_QUOTED_IF_SPACED=../main.c ../crt0.S
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/crt0.o ${OBJECTDIR}/_ext/1472/cdcacm.o ${OBJECTDIR}/_ext/1472/usb.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/1472/crt0.o.d ${OBJECTDIR}/_ext/1472/cdcacm.o.d ${OBJECTDIR}/_ext/1472/usb.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/crt0.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/1472/crt0.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/crt0.o ${OBJECTDIR}/_ext/1472/cdcacm.o ${OBJECTDIR}/_ext/1472/usb.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/crt0.o
 
 # Source Files
-SOURCEFILES=../main.c ../crt0.S ../cdcacm.c ../usb.c
+SOURCEFILES=../main.c ../crt0.S
 
 
 CFLAGS=
@@ -72,9 +72,9 @@ LDLIBSOPTIONS=
 FIXDEPS=fixDeps
 
 .build-conf:  ${BUILD_SUBPROJECTS}
-	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-MX7_USB.mk dist/${CND_CONF}/${IMAGE_TYPE}/chipKIT-Bootloaders.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-UNO32.mk dist/${CND_CONF}/${IMAGE_TYPE}/chipKIT-Bootloaders.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
-MP_PROCESSOR_OPTION=32MX795F512L
+MP_PROCESSOR_OPTION=32MX320F128H
 MP_LINKER_FILE_OPTION=,--script="..\MX3-7-boot-linkerscript.ld"
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
@@ -109,38 +109,14 @@ ${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CEREBOT_32MX7_USB_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c  
-	
-${OBJECTDIR}/_ext/1472/cdcacm.o: ../cdcacm.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/cdcacm.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/cdcacm.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/cdcacm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CEREBOT_32MX7_USB_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/cdcacm.o.d" -o ${OBJECTDIR}/_ext/1472/cdcacm.o ../cdcacm.c  
-	
-${OBJECTDIR}/_ext/1472/usb.o: ../usb.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/usb.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/usb.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/usb.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CEREBOT_32MX7_USB_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/usb.o.d" -o ${OBJECTDIR}/_ext/1472/usb.o ../usb.c  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CHIPKIT_UNO32_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c  
 	
 else
 ${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CEREBOT_32MX7_USB_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c  
-	
-${OBJECTDIR}/_ext/1472/cdcacm.o: ../cdcacm.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/cdcacm.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/cdcacm.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/cdcacm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CEREBOT_32MX7_USB_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/cdcacm.o.d" -o ${OBJECTDIR}/_ext/1472/cdcacm.o ../cdcacm.c  
-	
-${OBJECTDIR}/_ext/1472/usb.o: ../usb.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1472 
-	@${RM} ${OBJECTDIR}/_ext/1472/usb.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/usb.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/usb.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CEREBOT_32MX7_USB_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/usb.o.d" -o ${OBJECTDIR}/_ext/1472/usb.o ../usb.c  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -mips16 -mno-float -D_BOARD_CHIPKIT_UNO32_ -I".." -Os -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d" -o ${OBJECTDIR}/_ext/1472/main.o ../main.c  
 	
 endif
 
@@ -167,8 +143,8 @@ endif
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r build/MX7_USB
-	${RM} -r dist/MX7_USB
+	${RM} -r build/UNO32
+	${RM} -r dist/UNO32
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl
