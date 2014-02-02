@@ -1218,7 +1218,7 @@
     #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
 
 //************************************************************************
-#elif defined(_BOARD_FUBARINO_SD_USB_)
+#elif defined(_BOARD_FUBARINO_SD_USB_)  // 32MX440F256H, SeedStudio version (after first 100) - v1.4
  
 #if defined(PUT_CONFIG_BITS_HERE)
 
@@ -1278,7 +1278,7 @@
     #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
 
 //************************************************************************
-#elif defined(_BOARD_FUBARINO_SD_512K_USB_)
+#elif defined(_BOARD_FUBARINO_SD_512K_USB_) // 32MX795F512H, Microchip version (v1.5)
 
 #if defined(PUT_CONFIG_BITS_HERE)
 
@@ -1669,7 +1669,7 @@
     #define FLASH_PAGE_SIZE             1024						// In bytes
 
 //************************************************************************
-#elif defined(_BOARD_CHIPKIT_PI_)
+#elif defined(_BOARD_CHIPKIT_PI_)   // UART (Default) version
 // NOTE: As of 8/20/2013 the crystal on the board (v3.37 and above) is now 8MHz, so this bootloader has been updated
 
 #if defined(PUT_CONFIG_BITS_HERE)
