@@ -48,8 +48,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -150,6 +150,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -159,6 +160,8 @@
         <property key="preprocessor-macros" value="_BOARD_CHIPKIT_UNO32_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -180,6 +183,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -187,11 +191,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -202,8 +208,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -269,8 +303,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -371,6 +405,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -380,6 +415,8 @@
         <property key="preprocessor-macros" value="_BOARD_CHIPKIT_MAX32_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -401,6 +438,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -408,11 +446,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -423,8 +463,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -501,8 +569,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -603,6 +671,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -612,6 +681,8 @@
         <property key="preprocessor-macros" value="_BOARD_EXAMPLE_MX1_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -633,6 +704,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -640,11 +712,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -655,8 +729,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -689,8 +791,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -761,6 +863,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -770,6 +873,8 @@
         <property key="preprocessor-macros" value="_BOARD_EBBV3_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -791,6 +896,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -798,11 +904,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -813,8 +921,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -884,8 +1020,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -956,6 +1092,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -965,6 +1102,8 @@
         <property key="preprocessor-macros" value="_BOARD_FUBARINO_MINI_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -986,6 +1125,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -993,11 +1133,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -1008,8 +1150,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -1079,8 +1249,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1151,6 +1321,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -1160,6 +1331,8 @@
         <property key="preprocessor-macros" value="_MX2_chipKIT_PI_USB"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -1181,6 +1354,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -1188,11 +1362,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -1203,8 +1379,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -1274,8 +1478,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1328,6 +1532,14 @@
         </C32Global>
       </item>
       <item path="../cdcacm.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
@@ -1340,6 +1552,14 @@
         </C32Global>
       </item>
       <item path="../usb.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32Global>
+        </C32Global>
       </item>
       <C32>
         <property key="additional-warnings" value="false"/>
@@ -1350,6 +1570,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -1359,6 +1580,8 @@
         <property key="preprocessor-macros" value="_BOARD_CHIPKIT_PI_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -1380,6 +1603,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -1387,11 +1611,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -1402,8 +1628,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -1473,8 +1727,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1575,6 +1829,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -1584,6 +1839,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_MX3CK_128_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -1605,6 +1862,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -1612,11 +1870,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -1627,8 +1887,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -1694,8 +1982,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1796,6 +2084,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -1805,6 +2094,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_MX3CK_512_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -1826,6 +2117,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -1833,11 +2125,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -1848,8 +2142,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -1916,8 +2238,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -1988,6 +2310,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -1997,6 +2320,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_32MX4_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -2018,6 +2343,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -2025,11 +2351,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -2040,8 +2368,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -2074,8 +2430,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -2176,6 +2532,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -2185,6 +2542,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_32MX4_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -2206,6 +2565,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -2213,11 +2573,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -2228,8 +2590,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -2262,8 +2652,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -2334,6 +2724,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -2343,6 +2734,8 @@
         <property key="preprocessor-macros" value="_BOARD_UBW32_MX460_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -2364,6 +2757,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -2371,11 +2765,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -2386,8 +2782,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -2454,8 +2878,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -2526,6 +2950,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -2535,6 +2960,8 @@
         <property key="preprocessor-macros" value="_BOARD_FUBARINO_SD_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -2556,6 +2983,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -2563,11 +2991,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -2578,8 +3008,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -2646,8 +3104,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -2748,6 +3206,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -2757,6 +3216,8 @@
         <property key="preprocessor-macros" value="_BOARD_CHIPKIT_UC32_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -2778,6 +3239,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -2785,11 +3247,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -2800,8 +3264,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -2868,8 +3360,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -2970,6 +3462,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -2979,6 +3472,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_MX4CK_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -3000,6 +3495,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -3007,11 +3503,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -3022,8 +3520,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -3056,8 +3582,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -3158,6 +3684,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -3167,6 +3694,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_MX7CK_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -3188,6 +3717,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -3195,11 +3725,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -3210,8 +3742,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -3244,8 +3804,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -3316,6 +3876,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -3325,6 +3886,8 @@
         <property key="preprocessor-macros" value="_BOARD_FUBARINO_SD_512K_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -3346,6 +3909,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -3353,11 +3917,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -3368,8 +3934,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -3445,8 +4039,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -3547,6 +4141,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -3556,6 +4151,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_32MX7_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -3577,6 +4174,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -3584,11 +4182,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -3599,8 +4199,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -3633,8 +4261,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -3705,6 +4333,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -3714,6 +4343,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_32MX7_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -3735,6 +4366,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -3742,11 +4374,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -3757,8 +4391,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -3791,8 +4453,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PK3OBPlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -3863,6 +4525,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -3872,6 +4535,8 @@
         <property key="preprocessor-macros" value="_BOARD_CEREBOT_32MX7_USB_SPLIT_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -3893,6 +4558,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -3900,11 +4566,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -3915,8 +4583,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -3949,8 +4645,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>C32</languageToolchain>
-        <languageToolchainVersion>2.02</languageToolchainVersion>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -4021,6 +4717,7 @@
         <property key="exclude-floating-point" value="true"/>
         <property key="extra-include-directories" value=".."/>
         <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-Os"/>
@@ -4030,6 +4727,8 @@
         <property key="preprocessor-macros" value="_BOARD_UBW32_MX795_USB_"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
       <C32-AS>
@@ -4051,6 +4750,7 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="true"/>
         <property key="exclude-standard-libraries" value="true"/>
@@ -4058,11 +4758,13 @@
                   value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
         <property key="generate-16-bit-code" value="true"/>
         <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
@@ -4073,8 +4775,36 @@
         <property key="warn-section-align" value="false"/>
         <appendMe value="-Os"/>
       </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
       <C32Global>
         <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>

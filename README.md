@@ -12,8 +12,9 @@ These two methods are mutually exclusive in the current bootloader code - for a 
 for EITHER serial OR USB, but not both. This decission is made by which files are included in the build, and the #define
 CAPIBILITIES in the BoardConfig.h file.
 
-There is a separate project and workspace for each board for MPLAB 8, and a single project and multiple build targets for
-MPLAB X. To build the code requires eiher MPLAB 8 or MPLAB X and the C32 v2.02 compiler.
+There is a separate project and workspace for each board for MPLAB 8 (no longer maintained), and a single project 
+and multiple build targets for MPLAB X. To build the code requires eiher MPLAB 8 or MPLAB X and the XC32 v1.20 (or
+higher) compiler. Note that the full size optomizations are needed for this bootloader, so the free XC32 won't work.
 
 IMPORTANT NOTE: While the majority of this code was written and tested by Keith Vogel of Digilent Inc., this software
 is NOT a product of Digilent Inc. and Digilent will provide no suport for it. They have gracefully contributed this 
