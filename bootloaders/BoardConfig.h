@@ -2081,8 +2081,6 @@ static inline void __attribute__((always_inline)) ExposeSysClock(void)
     //* USB Settings
     #pragma config UPLLEN   = ON                                    // USB PLL enable
     #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
-    #pragma config FUSBIDIO = OFF									// USB USID pin controlled by port function
-    #pragma config FVBUSONIO = OFF									// USB VBUSON pin controlled by port function
     
     //* Other Peripheral Device settings
     #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
