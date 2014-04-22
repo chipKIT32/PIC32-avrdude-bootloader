@@ -11,7 +11,7 @@
 
 #ifndef MAIN_INCLUDED
 
-#define BOOTLOADERVER               0x01000108ul
+#define BOOTLOADERVER               0x01000301ul
 #define NULL                        ((void*)0)
 #define ALLF                        (0xFFFFFFFF)
 #define cbRAMReservedForDebugger    0x200ul
@@ -31,6 +31,12 @@
 #define NVMOP_WORD_PGM          0x4001      // Word program operation
 #define NVMOP_ROW_PGM           0x4003      // Row write
 #define NVMOP_PAGE_ERASE        0x4004      // Page erase operation
+
+#define NVMCON_NVMOP           	0x0000000f
+#define NVMCON_ERASE            0x00000040
+#define NVMCON_WRERR            0x00002000
+#define NVMCON_WREN             0x00004000
+#define NVMCON_WR               0x00008000
 
 #define ReadK0(dest) __asm__ __volatile__("mfc0 %0,$16" : "=r" (dest))
 #define WriteK0(src) __asm__ __volatile__("mtc0 %0,$16" : : "r" (src))
@@ -90,7 +96,7 @@ typedef void __attribute__((far, noreturn)) (* FNUSERAPP)(void);
 #define startOfFlashPage(a) (a & (~(FLASH_PAGE_SIZE - 1)))
 #define nextFlashPage(a) (startOfFlashPage(a) + FLASH_PAGE_SIZE)
 #define numberOfFlashPages(ihigh, ilow) ((ihigh - ilow + FLASH_PAGE_SIZE - 1) / FLASH_PAGE_SIZE)
-#define getPageIndex(a) (((startOfFlashPage(a)) - FLASH_START) / FLASH_PAGE_SIZE)
+#define getPageIndex(a) (((startOfFlashPage(KVA_2_PA(a))) - KVA_2_PA(FLASH_START)) / FLASH_PAGE_SIZE)
 #define wasPageErased(a) (pageMap[getPageIndex(a)] == 1)
 
 #define imageReserved                                   0x00000000ul
