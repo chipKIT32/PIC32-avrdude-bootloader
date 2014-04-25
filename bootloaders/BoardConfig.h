@@ -2449,10 +2449,10 @@
     #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
 #endif
 
-	// Red LED on RA0
-	// Yellow LED on RA1
+	// LED1 on RA0
+	// LED2 on RB15
 	// Boot button on RB9
-    #define CAPABILITIES    (blCapDownloadLED | blCapBootLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+    #define CAPABILITIES    (blCapBootLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
 
     // BTN / LED sense
     #define LedOn       High
@@ -2469,10 +2469,6 @@
     // Program button
     #define PBntPort    B
     #define PBntBit     9
-
-    // Download LED (Yellow)
-    #define DLedLat     A
-    #define DLedBit     1
 
     // Other capabilities
     #define BOOTLOADER_UART             2                   // avrdude program UART
@@ -2599,15 +2595,18 @@
     #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
 #endif
     
-    #define CAPABILITIES    (blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+	// LED1 on RA0
+	// LED2 on RB15
+	// Boot button on RB9
+    #define CAPABILITIES    (blCapSplitFlashBootloader | blCapUSBInterface | blCapBootLED | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
 
     // BTN / LED sense
     #define LedOn       High
     #define BntOn       Low
 
     // Boot LED
-    #define BLedLat     B
-    #define BLedBit     4
+    #define BLedLat     A
+    #define BLedBit     0
 
     // Virtual program button
     #define VPBntLat    B
@@ -2617,7 +2616,7 @@
     #define PBntPort    B
     #define PBntBit     9
   
-    #define _CPU_NAME_                  "32MX250F128B"
+#define _CPU_NAME_                  "32MX250F128B"
     #define VEND                        vendElement14
     #define PROD                        prodUnassigned
     #define F_CPU                       40000000UL
