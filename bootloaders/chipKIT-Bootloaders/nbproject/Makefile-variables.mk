@@ -39,6 +39,20 @@ CND_ARTIFACT_PATH_MX2_FB_MINI_USB=dist/MX2_FB_MINI_USB/production/chipKIT-Bootlo
 CND_PACKAGE_DIR_MX2_FB_MINI_USB=${CND_DISTDIR}/MX2_FB_MINI_USB/package
 CND_PACKAGE_NAME_MX2_FB_MINI_USB=chipkit-bootloaders.tar
 CND_PACKAGE_PATH_MX2_FB_MINI_USB=${CND_DISTDIR}/MX2_FB_MINI_USB/package/chipkit-bootloaders.tar
+# MX2_chipKIT_PI_USB configuration
+CND_ARTIFACT_DIR_MX2_chipKIT_PI_USB=dist/MX2_chipKIT_PI_USB/production
+CND_ARTIFACT_NAME_MX2_chipKIT_PI_USB=chipKIT-Bootloaders.production.hex
+CND_ARTIFACT_PATH_MX2_chipKIT_PI_USB=dist/MX2_chipKIT_PI_USB/production/chipKIT-Bootloaders.production.hex
+CND_PACKAGE_DIR_MX2_chipKIT_PI_USB=${CND_DISTDIR}/MX2_chipKIT_PI_USB/package
+CND_PACKAGE_NAME_MX2_chipKIT_PI_USB=chipkit-bootloaders.tar
+CND_PACKAGE_PATH_MX2_chipKIT_PI_USB=${CND_DISTDIR}/MX2_chipKIT_PI_USB/package/chipkit-bootloaders.tar
+# MX2_chipKIT_PI_UART configuration
+CND_ARTIFACT_DIR_MX2_chipKIT_PI_UART=dist/MX2_chipKIT_PI_UART/production
+CND_ARTIFACT_NAME_MX2_chipKIT_PI_UART=chipKIT-Bootloaders.production.hex
+CND_ARTIFACT_PATH_MX2_chipKIT_PI_UART=dist/MX2_chipKIT_PI_UART/production/chipKIT-Bootloaders.production.hex
+CND_PACKAGE_DIR_MX2_chipKIT_PI_UART=${CND_DISTDIR}/MX2_chipKIT_PI_UART/package
+CND_PACKAGE_NAME_MX2_chipKIT_PI_UART=chipkit-bootloaders.tar
+CND_PACKAGE_PATH_MX2_chipKIT_PI_UART=${CND_DISTDIR}/MX2_chipKIT_PI_UART/package/chipkit-bootloaders.tar
 # MX3cK_128 configuration
 CND_ARTIFACT_DIR_MX3cK_128=dist/MX3cK_128/production
 CND_ARTIFACT_NAME_MX3cK_128=chipKIT-Bootloaders.production.hex
@@ -81,13 +95,6 @@ CND_ARTIFACT_PATH_MX4_FB_SD_USB=dist/MX4_FB_SD_USB/production/chipKIT-Bootloader
 CND_PACKAGE_DIR_MX4_FB_SD_USB=${CND_DISTDIR}/MX4_FB_SD_USB/package
 CND_PACKAGE_NAME_MX4_FB_SD_USB=chipkit-bootloaders.tar
 CND_PACKAGE_PATH_MX4_FB_SD_USB=${CND_DISTDIR}/MX4_FB_SD_USB/package/chipkit-bootloaders.tar
-# MX4_FB_SD_512K_USB configuration
-CND_ARTIFACT_DIR_MX4_FB_SD_512K_USB=dist/MX4_FB_SD_512K_USB/production
-CND_ARTIFACT_NAME_MX4_FB_SD_512K_USB=chipKIT-Bootloaders.production.hex
-CND_ARTIFACT_PATH_MX4_FB_SD_512K_USB=dist/MX4_FB_SD_512K_USB/production/chipKIT-Bootloaders.production.hex
-CND_PACKAGE_DIR_MX4_FB_SD_512K_USB=${CND_DISTDIR}/MX4_FB_SD_512K_USB/package
-CND_PACKAGE_NAME_MX4_FB_SD_512K_USB=chipkit-bootloaders.tar
-CND_PACKAGE_PATH_MX4_FB_SD_512K_USB=${CND_DISTDIR}/MX4_FB_SD_512K_USB/package/chipkit-bootloaders.tar
 # uC32 configuration
 CND_ARTIFACT_DIR_uC32=dist/uC32/production
 CND_ARTIFACT_NAME_uC32=chipKIT-Bootloaders.production.hex
@@ -109,6 +116,13 @@ CND_ARTIFACT_PATH_MX7cK=dist/MX7cK/production/chipKIT-Bootloaders.production.hex
 CND_PACKAGE_DIR_MX7cK=${CND_DISTDIR}/MX7cK/package
 CND_PACKAGE_NAME_MX7cK=chipkit-bootloaders.tar
 CND_PACKAGE_PATH_MX7cK=${CND_DISTDIR}/MX7cK/package/chipkit-bootloaders.tar
+# MX7_FB_SD_512K_USB configuration
+CND_ARTIFACT_DIR_MX7_FB_SD_512K_USB=dist/MX7_FB_SD_512K_USB/production
+CND_ARTIFACT_NAME_MX7_FB_SD_512K_USB=chipKIT-Bootloaders.production.hex
+CND_ARTIFACT_PATH_MX7_FB_SD_512K_USB=dist/MX7_FB_SD_512K_USB/production/chipKIT-Bootloaders.production.hex
+CND_PACKAGE_DIR_MX7_FB_SD_512K_USB=${CND_DISTDIR}/MX7_FB_SD_512K_USB/package
+CND_PACKAGE_NAME_MX7_FB_SD_512K_USB=chipkit-bootloaders.tar
+CND_PACKAGE_PATH_MX7_FB_SD_512K_USB=${CND_DISTDIR}/MX7_FB_SD_512K_USB/package/chipkit-bootloaders.tar
 # MX7_UART configuration
 CND_ARTIFACT_DIR_MX7_UART=dist/MX7_UART/production
 CND_ARTIFACT_NAME_MX7_UART=chipKIT-Bootloaders.production.hex

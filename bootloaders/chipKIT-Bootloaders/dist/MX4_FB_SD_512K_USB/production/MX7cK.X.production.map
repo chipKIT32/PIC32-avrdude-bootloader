@@ -2,18 +2,18 @@
 Allocating common symbols
 Common symbol       size              file
 
-bulk_out_ep         0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-cdc_attached        0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-scsi_attached_count
-                    0x4               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-endpoints           0x180             build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-other_attached      0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-int_ep              0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-cdcacm_attached     0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 cdcacm_attached_count
                     0x4               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-bulk_in_ep          0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+bulk_out_ep         0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+int_ep              0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 cdcacm_active       0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
+bulk_in_ep          0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+cdcacm_attached     0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+cdc_attached        0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+endpoints           0x180             build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+scsi_attached_count
+                    0x4               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+other_attached      0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 scsi_attached       0x1               build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 
 Microchip PIC32 Memory-Usage Report
@@ -21,12 +21,12 @@ Microchip PIC32 Memory-Usage Report
 kseg0 Program-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-.text                   0x9fc00498         0x1178        4472  App's exec code 
-.dinit                  0x9fc01610           0x98         152   
-.rodata                 0x9fc016a8           0x90         144  Read-only const 
-.text                   0x9fc01738           0x10          16  App's exec code 
-.rodata                 0x9fc01748            0xc          12  Read-only const 
-      Total kseg0_program_mem used  :      0x12bc        4796  68.4% of 0x1b60
+.text                   0x9fc00498         0x1194        4500  App's exec code 
+.dinit                  0x9fc0162c           0x98         152   
+.rodata                 0x9fc016c4           0x90         144  Read-only const 
+.text                   0x9fc01754           0x10          16  App's exec code 
+.rodata                 0x9fc01764            0xc          12  Read-only const 
+      Total kseg0_program_mem used  :      0x12d8        4824  68.8% of 0x1b60
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -44,7 +44,7 @@ section                    address  length [bytes]      (dec)  Description
 .reset                  0xbfc00000          0x10c         268  Reset handler 
          Total kseg1_boot_mem used  :       0x10c         268  29.9% of 0x380
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x13c8        5064  63.9% of 0x1ef0
+         Total Program Memory used  :      0x13e4        5092  64.3% of 0x1ef0
         --------------------------------------------------------------------------
 
 
@@ -82,8 +82,8 @@ Discarded input sections
  .pdr           0x00000000       0xe0 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
  .reginfo       0x00000000       0x18 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
  .pdr           0x00000000      0x160 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
- .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
- .pdr           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .reginfo       0x00000000       0x18 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512H\processor.o
+ .pdr           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512H\processor.o
 
 Memory Configuration
 
@@ -112,7 +112,7 @@ LOAD build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
                 0x00000001                __MPLAB_BUILD = 0x1
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
                 0x00000000                PROVIDE (_min_heap_size, 0x0)
-LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+LOAD c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512H\processor.o
                 0x00000001                PROVIDE (_vector_spacing, 0x1)
                 0xbfc00000                _ebase_address = 0xbfc00000
                 0xbfc00000                _RESET_ADDR = _ebase_address
@@ -121,7 +121,10 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
                 0x00000600                _RAM_SKIP_SIZE = 0x600
 
 .config_BFC02FF0
+                0xbfc02ff0        0x4
  *(.config_BFC02FF0)
+ .config_BFC02FF0
+                0xbfc02ff0        0x4 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
 
 .config_BFC02FF4
                 0xbfc02ff4        0x4
@@ -223,14 +226,14 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
                 0xa00006a8                cdcacm_active
  *fill*         0xa00006a9        0x3 00
  .scommon       0xa00006ac       0x12 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-                0xa00006ac                bulk_out_ep
-                0xa00006ad                cdc_attached
-                0xa00006b0                scsi_attached_count
-                0xa00006b4                other_attached
-                0xa00006b5                int_ep
-                0xa00006b6                cdcacm_attached
-                0xa00006b8                cdcacm_attached_count
-                0xa00006bc                bulk_in_ep
+                0xa00006ac                cdcacm_attached_count
+                0xa00006b0                bulk_out_ep
+                0xa00006b1                int_ep
+                0xa00006b2                bulk_in_ep
+                0xa00006b3                cdcacm_attached
+                0xa00006b4                cdc_attached
+                0xa00006b8                scsi_attached_count
+                0xa00006bc                other_attached
                 0xa00006bd                scsi_attached
                 0xa00006be                _sbss_end = .
 
@@ -314,26 +317,26 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
  .debug_pubnames
                 0x000000a7      0x177 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 
-.debug_info     0x00000000     0x2d7f
+.debug_info     0x00000000     0x2dfb
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x13b7 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
- .debug_info    0x000013b7       0x77 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
- .debug_info    0x0000142e      0x906 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
- .debug_info    0x00001d34     0x104b build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+ .debug_info    0x00000000     0x13d9 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
+ .debug_info    0x000013d9       0x77 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
+ .debug_info    0x00001450      0x928 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
+ .debug_info    0x00001d78     0x1083 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 
-.debug_abbrev   0x00000000      0x959
+.debug_abbrev   0x00000000      0x968
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x332 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
- .debug_abbrev  0x00000332       0x12 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
- .debug_abbrev  0x00000344      0x2d9 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
- .debug_abbrev  0x0000061d      0x33c build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+ .debug_abbrev  0x00000000      0x341 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
+ .debug_abbrev  0x00000341       0x12 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
+ .debug_abbrev  0x00000353      0x2d9 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
+ .debug_abbrev  0x0000062c      0x33c build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 
-.debug_line     0x00000000      0x7e4
+.debug_line     0x00000000      0x7e3
  *(.debug_line)
- .debug_line    0x00000000      0x2fa build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
- .debug_line    0x000002fa       0xa2 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
- .debug_line    0x0000039c      0x1e2 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
- .debug_line    0x0000057e      0x266 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+ .debug_line    0x00000000      0x305 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
+ .debug_line    0x00000305       0xa2 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
+ .debug_line    0x000003a7      0x1dc build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
+ .debug_line    0x00000583      0x260 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 
 .debug_frame    0x00000000      0x2c0
  *(.debug_frame)
@@ -378,11 +381,11 @@ LOAD c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.
  .debug_pubtypes
                 0x00000113       0xa5 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 
-.debug_ranges   0x00000000      0x118
+.debug_ranges   0x00000000      0x130
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x60 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
- .debug_ranges  0x00000060       0x28 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
- .debug_ranges  0x00000088       0x90 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
+ .debug_ranges  0x00000000       0x78 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
+ .debug_ranges  0x00000078       0x28 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
+ .debug_ranges  0x000000a0       0x90 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
 
 .gnu.attributes
  *(.gnu.attributes)
@@ -401,10 +404,10 @@ LOAD data_init
  .bss           0xa0001800      0x200 build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
 
 .bss%z1         0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .bss           0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512H\processor.o
 
 .data%z2        0x00000000        0x0
- .data          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .data          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512H\processor.o
 
 .mdebug.abi32%z3
                 0x00000000        0x0
@@ -433,37 +436,37 @@ LOAD data_init
 .data%z10       0x00000000        0x0
  .data          0x00000000        0x0 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
 
-.text           0x9fc00498     0x1178
- .text          0x9fc00498      0x7f8 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
+.text           0x9fc00498     0x1194
+ .text          0x9fc00498      0x814 build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
                 0x9fc00aa9                main
-                0x9fc00be9                avrbl_state_machine
- .text          0x9fc00c90      0x6cc build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
-                0x9fc00dad                usb_device_enqueue
-                0x9fc00e55                usb_isr
-                0x9fc01201                usb_register
-                0x9fc01211                usb_device_descriptor
-                0x9fc0121d                usb_configuration_descriptor
-                0x9fc01229                usb_string_descriptor
-                0x9fc01235                usb_uninitialize
-                0x9fc012f9                usb_initialize
- .text          0x9fc0135c      0x2b4 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
-                0x9fc01495                cdcacm_print
-                0x9fc01589                cdcacm_command_ack
-                0x9fc015b1                cdcacm_register
-                0x9fc0160d                null_reset_cbfn
+                0x9fc00c05                avrbl_state_machine
+ .text          0x9fc00cac      0x6cc build/MX4_FB_SD_512K_USB/production/_ext/1472/usb.o
+                0x9fc00dc9                usb_device_enqueue
+                0x9fc00e71                usb_isr
+                0x9fc0121d                usb_register
+                0x9fc0122d                usb_device_descriptor
+                0x9fc01239                usb_configuration_descriptor
+                0x9fc01245                usb_string_descriptor
+                0x9fc01251                usb_uninitialize
+                0x9fc01315                usb_initialize
+ .text          0x9fc01378      0x2b4 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
+                0x9fc014b1                cdcacm_print
+                0x9fc015a5                cdcacm_command_ack
+                0x9fc015cd                cdcacm_register
+                0x9fc01629                null_reset_cbfn
 
-.dinit          0x9fc01610       0x98
- .dinit         0x9fc01610       0x98 data_init
+.dinit          0x9fc0162c       0x98
+ .dinit         0x9fc0162c       0x98 data_init
 
-.rodata         0x9fc016a8       0x90
- .rodata        0x9fc016a8       0x90 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
+.rodata         0x9fc016c4       0x90
+ .rodata        0x9fc016c4       0x90 build/MX4_FB_SD_512K_USB/production/_ext/1472/cdcacm.o
 
-.text           0x9fc01738       0x10
- .text          0x9fc01738       0x10 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
-                0x9fc01740                __crt0_exit
+.text           0x9fc01754       0x10
+ .text          0x9fc01754       0x10 build/MX4_FB_SD_512K_USB/production/_ext/1472/crt0.o
+                0x9fc0175c                __crt0_exit
 
-.rodata         0x9fc01748        0xc
- .rodata        0x9fc01748        0xc build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
+.rodata         0x9fc01764        0xc
+ .rodata        0x9fc01764        0xc build/MX4_FB_SD_512K_USB/production/_ext/1472/main.o
 
 .text%z11       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files (x86)/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX440F256H\processor.o
+ .text          0x00000000        0x0 c:/program files/microchip/mplabc32/v2.02/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX795F512H\processor.o
