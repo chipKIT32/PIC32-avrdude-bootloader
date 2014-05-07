@@ -10,13 +10,4 @@
             <line>0</line>
         </file>
     </editor-bookmarks>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/BoardConfig.h</file>
-        <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/cdcacm.h</file>
-        <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/main.h</file>
-        <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/usb.h</file>
-        <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/util.h</file>
-        <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/MX1-2-boot-linkerscript.ld</file>
-        <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/MX1-2-USB-boot-linkerscript.ld</file>
-    </open-files>
 </project-private>
