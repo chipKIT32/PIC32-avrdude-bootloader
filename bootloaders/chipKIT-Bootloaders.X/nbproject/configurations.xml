@@ -11368,7 +11368,7 @@
     <conf name="OLIMEX_DUINOMITE" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC32MX450F256H</targetDevice>
+        <targetDevice>PIC32MX795F512H</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
