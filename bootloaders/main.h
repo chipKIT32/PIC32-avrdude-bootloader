@@ -1,17 +1,44 @@
-// *** main.h ******************************************************************
-//
-// this is the main program that is launched by crt0.S; it just
-// initializes all of the modules of the os and then runs the main
-// application program loop.
-//
-// This file originated from the cpustick.com skeleton project from
-// http://www.cpustick.com/downloads.htm and was originally written
-// by Rich Testardi; please preserve this reference and share bug
-// fixes with rich@testardi.com.
-
+/**** main.h ******************************************************************
+ *
+ * this is the main program that is launched by crt0.S; it just
+ * initializes all of the modules of the os and then runs the main
+ * application program loop.
+ *
+ * This file originated from the cpustick.com skeleton project from
+ * http://www.cpustick.com/downloads.htm and was originally written
+ * by Rich Testardi; please preserve this reference and share bug
+ * fixes with rich@testardi.com.
+ * Copyright 2014 Rich Testardi
+ *
+ * This program is free software; distributed under the terms of
+ * BSD 3-clause license ("Revised BSD License", "New BSD License", or "Modified BSD License")
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1.    Redistributions of source code must retain the above copyright notice, this
+ *        list of conditions and the following disclaimer.
+ * 2.    Redistributions in binary form must reproduce the above copyright notice,
+ *        this list of conditions and the following disclaimer in the documentation
+ *        and/or other materials provided with the distribution.
+ * 3.    Neither the name(s) of the above-listed copyright holder(s) nor the names
+ *        of its contributors may be used to endorse or promote products derived
+ *        from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 #ifndef MAIN_INCLUDED
 
-#define BOOTLOADERVER               0x01000108ul
+#define BOOTLOADERVER               0x01000301ul
 #define NULL                        ((void*)0)
 #define ALLF                        (0xFFFFFFFF)
 #define cbRAMReservedForDebugger    0x200ul
@@ -31,6 +58,12 @@
 #define NVMOP_WORD_PGM          0x4001      // Word program operation
 #define NVMOP_ROW_PGM           0x4003      // Row write
 #define NVMOP_PAGE_ERASE        0x4004      // Page erase operation
+
+#define NVMCON_NVMOP           	0x0000000f
+#define NVMCON_ERASE            0x00000040
+#define NVMCON_WRERR            0x00002000
+#define NVMCON_WREN             0x00004000
+#define NVMCON_WR               0x00008000
 
 #define ReadK0(dest) __asm__ __volatile__("mfc0 %0,$16" : "=r" (dest))
 #define WriteK0(src) __asm__ __volatile__("mtc0 %0,$16" : : "r" (src))
@@ -90,7 +123,7 @@ typedef void __attribute__((far, noreturn)) (* FNUSERAPP)(void);
 #define startOfFlashPage(a) (a & (~(FLASH_PAGE_SIZE - 1)))
 #define nextFlashPage(a) (startOfFlashPage(a) + FLASH_PAGE_SIZE)
 #define numberOfFlashPages(ihigh, ilow) ((ihigh - ilow + FLASH_PAGE_SIZE - 1) / FLASH_PAGE_SIZE)
-#define getPageIndex(a) (((startOfFlashPage(a)) - FLASH_START) / FLASH_PAGE_SIZE)
+#define getPageIndex(a) (((startOfFlashPage(KVA_2_PA(a))) - KVA_2_PA(FLASH_START)) / FLASH_PAGE_SIZE)
 #define wasPageErased(a) (pageMap[getPageIndex(a)] == 1)
 
 #define imageReserved                                   0x00000000ul

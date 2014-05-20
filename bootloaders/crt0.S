@@ -63,6 +63,8 @@
 #endif
         .set noreorder
         .ent _reset
+
+__pic32_software_reset:
 _reset:
         la      k0, _startup
         jr      k0                      # Jump to startup code
@@ -70,6 +72,7 @@ _reset:
 
         .end _reset
         .globl _reset
+        .globl __pic32_software_reset
 
         ##################################################################
         # Startup code
