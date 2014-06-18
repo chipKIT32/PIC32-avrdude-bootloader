@@ -242,3 +242,10 @@ CND_ARTIFACT_PATH_OLIMEX_DUINOMITE=dist/OLIMEX_DUINOMITE/production/chipKIT-Boot
 CND_PACKAGE_DIR_OLIMEX_DUINOMITE=${CND_DISTDIR}/OLIMEX_DUINOMITE/package
 CND_PACKAGE_NAME_OLIMEX_DUINOMITE=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_OLIMEX_DUINOMITE=${CND_DISTDIR}/OLIMEX_DUINOMITE/package/chipkit-bootloaders.x.tar
+# PICadillo-35T configuration
+CND_ARTIFACT_DIR_PICadillo-35T=dist/PICadillo-35T/production
+CND_ARTIFACT_NAME_PICadillo-35T=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_PICadillo-35T=dist/PICadillo-35T/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_PICadillo-35T=${CND_DISTDIR}/PICadillo-35T/package
+CND_PACKAGE_NAME_PICadillo-35T=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_PICadillo-35T=${CND_DISTDIR}/PICadillo-35T/package/chipkit-bootloaders.x.tar
