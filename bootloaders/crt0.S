@@ -66,9 +66,16 @@
 
 __pic32_software_reset:
 _reset:
-        la      k0, _startup
-        jr      k0                      # Jump to startup code
-        nop
+        mfc0    k0, $12
+        ext     k0, k0, 0x13, 0x01
+        beqz    k0, _startup
+
+        mfc0    k0, $12
+        lui     k1, 0xffbf
+        ori     k1, k1, 0xffff
+        and     k0, k0, k1
+        mtc0    k0, $12
+        eret
 
         .end _reset
         .globl _reset
