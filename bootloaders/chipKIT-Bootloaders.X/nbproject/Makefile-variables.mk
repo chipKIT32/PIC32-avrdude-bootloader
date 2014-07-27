@@ -242,3 +242,10 @@ CND_ARTIFACT_PATH_OLIMEX_DUINOMITE=dist/OLIMEX_DUINOMITE/production/chipKIT-Boot
 CND_PACKAGE_DIR_OLIMEX_DUINOMITE=${CND_DISTDIR}/OLIMEX_DUINOMITE/package
 CND_PACKAGE_NAME_OLIMEX_DUINOMITE=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_OLIMEX_DUINOMITE=${CND_DISTDIR}/OLIMEX_DUINOMITE/package/chipkit-bootloaders.x.tar
+# FubarinoSDZ_uart configuration
+CND_ARTIFACT_DIR_FubarinoSDZ_uart=dist/FubarinoSDZ_uart/production
+CND_ARTIFACT_NAME_FubarinoSDZ_uart=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_FubarinoSDZ_uart=dist/FubarinoSDZ_uart/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_FubarinoSDZ_uart=${CND_DISTDIR}/FubarinoSDZ_uart/package
+CND_PACKAGE_NAME_FubarinoSDZ_uart=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_FubarinoSDZ_uart=${CND_DISTDIR}/FubarinoSDZ_uart/package/chipkit-bootloaders.x.tar

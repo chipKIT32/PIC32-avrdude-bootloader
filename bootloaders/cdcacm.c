@@ -89,7 +89,7 @@ static const byte cdcacm_configuration_descriptor[] = {
     4,  // length
     0x24,  // abstract control model descriptor
     0x02,
-    0x00,
+    0x06,   // Tell PC we understand line states
     
     5,  // length
     0x24,  // union functional descriptor
@@ -306,6 +306,25 @@ cdcacm_control_transfer(struct setup *setup, byte *buffer, int length)
             break;
         case CDCRQ_SET_CONTROL_LINE_STATE:
             assert(! (setup->requesttype & 0x80));
+			// We can sense RTS and DTR here, that's it.
+			// Bit 0 of setup->value is the state of DTR, and
+			// bit 1 is the state of RTS.
+			if (setup->value & 0x01) {
+				TRISDbits.TRISD0 = 0;
+				PORTDbits.RD0 = 1;
+			}
+			else {
+				TRISDbits.TRISD0 = 0;
+				PORTDbits.RD0 = 0;
+			}
+			if (setup->value & 0x02) {
+				TRISDbits.TRISD1 = 0;
+				PORTDbits.RD1 = 1;
+			}
+			else {
+				TRISDbits.TRISD1 = 0;
+				PORTDbits.RD1 = 0;
+			}
             length = 0;
             break;
         case CDCRQ_SEND_BREAK:
