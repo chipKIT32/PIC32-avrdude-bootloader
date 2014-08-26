@@ -80,7 +80,7 @@
 #define     vendFubarino        0x0003
 #define     vendSchmalzHausLLC  0x0004
 #define     vendOlimex          0x0005
-#define		vendElement14		0x0006
+#define	    vendElement14       0x0006
 #define     vendPontech         0x0007
 #define     vend4DSystems       0x0008
 #define     vendExperimental    0x8000
@@ -163,6 +163,7 @@
 // *****************************************************************************
 // *****************************************************************************
 #define     prodQuick240                0x0001
+#define     prodPontechUAV100           0x0002
 
 // *****************************************************************************
 // *****************************************************************************
@@ -2037,24 +2038,24 @@
     #define BntOn       Low
 
     // Boot LED
-    #define BLedLat     E
-    #define BLedBit     5
+    #define BLedLat     F
+    #define BLedBit     0
 
     // Virtual program button
-    #define VPBntLat    E
-    #define VPBntBit    7
+    #define VPBntLat    D
+    #define VPBntBit    4
 
     // Program button
-    #define PBntPort    E
-    #define PBntBit     7
+    #define PBntPort    D
+    #define PBntBit     4
 
-    #define _CPU_NAME_                  "32MX440F256H"
-    #define VEND                        vendFubarino
-    #define PROD                        prodFubarinoSD
+    #define _CPU_NAME_                  "32MX440F512H"
+    #define VEND                        vendPontech
+    #define PROD                        prodPontechUAV100
     #define F_CPU                       80000000UL
     #define F_PBUS                      F_CPU
 
-    #define FLASH_BYTES                 0x40000                     // 256K
+    #define FLASH_BYTES                 0x80000                     // 512K
     #define FLASH_PAGE_SIZE             4096
     #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
 
