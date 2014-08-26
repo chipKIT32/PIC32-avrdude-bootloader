@@ -51,8 +51,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -61,7 +61,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -77,8 +76,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -91,8 +88,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -105,8 +100,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -119,8 +112,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -133,8 +124,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -147,8 +136,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -161,8 +148,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -175,8 +160,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -189,8 +172,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -203,8 +184,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -217,8 +196,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -251,9 +228,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -332,7 +306,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -385,7 +358,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -407,8 +379,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -417,7 +389,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -433,8 +404,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -447,8 +416,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -461,8 +428,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -475,8 +440,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -489,8 +452,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -503,8 +464,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -517,8 +476,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -531,8 +488,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -545,8 +500,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -559,8 +512,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -573,8 +524,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -607,9 +556,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -688,7 +634,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -741,7 +686,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -763,8 +707,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -773,7 +717,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -789,8 +732,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -803,8 +744,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -817,8 +756,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -831,8 +768,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -845,8 +780,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -859,8 +792,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -873,8 +804,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -887,8 +816,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -901,8 +828,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -915,8 +840,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -929,8 +852,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -963,9 +884,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -1044,7 +962,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -1097,7 +1014,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -1119,8 +1035,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -1129,7 +1045,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -1145,8 +1060,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1159,8 +1072,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1173,8 +1084,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1187,8 +1096,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1201,8 +1108,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1215,8 +1120,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1229,8 +1132,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1243,8 +1144,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1277,9 +1176,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -1358,7 +1254,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -1411,7 +1306,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -1433,8 +1327,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -1443,7 +1337,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -1459,8 +1352,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1473,8 +1364,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1487,8 +1376,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1501,8 +1388,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1515,8 +1400,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1529,8 +1412,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1543,8 +1424,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1557,8 +1436,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1571,8 +1448,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1585,8 +1460,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1599,8 +1472,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1633,9 +1504,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -1714,7 +1582,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -1765,7 +1632,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -1787,8 +1653,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -1797,7 +1663,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -1813,8 +1678,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1827,8 +1690,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1841,8 +1702,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1855,8 +1714,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1869,8 +1726,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1883,8 +1738,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1897,8 +1750,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1911,8 +1762,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1925,8 +1774,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1939,8 +1786,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1953,8 +1798,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -1987,9 +1830,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -2068,7 +1908,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -2119,7 +1958,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -2141,8 +1979,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -2151,7 +1989,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -2167,8 +2004,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2181,8 +2016,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2195,8 +2028,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2209,8 +2040,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2223,8 +2052,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2237,8 +2064,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2251,8 +2076,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2265,8 +2088,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2279,8 +2100,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2293,8 +2112,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2307,8 +2124,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2341,9 +2156,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -2422,7 +2234,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -2474,7 +2285,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -2496,8 +2306,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -2506,7 +2316,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -2522,8 +2331,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2536,8 +2343,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2550,8 +2355,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2564,8 +2367,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2578,8 +2379,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2592,8 +2391,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2606,8 +2403,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2620,8 +2415,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2634,8 +2427,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2648,8 +2439,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2662,8 +2451,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2696,9 +2483,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -2777,7 +2561,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -2829,7 +2612,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -2851,8 +2633,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -2861,7 +2643,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -2877,8 +2658,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2891,8 +2670,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2905,8 +2682,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2919,8 +2694,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2933,8 +2706,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2947,8 +2718,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2961,8 +2730,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2975,8 +2742,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -2989,8 +2754,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3003,8 +2766,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3017,8 +2778,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3051,9 +2810,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -3132,7 +2888,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -3184,7 +2939,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -3206,8 +2960,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -3216,7 +2970,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -3232,8 +2985,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3246,8 +2997,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3260,8 +3009,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3274,8 +3021,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3288,8 +3033,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3302,8 +3045,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3316,8 +3057,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3330,8 +3069,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3344,8 +3081,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3358,8 +3093,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3372,8 +3105,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3406,9 +3137,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -3487,7 +3215,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -3539,7 +3266,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -3561,8 +3287,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -3571,7 +3297,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -3587,8 +3312,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3601,8 +3324,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3615,8 +3336,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3629,8 +3348,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3643,8 +3360,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3657,8 +3372,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3671,8 +3384,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3685,8 +3396,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3719,9 +3428,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -3800,7 +3506,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -3852,7 +3557,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -3874,8 +3578,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -3884,7 +3588,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -3900,8 +3603,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3914,8 +3615,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3928,8 +3627,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3942,8 +3639,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3956,8 +3651,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3970,8 +3663,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3984,8 +3675,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -3998,8 +3687,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4012,8 +3699,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4026,8 +3711,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4040,8 +3723,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4074,9 +3755,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -4155,7 +3833,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -4207,7 +3884,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -4229,8 +3905,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -4239,7 +3915,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -4255,8 +3930,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4269,8 +3942,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4283,8 +3954,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4297,8 +3966,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4311,8 +3978,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4325,8 +3990,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4339,8 +4002,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4353,8 +4014,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4387,9 +4046,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -4468,7 +4124,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -4520,7 +4175,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -4542,8 +4196,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -4552,7 +4206,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -4568,8 +4221,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4582,8 +4233,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4596,8 +4245,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4610,8 +4257,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4624,8 +4269,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4638,8 +4281,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4652,8 +4293,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4666,8 +4305,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4680,8 +4317,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4694,8 +4329,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4708,8 +4341,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -4742,9 +4373,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -4823,7 +4451,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -4885,7 +4512,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -4906,9 +4532,9 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchain></languageToolchain>
+        <languageToolchainVersion></languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -4917,7 +4543,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -4931,241 +4556,23 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../cdcacm.c" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../cdcacm.h" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../crt0.S" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../usb.c" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../usb.h" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
-      <C32>
-        <property key="additional-warnings" value="false"/>
-        <property key="enable-app-io" value="false"/>
-        <property key="enable-omit-frame-pointer" value="false"/>
-        <property key="enable-symbols" value="true"/>
-        <property key="enable-unroll-loops" value="false"/>
-        <property key="exclude-floating-point" value="true"/>
-        <property key="extra-include-directories" value=".."/>
-        <property key="generate-16-bit-code" value="true"/>
-        <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
-        <property key="place-data-into-section" value="false"/>
-        <property key="post-instruction-scheduling" value="default"/>
-        <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value="_BOARD_CHIPKIT_ZUNO_"/>
-        <property key="strict-ansi" value="false"/>
-        <property key="support-ansi" value="false"/>
-        <property key="use-cci" value="false"/>
-        <property key="use-iar" value="false"/>
-        <property key="use-indirect-calls" value="false"/>
-      </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
-      <C32-AS>
-        <property key="assembler-symbols" value=""/>
-        <property key="enable-symbols" value="true"/>
-        <property key="exclude-floating-point-library" value="false"/>
-        <property key="expand-macros" value="false"/>
-        <property key="extra-include-directories-for-assembler" value=".."/>
-        <property key="extra-include-directories-for-preprocessor" value=".."/>
-        <property key="false-conditionals" value="false"/>
-        <property key="keep-locals" value="false"/>
-        <property key="list-assembly" value="false"/>
-        <property key="list-source" value="false"/>
-        <property key="list-symbols" value="false"/>
-        <property key="oXC32asm-list-to-file" value="false"/>
-        <property key="omit-debug-dirs" value="false"/>
-        <property key="omit-forms" value="false"/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="warning-level" value=""/>
-        <appendMe value="-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8 "/>
-      </C32-AS>
-      <C32-LD>
-        <property key="additional-options-use-response-files" value="false"/>
-        <property key="enable-check-sections" value="false"/>
-        <property key="exclude-floating-point-library" value="true"/>
-        <property key="exclude-standard-libraries" value="true"/>
-        <property key="extra-lib-directories"
-                  value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
-        <property key="fill-flash-options-addr" value=""/>
-        <property key="fill-flash-options-const" value=""/>
-        <property key="fill-flash-options-how" value="0"/>
-        <property key="fill-flash-options-inc-const" value="1"/>
-        <property key="fill-flash-options-increment" value=""/>
-        <property key="fill-flash-options-seq" value=""/>
-        <property key="fill-flash-options-what" value="0"/>
-        <property key="generate-16-bit-code" value="true"/>
-        <property key="generate-cross-reference-file" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value=""/>
-        <property key="input-libraries" value=""/>
-        <property key="linker-symbols" value=""/>
-        <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
-        <property key="no-startup-files" value="true"/>
-        <property key="oXC32ld-extra-opts" value=""/>
-        <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="remove-unused-sections" value="false"/>
-        <property key="report-memory-usage" value="false"/>
-        <property key="stack-size" value=""/>
-        <property key="symbol-stripping" value=""/>
-        <property key="trace-symbols" value=""/>
-        <property key="warn-section-align" value="false"/>
-        <appendMe value="-Os"/>
-      </C32-LD>
-      <C32CPP>
-        <property key="additional-warnings" value="false"/>
-        <property key="check-new" value="false"/>
-        <property key="eh-specs" value="true"/>
-        <property key="enable-app-io" value="false"/>
-        <property key="enable-omit-frame-pointer" value="false"/>
-        <property key="enable-symbols" value="true"/>
-        <property key="enable-unroll-loops" value="false"/>
-        <property key="exceptions" value="true"/>
-        <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
-        <property key="generate-16-bit-code" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
-        <property key="place-data-into-section" value="false"/>
-        <property key="post-instruction-scheduling" value="default"/>
-        <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="rtti" value="true"/>
-        <property key="strict-ansi" value="false"/>
-        <property key="use-cci" value="false"/>
-        <property key="use-iar" value="false"/>
-        <property key="use-indirect-calls" value="false"/>
-      </C32CPP>
-      <C32Global>
-        <property key="gp-relative-option" value=""/>
-        <property key="legacy-libc" value="false"/>
-        <property key="save-temps" value="false"/>
-        <property key="wpo-lto" value="false"/>
-      </C32Global>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="CAN1" value="true"/>
@@ -5240,7 +4647,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -5261,9 +4667,9 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
-        <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchain></languageToolchain>
+        <languageToolchainVersion></languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -5272,7 +4678,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -5286,241 +4691,23 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../cdcacm.c" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../cdcacm.h" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../crt0.S" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../usb.c" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../usb.h" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
-      <C32>
-        <property key="additional-warnings" value="false"/>
-        <property key="enable-app-io" value="false"/>
-        <property key="enable-omit-frame-pointer" value="false"/>
-        <property key="enable-symbols" value="true"/>
-        <property key="enable-unroll-loops" value="false"/>
-        <property key="exclude-floating-point" value="true"/>
-        <property key="extra-include-directories" value=".."/>
-        <property key="generate-16-bit-code" value="true"/>
-        <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
-        <property key="place-data-into-section" value="false"/>
-        <property key="post-instruction-scheduling" value="default"/>
-        <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value="_BOARD_CHIPKIT_WIFIRE_"/>
-        <property key="strict-ansi" value="false"/>
-        <property key="support-ansi" value="false"/>
-        <property key="use-cci" value="false"/>
-        <property key="use-iar" value="false"/>
-        <property key="use-indirect-calls" value="false"/>
-      </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
-      <C32-AS>
-        <property key="assembler-symbols" value=""/>
-        <property key="enable-symbols" value="true"/>
-        <property key="exclude-floating-point-library" value="false"/>
-        <property key="expand-macros" value="false"/>
-        <property key="extra-include-directories-for-assembler" value=".."/>
-        <property key="extra-include-directories-for-preprocessor" value=".."/>
-        <property key="false-conditionals" value="false"/>
-        <property key="keep-locals" value="false"/>
-        <property key="list-assembly" value="false"/>
-        <property key="list-source" value="false"/>
-        <property key="list-symbols" value="false"/>
-        <property key="oXC32asm-list-to-file" value="false"/>
-        <property key="omit-debug-dirs" value="false"/>
-        <property key="omit-forms" value="false"/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="warning-level" value=""/>
-        <appendMe value="-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8 "/>
-      </C32-AS>
-      <C32-LD>
-        <property key="additional-options-use-response-files" value="false"/>
-        <property key="enable-check-sections" value="false"/>
-        <property key="exclude-floating-point-library" value="true"/>
-        <property key="exclude-standard-libraries" value="true"/>
-        <property key="extra-lib-directories"
-                  value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
-        <property key="fill-flash-options-addr" value=""/>
-        <property key="fill-flash-options-const" value=""/>
-        <property key="fill-flash-options-how" value="0"/>
-        <property key="fill-flash-options-inc-const" value="1"/>
-        <property key="fill-flash-options-increment" value=""/>
-        <property key="fill-flash-options-seq" value=""/>
-        <property key="fill-flash-options-what" value="0"/>
-        <property key="generate-16-bit-code" value="true"/>
-        <property key="generate-cross-reference-file" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value=""/>
-        <property key="input-libraries" value=""/>
-        <property key="linker-symbols" value=""/>
-        <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
-        <property key="no-startup-files" value="true"/>
-        <property key="oXC32ld-extra-opts" value=""/>
-        <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="remove-unused-sections" value="false"/>
-        <property key="report-memory-usage" value="false"/>
-        <property key="stack-size" value=""/>
-        <property key="symbol-stripping" value=""/>
-        <property key="trace-symbols" value=""/>
-        <property key="warn-section-align" value="false"/>
-        <appendMe value="-Os"/>
-      </C32-LD>
-      <C32CPP>
-        <property key="additional-warnings" value="false"/>
-        <property key="check-new" value="false"/>
-        <property key="eh-specs" value="true"/>
-        <property key="enable-app-io" value="false"/>
-        <property key="enable-omit-frame-pointer" value="false"/>
-        <property key="enable-symbols" value="true"/>
-        <property key="enable-unroll-loops" value="false"/>
-        <property key="exceptions" value="true"/>
-        <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
-        <property key="generate-16-bit-code" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
-        <property key="place-data-into-section" value="false"/>
-        <property key="post-instruction-scheduling" value="default"/>
-        <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="rtti" value="true"/>
-        <property key="strict-ansi" value="false"/>
-        <property key="use-cci" value="false"/>
-        <property key="use-iar" value="false"/>
-        <property key="use-indirect-calls" value="false"/>
-      </C32CPP>
-      <C32Global>
-        <property key="gp-relative-option" value=""/>
-        <property key="legacy-libc" value="false"/>
-        <property key="save-temps" value="false"/>
-        <property key="wpo-lto" value="false"/>
-      </C32Global>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="CAN1" value="true"/>
@@ -5598,7 +4785,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -5620,8 +4806,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -5630,7 +4816,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -5646,8 +4831,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5660,8 +4843,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5674,8 +4855,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5688,8 +4867,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5702,8 +4879,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5716,8 +4891,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5730,8 +4903,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5744,8 +4915,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5758,8 +4927,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5772,8 +4939,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5786,8 +4951,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -5820,9 +4983,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -5901,7 +5061,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -5965,7 +5124,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -5987,8 +5145,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -5997,7 +5155,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -6013,8 +5170,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6027,8 +5182,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6041,8 +5194,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6055,8 +5206,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6069,8 +5218,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6083,8 +5230,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6097,8 +5242,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6111,8 +5254,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6125,8 +5266,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6139,8 +5278,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6153,8 +5290,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6187,9 +5322,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -6268,7 +5400,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -6332,7 +5463,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -6354,8 +5484,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -6364,7 +5494,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -6380,8 +5509,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6394,8 +5521,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6408,8 +5533,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6422,8 +5545,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6436,8 +5557,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6450,8 +5569,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6464,8 +5581,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6478,8 +5593,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6512,9 +5625,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -6593,7 +5703,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -6657,7 +5766,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -6679,8 +5787,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -6689,7 +5797,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -6705,8 +5812,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6719,8 +5824,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6733,8 +5836,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6747,8 +5848,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6761,8 +5860,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6775,8 +5872,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6789,8 +5884,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6803,8 +5896,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -6837,9 +5928,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -6918,7 +6006,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -6982,7 +6069,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -7004,8 +6090,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -7014,7 +6100,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -7030,8 +6115,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7044,8 +6127,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7058,8 +6139,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7072,8 +6151,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7086,8 +6163,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7100,8 +6175,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7114,8 +6187,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7128,8 +6199,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7142,8 +6211,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7156,8 +6223,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7170,8 +6235,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7204,9 +6267,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -7285,7 +6345,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -7349,7 +6408,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -7371,8 +6429,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -7381,7 +6439,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -7397,8 +6454,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7411,8 +6466,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7425,8 +6478,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7439,8 +6490,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7453,8 +6502,6 @@
       <item path="../cdcacm.c" ex="false" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7467,8 +6514,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7481,8 +6526,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7495,8 +6538,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7509,8 +6550,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7523,8 +6562,6 @@
       <item path="../usb.c" ex="false" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7537,8 +6574,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7571,9 +6606,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -7652,7 +6684,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -7716,7 +6747,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -7738,8 +6768,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -7748,7 +6778,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -7764,8 +6793,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7778,8 +6805,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7792,8 +6817,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7806,8 +6829,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7820,8 +6841,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7834,8 +6853,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7848,8 +6865,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7862,8 +6877,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7876,8 +6889,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7890,8 +6901,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7904,8 +6913,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -7938,9 +6945,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -8019,7 +7023,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -8083,7 +7086,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -8105,8 +7107,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -8115,7 +7117,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -8131,8 +7132,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8145,8 +7144,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8159,8 +7156,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8173,8 +7168,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8187,8 +7180,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8201,8 +7192,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8215,8 +7204,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8229,8 +7216,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8263,9 +7248,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -8344,7 +7326,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -8395,7 +7376,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -8417,8 +7397,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>RealICEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -8427,7 +7407,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -8443,8 +7422,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8457,8 +7434,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8471,8 +7446,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8485,8 +7458,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8499,8 +7470,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8513,8 +7482,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8527,8 +7494,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8541,8 +7506,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8575,9 +7538,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -8656,7 +7616,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -8734,7 +7693,6 @@
                   value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveprogramrange" value="false"/>
@@ -8764,8 +7722,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -8774,7 +7732,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -8790,8 +7747,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8804,8 +7759,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8818,8 +7771,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8832,8 +7783,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8846,8 +7795,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8860,8 +7807,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8874,8 +7819,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8888,8 +7831,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -8922,9 +7863,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -9003,7 +7941,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -9056,7 +7993,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -9078,8 +8014,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -9088,7 +8024,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -9104,8 +8039,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9118,8 +8051,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9132,8 +8063,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9146,8 +8075,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9160,8 +8087,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9174,8 +8099,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9188,8 +8111,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9202,8 +8123,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9236,9 +8155,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -9317,7 +8233,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -9370,7 +8285,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -9392,8 +8306,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -9402,7 +8316,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -9418,8 +8331,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9432,8 +8343,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9446,8 +8355,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9460,8 +8367,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9474,8 +8379,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9488,8 +8391,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9502,8 +8403,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9516,8 +8415,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9550,9 +8447,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -9631,7 +8525,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -9684,7 +8577,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -9706,8 +8598,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -9716,7 +8608,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -9732,8 +8623,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9746,8 +8635,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9760,8 +8647,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9774,8 +8659,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9788,8 +8671,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9802,8 +8683,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9816,8 +8695,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9830,8 +8707,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -9864,9 +8739,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -9945,7 +8817,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -10000,7 +8871,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -10022,8 +8892,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -10032,7 +8902,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -10048,8 +8917,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10062,8 +8929,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10076,8 +8941,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10090,8 +8953,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10104,8 +8965,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10118,8 +8977,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10132,8 +8989,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10146,8 +9001,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10180,9 +9033,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -10261,7 +9111,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -10314,7 +9163,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -10336,8 +9184,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -10346,7 +9194,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -10362,8 +9209,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10376,8 +9221,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10390,8 +9233,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10404,8 +9245,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10418,8 +9257,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10432,8 +9269,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10446,8 +9281,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10460,8 +9293,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10474,8 +9305,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10488,8 +9317,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10502,8 +9329,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10536,9 +9361,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -10617,7 +9439,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -10670,7 +9491,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -10692,8 +9512,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -10702,7 +9522,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -10718,8 +9537,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10732,8 +9549,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10746,8 +9561,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10760,8 +9573,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10774,8 +9585,6 @@
       <item path="../cdcacm.c" ex="false" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10788,8 +9597,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10802,8 +9609,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10816,8 +9621,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10830,8 +9633,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10844,8 +9645,6 @@
       <item path="../usb.c" ex="false" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10858,8 +9657,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -10892,9 +9689,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -10973,7 +9767,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -11037,7 +9830,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -11059,8 +9851,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -11069,7 +9861,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -11085,8 +9876,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11099,8 +9888,6 @@
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11113,8 +9900,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11127,8 +9912,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11141,8 +9924,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11155,8 +9936,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11169,8 +9948,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11183,8 +9960,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11217,9 +9992,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -11298,7 +10070,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -11351,7 +10122,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -11373,8 +10143,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -11383,7 +10153,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -11399,8 +10168,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11413,8 +10180,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11427,8 +10192,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11441,8 +10204,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11455,8 +10216,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11469,8 +10228,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11483,8 +10240,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11497,8 +10252,6 @@
       <item path="../serial.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11531,9 +10284,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -11612,7 +10362,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
@@ -11674,7 +10423,6 @@
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
@@ -11694,10 +10442,10 @@
         <targetDevice>PIC32MX795F512L</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>ICD3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -11706,7 +10454,6 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -11722,8 +10469,6 @@
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11736,8 +10481,6 @@
       <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11750,8 +10493,6 @@
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11764,8 +10505,6 @@
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11778,8 +10517,6 @@
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11792,8 +10529,6 @@
       <item path="../cdcacm.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11806,8 +10541,6 @@
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11820,8 +10553,6 @@
       <item path="../pic32_init_cache.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11834,8 +10565,6 @@
       <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11848,8 +10577,6 @@
       <item path="../usb.c" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11862,8 +10589,6 @@
       <item path="../usb.h" ex="true" overriding="false">
         <C32>
         </C32>
-        <C32-AR>
-        </C32-AR>
         <C32-AS>
         </C32-AS>
         <C32-LD>
@@ -11896,9 +10621,6 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
-      <C32-AR>
-        <property key="additional-options-chop-files" value="false"/>
-      </C32-AR>
       <C32-AS>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
@@ -11977,12 +10699,11 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
-      <PICkit3PlatformTool>
+      <ICD3PlatformTool>
         <property key="ADC 1" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="CAN1" value="true"/>
@@ -12029,9 +10750,10 @@
         <property key="UART4" value="true"/>
         <property key="UART5" value="true"/>
         <property key="UART6" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
-        <property key="memories.bootflash" value="true"/>
+        <property key="memories.bootflash" value="false"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.eeprom" value="true"/>
         <property key="memories.flashdata" value="true"/>
@@ -12040,10 +10762,7 @@
         <property key="memories.programmemory.end" value="0x1d07ffff"/>
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.pgmspeed" value="2"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveprogramrange.end" value="0x1d07ffff"/>
@@ -12053,7 +10772,296 @@
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="3.25"/>
-      </PICkit3PlatformTool>
+      </ICD3PlatformTool>
+    </conf>
+    <conf name="UAV100" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC32MX440F512H</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>ICD3PlatformTool</platformTool>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.10</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep>copy /Y /B dist\${ConfName}\production\chipKIT-Bootloaders.X.production.hex ..\..\BootloadersCurrent-hex\PONTECH-UAV100.hex</makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../MX1-2-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../crt0MZ.S" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../pic32_init_cache.S" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../pic32_init_tlb_ebi_sqi.S" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../serial.h" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <C32>
+        <property key="additional-warnings" value="false"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="true"/>
+        <property key="extra-include-directories" value=".."/>
+        <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value="-Os"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value="_BOARD_UAV100_"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=".."/>
+        <property key="extra-include-directories-for-preprocessor" value=".."/>
+        <property key="false-conditionals" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="exclude-floating-point-library" value="true"/>
+        <property key="exclude-standard-libraries" value="true"/>
+        <property key="extra-lib-directories"
+                  value="../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/lib;../../../../../../../../Program Files (x86)/Microchip/MPLAB C32 Suite/pic32mx/lib"/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="true"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value=""/>
+        <property key="input-libraries" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="&quot;${DISTDIR}/MX7cK.X.${IMAGE_TYPE}.map&quot;"/>
+        <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="false"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+        <appendMe value="-Os"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="legacy-libc" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
+      <ICD3PlatformTool>
+        <property key="ADC 1" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="CHANGE NOTICE" value="true"/>
+        <property key="COMPARATOR" value="true"/>
+        <property key="DMA" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="I2C1" value="true"/>
+        <property key="I2C2" value="true"/>
+        <property key="INPUT CAPTURE 1" value="true"/>
+        <property key="INPUT CAPTURE 2" value="true"/>
+        <property key="INPUT CAPTURE 3" value="true"/>
+        <property key="INPUT CAPTURE 4" value="true"/>
+        <property key="INPUT CAPTURE 5" value="true"/>
+        <property key="INTERRUPT CONTROL" value="true"/>
+        <property key="OUTPUT COMPARE 1" value="true"/>
+        <property key="OUTPUT COMPARE 2" value="true"/>
+        <property key="OUTPUT COMPARE 3" value="true"/>
+        <property key="OUTPUT COMPARE 4" value="true"/>
+        <property key="OUTPUT COMPARE 5" value="true"/>
+        <property key="PARALLEL MASTER/SLAVE PORT" value="true"/>
+        <property key="REAL TIME CLOCK" value="true"/>
+        <property key="SPI 2" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="TIMER1" value="true"/>
+        <property key="TIMER2" value="true"/>
+        <property key="TIMER3" value="true"/>
+        <property key="TIMER4" value="true"/>
+        <property key="TIMER5" value="true"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="UART1" value="true"/>
+        <property key="UART2" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="false"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x1d07ffff"/>
+        <property key="memories.programmemory.start" value="0x1d000000"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x1d07ffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x1d000000"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VPPFirst"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="voltagevalue" value="3.25"/>
+      </ICD3PlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>
