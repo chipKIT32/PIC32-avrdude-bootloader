@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="62">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>34</defaultConf>
+  <defaultConf>35</defaultConf>
   <confs>
     <conf name="MX1_EXAMPLE_UART" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -23,7 +23,7 @@
     </conf>
     <conf name="UDB32_MX2_DIP" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -41,7 +41,7 @@
     </conf>
     <conf name="MX1_Cmod" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -58,8 +58,8 @@
       </runprofile>
     </conf>
     <conf name="DP32" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -77,7 +77,7 @@
     </conf>
     <conf name="Uno32" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -94,8 +94,8 @@
       </runprofile>
     </conf>
     <conf name="MX3cK_128" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -113,7 +113,7 @@
     </conf>
     <conf name="UDB32_PIM" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -130,8 +130,8 @@
       </runprofile>
     </conf>
     <conf name="uC32" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -149,7 +149,7 @@
     </conf>
     <conf name="MX3cK_512" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -167,7 +167,7 @@
     </conf>
     <conf name="MX4_UART" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -185,7 +185,7 @@
     </conf>
     <conf name="MX4_USB" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -203,7 +203,7 @@
     </conf>
     <conf name="MX4cK" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -220,8 +220,8 @@
       </runprofile>
     </conf>
     <conf name="UBW32_MX460" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -239,7 +239,7 @@
     </conf>
     <conf name="WF32" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -257,7 +257,7 @@
     </conf>
     <conf name="zUno" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -275,7 +275,7 @@
     </conf>
     <conf name="WiFire" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -292,8 +292,8 @@
       </runprofile>
     </conf>
     <conf name="MAX32" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -311,7 +311,7 @@
     </conf>
     <conf name="MX7_UART" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -329,7 +329,7 @@
     </conf>
     <conf name="MX7_USB" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -347,7 +347,7 @@
     </conf>
     <conf name="MX7cK_USB_SPLIT_FLASH" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -365,7 +365,7 @@
     </conf>
     <conf name="MX7cK" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -383,7 +383,7 @@
     </conf>
     <conf name="UBW32_MX795" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -401,7 +401,7 @@
     </conf>
     <conf name="FG32" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -419,7 +419,7 @@
     </conf>
     <conf name="FUBARINO_SD_USB" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -436,8 +436,8 @@
       </runprofile>
     </conf>
     <conf name="FUBARINO_SD_512K_USB" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -455,7 +455,7 @@
     </conf>
     <conf name="FUBARINO_MINI_USB" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -472,8 +472,8 @@
       </runprofile>
     </conf>
     <conf name="FUBARINO_MINI_USB_48MHz" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -490,8 +490,8 @@
       </runprofile>
     </conf>
     <conf name="FUBARINO_MINI_USB_50MHz" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -509,7 +509,7 @@
     </conf>
     <conf name="OLIMEX_PIC32_PINGUINO" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -527,7 +527,7 @@
     </conf>
     <conf name="EBBV3_USB" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -544,8 +544,8 @@
       </runprofile>
     </conf>
     <conf name="CHIPKIT_PI" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -563,7 +563,7 @@
     </conf>
     <conf name="QUICK240" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -580,8 +580,8 @@
       </runprofile>
     </conf>
     <conf name="CHIPKIT_PI_USB" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -599,7 +599,7 @@
     </conf>
     <conf name="OLIMEX_DUINOMITE" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -617,7 +617,7 @@
     </conf>
     <conf name="PICadillo-35T" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc32/v1.31/bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -633,9 +633,9 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="FubarinoSDZ_uart" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>BUR101260159:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.31\bin</languageToolchainDir>
+    <conf name="UAV100" type="2">
+      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>9009:=&lt;rev>0100:=&lt;man>Microchip Technology, Inc. (www.microchip.com):=&lt;prod>MPLAB ICD3 tm (www.microchip.com):=&lt;sn>JIT114912566:=&lt;drv>x:=&lt;xpt>b:=end</platformToolSN>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>

@@ -104,15 +104,15 @@ CND_PACKAGE_NAME_WF32=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_WF32=${CND_DISTDIR}/WF32/package/chipkit-bootloaders.x.tar
 # zUno configuration
 CND_ARTIFACT_DIR_zUno=dist/zUno/production
-CND_ARTIFACT_NAME_zUno=chipKIT-Bootloaders.X.production.hex
-CND_ARTIFACT_PATH_zUno=dist/zUno/production/chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_NAME_zUno=chipKIT-Bootloaders.X.production.null
+CND_ARTIFACT_PATH_zUno=dist/zUno/production/chipKIT-Bootloaders.X.production.null
 CND_PACKAGE_DIR_zUno=${CND_DISTDIR}/zUno/package
 CND_PACKAGE_NAME_zUno=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_zUno=${CND_DISTDIR}/zUno/package/chipkit-bootloaders.x.tar
 # WiFire configuration
 CND_ARTIFACT_DIR_WiFire=dist/WiFire/production
-CND_ARTIFACT_NAME_WiFire=chipKIT-Bootloaders.X.production.hex
-CND_ARTIFACT_PATH_WiFire=dist/WiFire/production/chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_NAME_WiFire=chipKIT-Bootloaders.X.production.null
+CND_ARTIFACT_PATH_WiFire=dist/WiFire/production/chipKIT-Bootloaders.X.production.null
 CND_PACKAGE_DIR_WiFire=${CND_DISTDIR}/WiFire/package
 CND_PACKAGE_NAME_WiFire=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_WiFire=${CND_DISTDIR}/WiFire/package/chipkit-bootloaders.x.tar
@@ -249,10 +249,10 @@ CND_ARTIFACT_PATH_PICadillo-35T=dist/PICadillo-35T/production/chipKIT-Bootloader
 CND_PACKAGE_DIR_PICadillo-35T=${CND_DISTDIR}/PICadillo-35T/package
 CND_PACKAGE_NAME_PICadillo-35T=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_PICadillo-35T=${CND_DISTDIR}/PICadillo-35T/package/chipkit-bootloaders.x.tar
-# FubarinoSDZ_uart configuration
-CND_ARTIFACT_DIR_FubarinoSDZ_uart=dist/FubarinoSDZ_uart/production
-CND_ARTIFACT_NAME_FubarinoSDZ_uart=chipKIT-Bootloaders.X.production.hex
-CND_ARTIFACT_PATH_FubarinoSDZ_uart=dist/FubarinoSDZ_uart/production/chipKIT-Bootloaders.X.production.hex
-CND_PACKAGE_DIR_FubarinoSDZ_uart=${CND_DISTDIR}/FubarinoSDZ_uart/package
-CND_PACKAGE_NAME_FubarinoSDZ_uart=chipkit-bootloaders.x.tar
-CND_PACKAGE_PATH_FubarinoSDZ_uart=${CND_DISTDIR}/FubarinoSDZ_uart/package/chipkit-bootloaders.x.tar
+# UAV100 configuration
+CND_ARTIFACT_DIR_UAV100=dist/UAV100/production
+CND_ARTIFACT_NAME_UAV100=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_UAV100=dist/UAV100/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_UAV100=${CND_DISTDIR}/UAV100/package
+CND_PACKAGE_NAME_UAV100=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_UAV100=${CND_DISTDIR}/UAV100/package/chipkit-bootloaders.x.tar
