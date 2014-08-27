@@ -104,15 +104,15 @@ CND_PACKAGE_NAME_WF32=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_WF32=${CND_DISTDIR}/WF32/package/chipkit-bootloaders.x.tar
 # zUno configuration
 CND_ARTIFACT_DIR_zUno=dist/zUno/production
-CND_ARTIFACT_NAME_zUno=chipKIT-Bootloaders.X.production.null
-CND_ARTIFACT_PATH_zUno=dist/zUno/production/chipKIT-Bootloaders.X.production.null
+CND_ARTIFACT_NAME_zUno=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_zUno=dist/zUno/production/chipKIT-Bootloaders.X.production.hex
 CND_PACKAGE_DIR_zUno=${CND_DISTDIR}/zUno/package
 CND_PACKAGE_NAME_zUno=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_zUno=${CND_DISTDIR}/zUno/package/chipkit-bootloaders.x.tar
 # WiFire configuration
 CND_ARTIFACT_DIR_WiFire=dist/WiFire/production
-CND_ARTIFACT_NAME_WiFire=chipKIT-Bootloaders.X.production.null
-CND_ARTIFACT_PATH_WiFire=dist/WiFire/production/chipKIT-Bootloaders.X.production.null
+CND_ARTIFACT_NAME_WiFire=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_WiFire=dist/WiFire/production/chipKIT-Bootloaders.X.production.hex
 CND_PACKAGE_DIR_WiFire=${CND_DISTDIR}/WiFire/package
 CND_PACKAGE_NAME_WiFire=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_WiFire=${CND_DISTDIR}/WiFire/package/chipkit-bootloaders.x.tar
