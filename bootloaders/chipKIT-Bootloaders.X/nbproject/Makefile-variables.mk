@@ -256,3 +256,10 @@ CND_ARTIFACT_PATH_UAV100=dist/UAV100/production/chipKIT-Bootloaders.X.production
 CND_PACKAGE_DIR_UAV100=${CND_DISTDIR}/UAV100/package
 CND_PACKAGE_NAME_UAV100=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_UAV100=${CND_DISTDIR}/UAV100/package/chipkit-bootloaders.x.tar
+# Fubarino_SDZ_UART configuration
+CND_ARTIFACT_DIR_Fubarino_SDZ_UART=dist/Fubarino_SDZ_UART/production
+CND_ARTIFACT_NAME_Fubarino_SDZ_UART=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_Fubarino_SDZ_UART=dist/Fubarino_SDZ_UART/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_Fubarino_SDZ_UART=${CND_DISTDIR}/Fubarino_SDZ_UART/package
+CND_PACKAGE_NAME_Fubarino_SDZ_UART=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_Fubarino_SDZ_UART=${CND_DISTDIR}/Fubarino_SDZ_UART/package/chipkit-bootloaders.x.tar

@@ -1390,7 +1390,7 @@
     #define FLASH_PAGE_SIZE             0x4000                      // 16K
 
 //************************************************************************
-#elif defined(_BOARD_FUBARINO_SDZ_)
+#elif defined(_BOARD_FUBARINO_SDZ_UART_)
 
 #if defined(PUT_CONFIG_BITS_HERE)
 
