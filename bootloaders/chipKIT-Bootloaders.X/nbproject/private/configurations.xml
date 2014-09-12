@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="62">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>36</defaultConf>
+  <defaultConf>31</defaultConf>
   <confs>
     <conf name="MX1_EXAMPLE_UART" type="2">
       <platformToolSN></platformToolSN>
@@ -562,7 +562,7 @@
       </runprofile>
     </conf>
     <conf name="QUICK240" type="2">
-      <platformToolSN></platformToolSN>
+      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>9009:=&lt;rev>0100:=&lt;man>Microchip Technology, Inc. (www.microchip.com):=&lt;prod>MPLAB ICD3 tm (www.microchip.com):=&lt;sn>JIT114912566:=&lt;drv>x:=&lt;xpt>b:=end</platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.33\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
