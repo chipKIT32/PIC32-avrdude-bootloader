@@ -57,7 +57,7 @@ static const byte cdcacm_device_descriptor[] = {
     CDCACM_RID%0x100, CDCACM_RID/0x100,
     0x01,  // manufacturer (string)
     0x02,  // product (string)
-    0x00,  // sn (string)
+    0x03,  // sn (string)
     0x01  // num configurations
 };
 
@@ -147,6 +147,9 @@ static const byte cdcacm_string_descriptor[] = {
     18,  // length
     0x03,  // string descriptor
     'S', 0, 't', 0, 'k', 0, '5', 0, '0', 0, '0', 0, 'v', 0, '2', 0,
+
+    2,
+    0x03, // Empty string descriptor for no serial
 };
 
 bool cdcacm_active;
