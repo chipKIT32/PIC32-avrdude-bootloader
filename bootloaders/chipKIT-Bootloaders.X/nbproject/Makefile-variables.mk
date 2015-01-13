@@ -263,3 +263,31 @@ CND_ARTIFACT_PATH_Fubarino_SDZ_UART=dist/Fubarino_SDZ_UART/production/chipKIT-Bo
 CND_PACKAGE_DIR_Fubarino_SDZ_UART=${CND_DISTDIR}/Fubarino_SDZ_UART/package
 CND_PACKAGE_NAME_Fubarino_SDZ_UART=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_Fubarino_SDZ_UART=${CND_DISTDIR}/Fubarino_SDZ_UART/package/chipkit-bootloaders.x.tar
+# Majenko_SDXL configuration
+CND_ARTIFACT_DIR_Majenko_SDXL=dist/Majenko_SDXL/production
+CND_ARTIFACT_NAME_Majenko_SDXL=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_Majenko_SDXL=dist/Majenko_SDXL/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_Majenko_SDXL=${CND_DISTDIR}/Majenko_SDXL/package
+CND_PACKAGE_NAME_Majenko_SDXL=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_Majenko_SDXL=${CND_DISTDIR}/Majenko_SDXL/package/chipkit-bootloaders.x.tar
+# Majenko_SDAU configuration
+CND_ARTIFACT_DIR_Majenko_SDAU=dist/Majenko_SDAU/production
+CND_ARTIFACT_NAME_Majenko_SDAU=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_Majenko_SDAU=dist/Majenko_SDAU/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_Majenko_SDAU=${CND_DISTDIR}/Majenko_SDAU/package
+CND_PACKAGE_NAME_Majenko_SDAU=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_Majenko_SDAU=${CND_DISTDIR}/Majenko_SDAU/package/chipkit-bootloaders.x.tar
+# Majenko_SDZL configuration
+CND_ARTIFACT_DIR_Majenko_SDZL=dist/Majenko_SDZL/production
+CND_ARTIFACT_NAME_Majenko_SDZL=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_Majenko_SDZL=dist/Majenko_SDZL/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_Majenko_SDZL=${CND_DISTDIR}/Majenko_SDZL/package
+CND_PACKAGE_NAME_Majenko_SDZL=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_Majenko_SDZL=${CND_DISTDIR}/Majenko_SDZL/package/chipkit-bootloaders.x.tar
+# MAJENKO_ULTRANANO configuration
+CND_ARTIFACT_DIR_MAJENKO_ULTRANANO=dist/MAJENKO_ULTRANANO/production
+CND_ARTIFACT_NAME_MAJENKO_ULTRANANO=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_MAJENKO_ULTRANANO=dist/MAJENKO_ULTRANANO/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_MAJENKO_ULTRANANO=${CND_DISTDIR}/MAJENKO_ULTRANANO/package
+CND_PACKAGE_NAME_MAJENKO_ULTRANANO=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_MAJENKO_ULTRANANO=${CND_DISTDIR}/MAJENKO_ULTRANANO/package/chipkit-bootloaders.x.tar
