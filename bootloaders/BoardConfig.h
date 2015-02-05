@@ -2707,7 +2707,7 @@
 
     //*    Other Peripheral Device settings
     #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
+    #pragma config FCANIO       = ON                               // Standard/alternate CAN pin select (OFF=Alt)
     #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
     #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
 
