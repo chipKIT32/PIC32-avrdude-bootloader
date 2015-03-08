@@ -63,6 +63,7 @@ enum {
 #define CMD_PROGRAM_FLASH_ISP               0x13
 #define CMD_READ_FLASH_ISP                  0x14
 #define CMD_SPI_MULTI                       0x1D
+#define CMD_SET_BAUD                        0x48
 
 #define STATUS_CMD_OK                       0x00
 
@@ -103,6 +104,9 @@ static byte request[1024];  // request buffer
 // stk500v2 reply message
 static int replyi;          // number of reply bytes
 static byte reply[1024];    // reply buffer
+
+// Set when we want to change the baud rate
+static uint32 baudRateChange = 0;
 
 // Just-In-Time-Flash variables.
 
@@ -220,6 +224,16 @@ int main()  // we're called directly by Crt0.S
             avrbl_message(request+REQUEST_OFFSET, requesti);
             ready = false;
         }
+
+#ifdef UBRG
+        if (baudRateChange != 0) {
+            while (!USTAbits.TRMT);
+//            UMODE   &=   ~(UART_ENABLE);
+            UBRG    =   ((F_PBUS / (16 * baudRateChange))-1); 
+//            UMODE   |=   (UART_ENABLE);
+            baudRateChange = 0;
+        }
+#endif
     }
 
     ASSERT(0);  // stop!
@@ -335,6 +349,9 @@ avrbl_message(byte *request, int size)
             ilstrcpy(reply+replyi, "STK500_2");
             replyi += 8;
             DownloadLED_On();
+            break;
+        case CMD_SET_BAUD:
+            baudRateChange = request[1] | (request[2] << 8) | (request[3] << 16) | (request[4] << 24);
             break;
         case CMD_SET_PARAMETER:
             parameters[request[1]] = request[2];
