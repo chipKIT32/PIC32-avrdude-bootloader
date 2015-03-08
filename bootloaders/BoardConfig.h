@@ -3127,7 +3127,7 @@
     //*    Clock control settings
     #pragma config IESO         = ON                                // Internal/external clock switchover
     #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = ON                               // Clock output on OSCO pin enable
+    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
 
     //*    Other Peripheral Device settings
     #pragma config FWDTEN       = OFF                               // Watchdog timer enable
