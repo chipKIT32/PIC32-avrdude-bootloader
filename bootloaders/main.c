@@ -352,6 +352,10 @@ avrbl_message(byte *request, int size)
             break;
         case CMD_SET_BAUD:
             baudRateChange = request[1] | (request[2] << 8) | (request[3] << 16) | (request[4] << 24);
+            reply[replyi++] = request[1];
+            reply[replyi++] = request[2];
+            reply[replyi++] = request[3];
+            reply[replyi++] = request[4];
             break;
         case CMD_SET_PARAMETER:
             parameters[request[1]] = request[2];
