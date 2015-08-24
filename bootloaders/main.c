@@ -152,7 +152,7 @@ int main()  // we're called directly by Crt0.S
     // This must occur after the WaitForFinalReset() and checking our program buttons states
     ClearVirtualProgramButton();
 	RCON = 0;	
-	
+
     // If we are just going to immediately load from flash
     // don't even init the UART or USB, just load the application
     if (fLoadProgramFromFlash && LISTEN_BEFORE_LOAD == 0)
@@ -160,15 +160,15 @@ int main()  // we're called directly by Crt0.S
         // launch the application!
         ExecuteApp();
     }
-	
+
     tLoopStart = _CP0_GET_COUNT();
     tLastBlink = tLoopStart;
-
+            
     // at this point we know that we either are going to wait
     // for something to be download, or are going to wait indefinitly for
     // for a download, in any case we need to enable the the interface for the download
     InitStk500v2Interface();
-
+   
     // forever...
     for (;;) {
         tLoopTime = _CP0_GET_COUNT();
@@ -181,10 +181,10 @@ int main()  // we're called directly by Crt0.S
             
             // blink the heartbeat LED
             BootLED_Toggle();
-
+            
             // set up for the next blink
             tLastBlink = tLoopTime;
-       }
+        }
 
         // See if we should jump to the application in flash
         // If we just loaded an application via the Stk500v2Interface, we know there is an applicaiton
@@ -785,7 +785,13 @@ static void __attribute__((nomips16)) flashOperation(uint32 nvmop, uint32 addr, 
 
     #if defined(_PCACHE)
         unsigned long   K0;
-        unsigned long   PFEN = CHECON & _CHECON_PREFEN_MASK;
+        #if defined(_CHECON_PREFEN_MASK)
+            unsigned long   PFEN = CHECON & _CHECON_PREFEN_MASK;
+        #elif defined(_PRECON_PREFEN_MASK)
+            unsigned long   PFEN = PRECON & _PRECON_PREFEN_MASK;
+        #else
+            #error Unable to get prefetch status for this CPU type
+        #endif
     #endif
 
     // Convert Address to Physical Address
@@ -804,7 +810,14 @@ static void __attribute__((nomips16)) flashOperation(uint32 nvmop, uint32 addr, 
 
     #if defined(_PCACHE)
         // disable predictive prefetching, see errata
-        CHECONCLR = _CHECON_PREFEN_MASK;
+        #if defined(_CHECON_PREFEN_MASK)
+            CHECONCLR = _CHECON_PREFEN_MASK;
+        #elif defined(_PRECON_PREFEN_MASK)
+            PRECONCLR = _PRECON_PREFEN_MASK;
+        #else
+            #error Unable disable prefetch for this CPU type
+        #endif
+    
 
         // turn off caching, see errata
         ReadK0(K0);
@@ -841,7 +854,13 @@ static void __attribute__((nomips16)) flashOperation(uint32 nvmop, uint32 addr, 
     #if defined(_PCACHE)
         // restore predictive prefetching and caching, see errata
         WriteK0(K0);
-        CHECONSET = PFEN;
+        #if defined(_CHECON_PREFEN_MASK)
+            CHECONSET = PFEN;
+        #elif defined(_PRECON_PREFEN_MASK)
+            PRECONSET = PFEN;
+        #else
+            #error Unable disable prefetch for this CPU type
+        #endif
     #endif
 
     // Restore Interrupts 
