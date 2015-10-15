@@ -671,7 +671,7 @@ SECTIONS
   .dbg_data ORIGIN(kseg0_data_mem) :
   {
    _skip_ram_space_addr = . ;
-     . += 0x2F7;
+     . += 0x380;
   } >kseg0_data_mem
 
    /*

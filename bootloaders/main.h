@@ -38,7 +38,7 @@
  */
 #ifndef MAIN_INCLUDED
 
-#define BOOTLOADERVER               0x01000301ul
+#define BOOTLOADERVER               0x01000303ul
 #define NULL                        ((void*)0)
 #define ALLF                        (0xFFFFFFFF)
 #define cbRAMReservedForDebugger    0x200ul
@@ -46,10 +46,10 @@
 #include <p32xxxx.h>
 
 // thing re-written out of plib.h for open source
-#define KVA_2_PA(v) 			((v) & 0x1fffffff)
-#define PA_2_KVA0(pa)           ((pa) | 0x80000000)  // cachable
+#define KVA_2_PA(v)             ((v) & 0x1fffffff)
+#define PA_2_KVA0(pa)           ((pa) | 0x80000000)     // cachable
 #define PA_2_KVA1(pa)           ((pa) | 0xa0000000)
-#define UART_RX_ENABLE			(1<<12)					/* Enable RX*/
+#define UART_RX_ENABLE          (1<<12)                 /* Enable RX*/
 #define UART_TX_ENABLE         	(1<<10)                 /* Enable TX*/
 #define UART_ENABLE             (1<<15)                 /* UART enable */
 #define TF_LITTLE(x)            (x)

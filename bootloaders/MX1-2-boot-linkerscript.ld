@@ -44,7 +44,7 @@ MEMORY
   config2                    : ORIGIN = 0xBFC00BF4, LENGTH = 0x4
   config1                    : ORIGIN = 0xBFC00BF8, LENGTH = 0x4
   config0                    : ORIGIN = 0xBFC00BFC, LENGTH = 0x4
-  kseg1_data_mem       (w!x) : ORIGIN = 0xA0000000, LENGTH = 0x2000
+  kseg1_data_mem       (w!x) : ORIGIN = 0xA0000000, LENGTH = 0x4000
   sfrs                       : ORIGIN = 0xBF800000, LENGTH = 0x100000
   configsfrs                 : ORIGIN = 0xBFC00BF0, LENGTH = 0x10
 }
