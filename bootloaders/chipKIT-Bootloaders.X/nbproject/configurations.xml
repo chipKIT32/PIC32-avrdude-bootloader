@@ -71,7 +71,7 @@
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>copy /Y /B dist\${ConfName}\production\chipKIT-Bootloaders.X.production.hex ..\..\BootloadersCurrent-hex\MX1_EXAMPLE.hex</makeCustomizationPostStep>
+        <makeCustomizationPostStep>copy /Y /B dist\${ConfName}\production\chipKIT-Bootloaders.X.production.hex ..\..\BootloadersCurrent-hex\EXAMPLE_MX1.hex</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
@@ -2993,7 +2993,7 @@
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>copy /Y /B dist\${ConfName}\production\chipKIT-Bootloaders.X.production.hex ..\..\BootloadersCurrent-hex\FUBARINIO_MINI_USB_48MHZ.hex</makeCustomizationPostStep>
+        <makeCustomizationPostStep>copy /Y /B dist\${ConfName}\production\chipKIT-Bootloaders.X.production.hex ..\..\BootloadersCurrent-hex\FUBARINO_MINI_USB_48MHZ.hex</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
@@ -5730,7 +5730,7 @@
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>cp dist/${ConfName}/production/chipKIT-Bootloaders.X.production.hex ../../BootloadersCurrent-hex/PICADILLO-35T.hex</makeCustomizationPostStep>
+        <makeCustomizationPostStep>cp dist/${ConfName}/production/chipKIT-Bootloaders.X.production.hex ../../BootloadersCurrent-hex/PICADILLO_35T.hex</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
