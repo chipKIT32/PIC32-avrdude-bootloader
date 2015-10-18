@@ -100,6 +100,7 @@
 #define     prodChipKITuC32     0x0103
 #define     prodChipKITWF32     0x0104
 #define     prodChipKITFG32     0x0105
+#define     prodChipKITuC32350  0x0106
 
 // Cerebot like boards, only software Arduino compatible chipKITs
 #define     prodCerebot32MX4    0x0201
@@ -119,10 +120,13 @@
 #define     prodChipKITUDB32PIM 0x0501
 
 // MZ processors
-#define     prodChipKITWiFire   0x0601
-#define     prodChipKITzUno     0x0602
+#define     prodChipKITWiFire       0x0601
+#define     prodChipKITWF32z        prodChipKITWiFire
+#define     prodChipKITzUno         0x0602
+#define     prodChipKITLogicFire    0x0603
+#define     prodChipKITWiFireEF     0x0604
 
-
+#define     prodOpenScope           0x0701
 // *****************************************************************************
 // *****************************************************************************
 //                    Fubarino Product IDs
@@ -293,769 +297,6 @@
     #define BAUDRATE                115200                  // avrdude baudrate
     #define UARTMapRX()             (U1RXR = 0x1)           // RPB6 -> U1RX
     #define UARTMapTX()             (RPB7R = 0x1)           // RB7 -> U1TX
- 
-//************************************************************************
-#elif defined(_BOARD_UDB32_MX2_DIP_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //* Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                                // Oscillator selection
-    #pragma config POSCMOD  = XT                                    // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
-    #pragma config FPLLODIV = DIV_2                                 // PLL output divider
-    #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
-    #pragma config FSOSCEN  = OFF                                    // Secondary oscillator enable
-
-    //* Clock control settings
-    #pragma config IESO     = OFF                                   // Internal/external clock switchover
-    #pragma config FCKSM    = CSECME                                // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                                   // Clock output on OSCO pin enable
-
-    //* USB Settings
-    #pragma config UPLLEN   = ON                                    // USB PLL enable
-    #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
-    #pragma config FVBUSONIO = OFF                                  // Make VBUSON a GPIO pin
-    #pragma config FUSBIDIO = OFF                                   // Controlled by port function
-
-    //* Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                                // Watchdog timer postscaler
-    #pragma config WINDIS   = OFF
-    #pragma config JTAGEN   = OFF                                   // JTAG port disabled
-
-    //* Code Protection settings
-    #pragma config CP       = OFF                                   // Code protection
-    #pragma config BWP      = OFF                                   // Boot flash write protect
-    #pragma config PWP      = OFF                                   // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx1                      		// ICE/ICD Comm Channel Select
-    //#pragma config DEBUG    = ON                          		// DO NOT SET THIS CONFIG BIT, it will break debugging
-
-    #pragma config PMDL1WAY = OFF                           		// Allow multiple reconfigurations
-    #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       Low
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     B
-    #define BLedBit     0
-
-    // Download LED
-    #define DLedLat     B
-    #define DLedBit     1
-
-    // Virtual program button
-    #define VPBntLat    B
-    #define VPBntBit    4
-
-    // Program button
-    #define PBntPort    B
-    #define PBntBit     4
-
-    #define _CPU_NAME_                  "32MX250F128B"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITDP32
-    #define F_CPU                       40000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 (0x20000)           // Leave room 4 pages (for bootloader!)
-    #define FLASH_PAGE_SIZE             1024                // In bytes
-
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-    #define UARTMapRX()                 (U1RXR = 0x3)       // RPB13 -> U1RX
-    #define UARTMapTX()                 (RPB3R = 0x1)       // RB3 -> U1TX
-
-//************************************************************************
-#elif defined(_BOARD_CMOD_CK1_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                        // Oscillator Selection
-    #pragma config POSCMOD  = XT                            // Primary Oscillator
-    #pragma config FPLLIDIV = DIV_2                         // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                        // PLL multiplier
-    #pragma config FPLLODIV = DIV_2                         // PLL output divider
-    #pragma config FPBDIV   = DIV_1                         // Peripheral bus clock divider
-    #pragma config FSOSCEN  = OFF                           // Secondary Oscillator Enable
-
-    //*    Clock control settings
-    #pragma config IESO     = ON                            // Internal/External Switch-over
-    #pragma config FCKSM    = CSDCMD                        // Clock Switching & Fail Safe Clock Monitor
-    #pragma config OSCIOFNC = OFF                           // CLKO Enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                           // Watchdog Timer
-    #pragma config WDTPS    = PS1024                        // Watchdog Timer Postscale
-    #pragma config WINDIS   = OFF
-    #pragma config JTAGEN   = OFF                           // JTAG port disabled
-
-    //*    Code Protection settings
-    #pragma config CP       = OFF                           // Code Protect
-    #pragma config BWP      = OFF                           // Boot Flash Write Protect
-    #pragma config PWP      = OFF                           // Program Flash Write Protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx2                      // ICE/ICD Comm Channel Select
-    //#pragma config DEBUG    = ON                          // DO NOT SET THIS CONFIG BIT, it will break debugging
-
-    #pragma config PMDL1WAY = OFF                           // Allow multiple reconfigurations
-    #pragma config IOL1WAY  = OFF                           // Allow multiple reconfigurations
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     A
-    #define BLedBit     10
-
-    // Download LED
-    #define DLedLat     B
-    #define DLedBit     12
-
-    // Virtual program button
-    #define VPBntLat    A
-    #define VPBntBit    2
-
-    #define _CPU_NAME_              "PIC32MX150F128D"
-    #define VEND                    vendDigilent
-    #define PROD                    prodCmodCK1
-    #define F_CPU                   40000000UL              // CPU frequence
-    #define F_PBUS                  F_CPU                   // Peripheral bus rate F_CPU / FPBDIV; just set it, saves code.
-
-    #define FLASH_BYTES             0x20000                  // 128K
-    #define FLASH_PAGE_SIZE         1024
-
-    #define LISTEN_BEFORE_LOAD      2000                    // no less than 2 seconds
-    #define BOOTLOADER_UART         1                       // avrdude program UART
-    #define BAUDRATE                115200                  // avrdude baudrate
-    #define UARTMapRX()             (U1RXR = 0x5)           // RPC6 -> U1RX
-    #define UARTMapTX()             (RPB3R = 0x1)           // RPB3 -> U1TX
-
-//************************************************************************
-#elif defined(_BOARD_CHIPKIT_DP32_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //* Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                                // Oscillator selection
-    #pragma config POSCMOD  = XT                                    // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
-    #pragma config FPLLODIV = DIV_2                                 // PLL output divider
-    #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
-    #pragma config FSOSCEN  = OFF                                    // Secondary oscillator enable
-
-    //* Clock control settings
-    #pragma config IESO     = OFF                                   // Internal/external clock switchover
-    #pragma config FCKSM    = CSECME                                // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                                   // Clock output on OSCO pin enable
-
-    //* USB Settings
-    #pragma config UPLLEN   = ON                                    // USB PLL enable
-    #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
-    #pragma config FVBUSONIO = OFF                                  // Make VBUSON a GPIO pin
-    #pragma config FUSBIDIO = OFF                                   // Controlled by port function
-
-    //* Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                                // Watchdog timer postscaler
-    #pragma config WINDIS   = OFF
-    #pragma config JTAGEN   = OFF                                   // JTAG port disabled
-
-    //* Code Protection settings
-    #pragma config CP       = OFF                                   // Code protection
-    #pragma config BWP      = OFF                                   // Boot flash write protect
-    #pragma config PWP      = OFF                                   // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx1                      		// ICE/ICD Comm Channel Select
-    //#pragma config DEBUG    = ON                          		// DO NOT SET THIS CONFIG BIT, it will break debugging
-
-    #pragma config PMDL1WAY = OFF                           		// Allow multiple reconfigurations
-    #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     B
-    #define BLedBit     3
-
-    // Download LED
-    #define DLedLat     B
-    #define DLedBit     2
-
-    // Virtual program button
-    #define VPBntLat    B
-    #define VPBntBit    4
-
-    // Program button
-    #define PBntPort    B
-    #define PBntBit     4
-
-    #define _CPU_NAME_                  "32MX250F128B"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITDP32
-    #define F_CPU                       40000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 (0x20000-0x1000)		    // Leave room 4 pages (for bootloader!)
-    #define FLASH_PAGE_SIZE             1024                                // In bytes
-
-//************************************************************************
-#elif defined(_BOARD_CHIPKIT_UNO32_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                        // Oscillator selection
-    #pragma config POSCMOD  = XT                            // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                         // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                        // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                         // PLL output divider
-    #pragma config FPBDIV   = DIV_1                         // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                            // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO     = OFF                           // Internal/external clock switchover
-    #pragma config FCKSM    = CSDCMD                        // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                           // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                           // Watchdog timer enable
-    #pragma config WDTPS    =  PS1024                       // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP       = OFF                           // Code protection
-    #pragma config BWP      = OFF                           // Boot flash write protect
-    #pragma config PWP      = OFF                           // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx2                      // ICE pin selection
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     6
-
-    // Download LED
-    #define DLedLat     F
-    #define DLedBit     0
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
- 
-    #define _CPU_NAME_                  "32MX320F128H"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITUno32
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x20000             // 128K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)
-
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_MX3CK_128_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD  = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                             // PLL output divider
-    #pragma config FPBDIV   = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                                // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO     = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM    = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                               // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP       = OFF                               // Code protection
-    #pragma config BWP      = OFF                               // Boot flash write protect
-    #pragma config PWP      = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx2                          // ICE pin selection
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     F
-    #define BLedBit     0
-
-    // Download LED
-    #define DLedLat     F
-    #define DLedBit     1
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
- 
-    #define _CPU_NAME_                  "32MX320F128H"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebotMX3cK128
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x20000             // 128K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)        // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_UDB32_PIM_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                        // Oscillator selection
-    #pragma config POSCMOD  = XT                            // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                         // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                        // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                         // PLL output divider
-    #pragma config FPBDIV   = DIV_1                         // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                            // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO     = OFF                           // Internal/external clock switchover
-    #pragma config FCKSM    = CSDCMD                        // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                           // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                           // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                        // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP       = OFF                           // Code protection
-    #pragma config BWP      = OFF                           // Boot flash write protect
-    #pragma config PWP      = OFF                           // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx1                      // ICE pin selection
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       Low
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     A
-    #define BLedBit     6
-
-    // Download LED
-    #define DLedLat     A
-    #define DLedBit     7
-
-    // Virtual program button
-    #define VPBntLat    G
-    #define VPBntBit    15
-
-    // Program button
-    #define PBntPort    G
-    #define PBntBit     15
-
-    // Other capabilities
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX360F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITUDB32PIM
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000         // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)
-
-//************************************************************************
-#elif defined(_BOARD_CHIPKIT_UC32_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                        // Oscillator selection
-    #pragma config POSCMOD  = XT                            // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                         // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                        // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                         // PLL output divider
-    #pragma config FPBDIV   = DIV_1                         // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                            // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO     = OFF                           // Internal/external clock switchover
-    #pragma config FCKSM    = CSDCMD                        // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                           // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                           // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                        // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP       = OFF                           // Code protection
-    #pragma config BWP      = OFF                           // Boot flash write protect
-    #pragma config PWP      = OFF                           // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx2                      // ICE pin selection
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     6
-
-    // Download LED
-    #define DLedLat     F
-    #define DLedBit     0
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX340F512H"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITuC32
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000         // 512K   
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)
-
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_MX3CK_512_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD  = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                             // PLL output divider
-    #pragma config FPBDIV   = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                                // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO     = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM    = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                               // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP       = OFF                               // Code protection
-    #pragma config BWP      = OFF                               // Boot flash write protect
-    #pragma config PWP      = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL   = ICS_PGx2                          // ICE pin selection
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     F
-    #define BLedBit     0
-
-    // Download LED
-    #define DLedLat     F
-    #define DLedBit     1
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
- 
-    #define _CPU_NAME_                  "32MX340F512H"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebotMX3cK512
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000         // 512K   
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)        // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_32MX4_)
- 
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //* Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                                // Oscillator selection
-    #pragma config POSCMOD  = XT                                    // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                                 // PLL output divider
-    #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                                    // Secondary oscillator enable
-    
-    //* Clock control settings
-    #pragma config IESO     = OFF                                   // Internal/external clock switchover
-    #pragma config FCKSM    = CSECME                                // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                                   // Clock output on OSCO pin enable
-    
-    //* USB Settings
-    #pragma config UPLLEN   = ON                                    // USB PLL enable
-    #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
-    
-    //* Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                                // Watchdog timer postscaler
-    
-    //* Code Protection settings
-    #pragma config CP       = OFF                                   // Code protection
-    #pragma config BWP      = OFF                                   // Boot flash write protect
-    #pragma config PWP      = OFF                                   // Program flash write protect
-    
-    //* Debug settings
-    #pragma config ICESEL   = ICS_PGx2                              // ICE pin selection
-#endif
-    
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     B
-    #define BLedBit     10
-
-    // Download LED
-    #define DLedLat     B
-    #define DLedBit     11
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Program button
-    #define PBntPort    A
-    #define PBntBit     6
-
-     // Other capabilities
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                                115200              
-
-    #define _CPU_NAME_                  "32MX460F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebot32MX4
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                 // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_32MX4_USB_)
- 
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //* Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                                // Oscillator selection
-    #pragma config POSCMOD  = XT                                    // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                                 // PLL output divider
-    #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                                    // Secondary oscillator enable
-    
-    //* Clock control settings
-    #pragma config IESO     = OFF                                   // Internal/external clock switchover
-    #pragma config FCKSM    = CSECME                                // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                                   // Clock output on OSCO pin enable
-    
-    //* USB Settings
-    #pragma config UPLLEN   = ON                                    // USB PLL enable
-    #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
-    
-    //* Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                                // Watchdog timer postscaler
-    
-    //* Code Protection settings
-    #pragma config CP       = OFF                                   // Code protection
-    #pragma config BWP      = OFF                                   // Boot flash write protect
-    #pragma config PWP      = OFF                                   // Program flash write protect
-    
-    //* Debug settings
-    #pragma config ICESEL   = ICS_PGx2                              // ICE pin selection
-#endif
-    
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     B
-    #define BLedBit     10
-
-    // Download LED
-    #define DLedLat     B
-    #define DLedBit     11
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Program button
-    #define PBntPort    A
-    #define PBntBit     6
-
-    #define _CPU_NAME_                  "32MX460F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebot32MX4
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                     // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_MX4CK_)
- 
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //* Oscillator Settings
-    #pragma config FNOSC    = PRIPLL                                // Oscillator selection
-    #pragma config POSCMOD  = XT                                    // Primary oscillator mode
-    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
-    #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
-    #pragma config FPLLODIV = DIV_1                                 // PLL output divider
-    #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
-    #pragma config FSOSCEN  = ON                                    // Secondary oscillator enable
-    
-    //* Clock control settings
-    #pragma config IESO     = OFF                                   // Internal/external clock switchover
-    #pragma config FCKSM    = CSECME                                // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC = OFF                                   // Clock output on OSCO pin enable
-    
-    //* USB Settings
-    #pragma config UPLLEN   = ON                                    // USB PLL enable
-    #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
-    
-    //* Other Peripheral Device settings
-    #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
-    #pragma config WDTPS    = PS1024                                // Watchdog timer postscaler
-    
-    //* Code Protection settings
-    #pragma config CP       = OFF                                   // Code protection
-    #pragma config BWP      = OFF                                   // Boot flash write protect
-    #pragma config PWP      = OFF                                   // Program flash write protect
-    
-    //* Debug settings
-    #pragma config ICESEL   = ICS_PGx2                              // ICE pin selection
-#endif
-    
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     B
-    #define BLedBit     10
-
-    // Download LED
-    #define DLedLat     B
-    #define DLedBit     11
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX460F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebotMX4cK
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                 // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
 
 //************************************************************************
 #elif defined(_BOARD_UBW32_MX460_USB_)
@@ -1124,281 +365,6 @@
     #define FLASH_BYTES                 0x80000                     // 512K
     #define FLASH_PAGE_SIZE             4096
     #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CHIPKIT_WF32_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD      = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
-    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO         = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-    #pragma config BWP          = OFF                               // Boot flash write protect
-    #pragma config PWP          = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL       = ICS_PGx2                          // ICE pin selection
-
-    //*    Other Peripheral Device settings
-    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-//    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     6
-
-    // Download LED
-    #define DLedLat     F
-    #define DLedBit     0
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX695F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITWF32
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                     // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CHIPKIT_ZUNO_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-     //*    Oscillator Settings
-    // works with proper timing
-    #pragma config POSCMOD      = EC                                // External Clock
-//    #pragma config POSCMOD      = HS                                // Crystal
-
-    #pragma config FPLLIDIV     = DIV_3                             // 8 MHz
-    #pragma config FPLLICLK     = PLL_POSC                          // 8MHz Posc
-
-    #pragma config FNOSC        = SPLL                              // Oscillator selection
-    #pragma config FPLLMULT     = MUL_50                            // 400 MHz
-    #pragma config FPLLODIV     = DIV_2                             // 200 MHz or 80 MHz, depending
-
-    #pragma config FPLLRNG      = RANGE_5_10_MHZ                    // 5-10Mhz
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-    #pragma config UPLLFSEL     = FREQ_24MHZ                        // USB PLL Input Frequency Selection (USB PLL input is 24 MHz)
-
-    //*    Clock control settings
-    #pragma config IESO         = ON                                // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1048576                         // Watchdog timer postscaler
-    #pragma config WDTSPGM      = STOP                              // Watchdog Timer Stop During Flash Programming (WDT stops during Flash programming)
-    #pragma config WINDIS       = NORMAL          // Watchdog Timer Window Mode (Watchdog Timer is in non-Window mode)
-    #pragma config FWDTWINSZ    = WINSZ_25     // Watchdog Timer Window Size (Window size is 25%)
-    #pragma config FDMTEN       = OFF             // Deadman Timer Enable (Deadman Timer is disabled)
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-
-    //*    Debug settings
-//    #pragma config DEBUG       = ON                             // turn debugging on
-    #pragma config ICESEL       = ICS_PGx2                          // ICE pin selection
-
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    #pragma config BOOTISA  = MIPS32
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-//    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-//    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-
-    #pragma config DMTCNT       = 0
-
-//#pragma config PGL1WAY  = OFF             // Permission Group Lock One Way Configuration (Allow only one reconfiguration)
-//#pragma config PMDL1WAY = OFF           // Peripheral Module Disable Configuration (Allow only one reconfiguration)
-//#pragma config IOL1WAY  = OFF             // Peripheral Pin Select Configuration (Allow only one reconfiguration)
-//#pragma config DMTINTV  = WIN_127_128    // DMT Count Window Interval (Window/Interval value is 127/128 counter value)
-//#pragma config EJTAGBEN = NORMAL
-//#pragma config DBGPER   = PG_ALL
-//#pragma config FSLEEP   = OFF
-//#pragma config FECCCON  = OFF_UNLOCKED
-//#pragma config TRCEN    = OFF
-
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     B
-    #define BLedBit     14
-
-    // Download LED
-    #define DLedLat     B
-    #define DLedBit     15
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-    #define UARTMapRX()                 (U1RXR = 0b0100)    // RPF1 -> U1RX
-    #define UARTMapTX()                 (RPF0R = 0b0001)    // RF0 -> U1TX
-
-    #define _CPU_NAME_                  "PIC32MZ2048ECG"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITzUno
-    #define F_CPU                       200000000UL
-    #define F_PBUS                      (F_CPU / (PB2DIVbits.PBDIV + 1))
-
-    #define FLASH_BYTES                 0x200000                    // 2MB
-    #define FLASH_PAGE_SIZE             0x4000                      // 16K
-
-//************************************************************************
-#elif defined(_BOARD_CHIPKIT_WIFIRE_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-     //*    Oscillator Settings
-    // works with proper timing
-    #pragma config POSCMOD      = EC                                // External Clock
-//    #pragma config POSCMOD      = HS                                // Crystal
-
-    #pragma config FPLLIDIV     = DIV_3                             // 8 MHz
-    #pragma config FPLLICLK     = PLL_POSC                          // 8MHz Posc
-
-    #pragma config FNOSC        = SPLL                              // Oscillator selection
-    #pragma config FPLLMULT     = MUL_50                            // 400 MHz
-    #pragma config FPLLODIV     = DIV_2                             // 200 MHz or 80 MHz, depending
-
-    #pragma config FPLLRNG      = RANGE_5_10_MHZ                    // 5-10Mhz
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-    #pragma config UPLLFSEL     = FREQ_24MHZ                        // USB PLL Input Frequency Selection (USB PLL input is 24 MHz)
-
-    //*    Clock control settings
-    #pragma config IESO         = ON                                // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1048576                         // Watchdog timer postscaler
-    #pragma config WDTSPGM      = STOP                              // Watchdog Timer Stop During Flash Programming (WDT stops during Flash programming)
-    #pragma config WINDIS       = NORMAL                            // Watchdog Timer Window Mode (Watchdog Timer is in non-Window mode)
-    #pragma config FWDTWINSZ    = WINSZ_25                          // Watchdog Timer Window Size (Window size is 25%)
-    #pragma config FDMTEN       = OFF                               // Deadman Timer Enable (Deadman Timer is disabled)
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-
-    //*    Debug settings
-//    #pragma config DEBUG       = ON                               // turn debugging on
-    #pragma config ICESEL       = ICS_PGx2                          // ICE pin selection
-
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    #pragma config BOOTISA  = MIPS32
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-
-    #pragma config DMTCNT       = 0
-
-//#pragma config PGL1WAY  = OFF             // Permission Group Lock One Way Configuration (Allow only one reconfiguration)
-//#pragma config PMDL1WAY = OFF             // Peripheral Module Disable Configuration (Allow only one reconfiguration)
-//#pragma config IOL1WAY  = OFF             // Peripheral Pin Select Configuration (Allow only one reconfiguration)
-//#pragma config DMTINTV  = WIN_127_128     // DMT Count Window Interval (Window/Interval value is 127/128 counter value)
-//#pragma config EJTAGBEN = NORMAL
-//#pragma config DBGPER   = PG_ALL
-//#pragma config FSLEEP   = OFF
-//#pragma config FECCCON  = OFF_UNLOCKED
-//#pragma config TRCEN    = OFF
-
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     6
-
-    // Download LED
-    #define DLedLat     D
-    #define DLedBit     4
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             4                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-    #define UARTMapRX()                 (U4RXR = 0b1011)    // RPF2 -> U4RX
-    #define UARTMapTX()                 (RPF8R = 0b0010)    // RF8 -> U4TX
-
-    #define _CPU_NAME_                  "PIC32MZ2048ECG"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITWiFire
-    #define F_CPU                       200000000UL
-    #define F_PBUS                      (F_CPU / (PB2DIVbits.PBDIV + 1))
-
-    #define FLASH_BYTES                 0x200000                    // 2MB
-    #define FLASH_PAGE_SIZE             0x4000                      // 16K
 
 //************************************************************************
 #elif defined(_BOARD_FUBARINO_SDZ_UART_)
@@ -1498,396 +464,6 @@
     #define FLASH_PAGE_SIZE             0x4000                      // 16K
 
 //************************************************************************
-#elif defined(_BOARD_CHIPKIT_MAX32_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD      = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
-    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO         = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-    #pragma config BWP          = OFF                               // Boot flash write protect
-    #pragma config PWP          = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL       = ICS_PGx2                          // ICE pin selection
-
-    //*    Other Peripheral Device settings
-    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     A
-    #define BLedBit     3
-
-    // Download LED
-    #define DLedLat     C
-    #define DLedBit     1
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX795F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITMax32
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                     // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_32MX7_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD      = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
-    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO         = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-    #pragma config BWP          = OFF                               // Boot flash write protect
-    #pragma config PWP          = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL       = ICS_PGx1                          // ICE pin selection
-
-    //*    Other Peripheral Device settings
-    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     12
-
-    // Download LED
-    #define DLedLat     G
-    #define DLedBit     13
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Program button
-    #define PBntPort    G
-    #define PBntBit     6
-
-    // Other capabilities
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX795F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebot32MX7
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                 // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_32MX7_USB_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD      = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
-    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO         = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-    #pragma config BWP          = OFF                               // Boot flash write protect
-    #pragma config PWP          = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL       = ICS_PGx1                          // ICE pin selection
-
-    //*    Other Peripheral Device settings
-    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     12
-
-    // Download LED
-    #define DLedLat     G
-    #define DLedBit     13
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Program button
-    #define PBntPort    G
-    #define PBntBit     6
-
-    // Other capabilities
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX795F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebot32MX7
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                     // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
- 
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_32MX7_USB_SPLIT_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD      = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
-    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO         = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-    #pragma config BWP          = OFF                               // Boot flash write protect
-    #pragma config PWP          = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL       = ICS_PGx1                          // ICE pin selection
-
-    //*    Other Peripheral Device settings
-    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     12
-
-    // Download LED
-    #define DLedLat     G
-    #define DLedBit     13
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Program button
-    #define PBntPort    G
-    #define PBntBit     6
-
-    #define _CPU_NAME_                  "32MX795F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebot32MX7
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 (0x80000-4096)              // 512K less 4K for the splitflash bootloader in program flash
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
- 
-//************************************************************************
-#elif defined(_BOARD_CEREBOT_MX7CK_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD      = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
-    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO         = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-    #pragma config BWP          = OFF                               // Boot flash write protect
-    #pragma config PWP          = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL       = ICS_PGx1                          // ICE pin selection
-
-    //*    Other Peripheral Device settings
-    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-#endif
-
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-    #define BLedLat     G
-    #define BLedBit     12
-
-    // Download LED
-    #define DLedLat     G
-    #define DLedBit     13
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX795F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodCerebotMX7cK
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                 // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
 #elif defined(_BOARD_UBW32_MX795_USB_)
 
 #if defined(PUT_CONFIG_BITS_HERE)
@@ -1956,83 +532,6 @@
     #define _CPU_NAME_                  "32MX795F512L"
     #define VEND                        vendSchmalzHausLLC
     #define PROD                        prodUBW32MX795
-    #define F_CPU                       80000000UL
-    #define F_PBUS                      F_CPU
-
-    #define FLASH_BYTES                 0x80000                     // 512K
-    #define FLASH_PAGE_SIZE             4096
-    #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
-
-//************************************************************************
-#elif defined(_BOARD_CHIPKIT_FG32_)
-
-#if defined(PUT_CONFIG_BITS_HERE)
-
-    //*    Oscillator Settings
-    #pragma config FNOSC        = PRIPLL                            // Oscillator selection
-    #pragma config POSCMOD      = XT                                // Primary oscillator mode
-    #pragma config FPLLIDIV     = DIV_2                             // PLL input divider
-    #pragma config FPLLMUL      = MUL_20                            // PLL multiplier
-    #pragma config FPLLODIV     = DIV_1                             // PLL output divider
-    #pragma config FPBDIV       = DIV_1                             // Peripheral bus clock divider
-    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
-
-    //*    Clock control settings
-    #pragma config IESO         = OFF                               // Internal/external clock switchover
-    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
-    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
-
-    //*    Other Peripheral Device settings
-    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
-    #pragma config WDTPS        = PS1024                            // Watchdog timer postscaler
-
-    //*    Code Protection settings
-    #pragma config CP           = OFF                               // Code protection
-    #pragma config BWP          = OFF                               // Boot flash write protect
-    #pragma config PWP          = OFF                               // Program flash write protect
-
-    //*    Debug settings
-    #pragma config ICESEL       = ICS_PGx2                          // ICE pin selection
-
-    //*    Other Peripheral Device settings
-    #pragma config FSRSSEL      = PRIORITY_7                        // SRS interrupt priority
-    #pragma config FCANIO       = OFF                               // Standard/alternate CAN pin select (OFF=Alt)
-    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
-    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
-
-    //*    USB Settings
-    #pragma config UPLLEN       = ON                                // USB PLL enable
-    #pragma config UPLLIDIV     = DIV_2                             // USB PLL input divider
-    #pragma config FVBUSONIO    = OFF                               // VBUS pin control
-    #pragma config FUSBIDIO     = OFF                               // USBID pin control
-#endif
-
-    #define CAPABILITIES    (blCapUARTInterface | blCapAutoResetListening | blCapVirtualProgramButton | CAPCOMMON)
-
-    // BTN / LED sense
-    #define LedOn       High
-    #define BntOn       High
-
-    // Boot LED
-//    #define BLedLat     A
-//    #define BLedBit     3
-
-    // Download LED
-//    #define DLedLat     C
-//    #define DLedBit     1
-
-    // Virtual program button
-    #define VPBntLat    C
-    #define VPBntBit    12
-
-    // Other capabilities
-    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
-    #define BOOTLOADER_UART             1                   // avrdude program UART
-    #define BAUDRATE                    115200              // avrdude baudrate
-
-    #define _CPU_NAME_                  "32MX695F512L"
-    #define VEND                        vendDigilent
-    #define PROD                        prodChipKITFG32
     #define F_CPU                       80000000UL
     #define F_PBUS                      F_CPU
 
@@ -3103,7 +1602,6 @@
     #define LoadFlashWaitStates()       (CHECON = 2)            // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
 
 //************************************************************************
-
 #elif defined(_BOARD_MAJENKO_SDZL_)
 
 #if defined(PUT_CONFIG_BITS_HERE)
@@ -3317,6 +1815,7 @@
     (__32MX250F128B__)  ||      \
     (__32MX250F128C__)  ||      \
     (__32MX250F128D__)  ||      \
+    (__32MX350F256H__)  ||      \
     (__32MZ0256ECE064__) ||     \
     (__32MZ0512ECE064__) ||     \
     (__32MZ1024ECE064__) ||     \
@@ -3396,9 +1895,32 @@
     (__32MZ0512ECK144__) ||     \
     (__32MZ1024ECK144__) ||     \
     (__32MZ1024ECM144__) ||     \
-    (__32MZ2048ECM144__)        )
+    (__32MZ2048ECM144__) ||     \
+    (__32MZ1024EFG100__) ||     \
+    (__32MZ1024EFG124__) ||     \
+    (__32MZ1024EFG144__) ||     \
+    (__32MZ1024EFH064__) ||     \
+    (__32MZ1024EFH100__) ||     \
+    (__32MZ1024EFH124__) ||     \
+    (__32MZ1024EFH144__) ||     \
+    (__32MZ2048EFG064__) ||     \
+    (__32MZ2048EFG100__) ||     \
+    (__32MZ2048EFG124__) ||     \
+    (__32MZ2048EFG144__) ||     \
+    (__32MZ2048EFH064__) ||     \
+    (__32MZ2048EFH100__) ||     \
+    (__32MZ2048EFH124__) ||     \
+    (__32MZ2048EFH144__) ||     \
+    (__32MZ1024EFM064__) ||     \
+    (__32MZ2048EFM064__) ||     \
+    (__32MZ1024EFM100__) ||     \
+    (__32MZ2048EFM100__) ||     \
+    (__32MZ1024EFM124__) ||     \
+    (__32MZ2048EFM124__) ||     \
+    (__32MZ1024EFM144__) ||     \
+    (__32MZ2048EFM144__)        )
 
-	#define PPS_IN_USE		1		// indicate that this is a PPS type processor
+    #define PPS_IN_USE 1            // indicate that this is a PPS type processor
 
     #if ((CAPABILITIES & blCapUARTInterface) == blCapUARTInterface)
 
@@ -3546,6 +2068,10 @@
         #define LISTEN_BEFORE_LOAD                      0 
 #endif
 
+#ifndef JTAG
+        #define JTAG 0
+#endif
+
 // error checking for #defines.
 #if !defined(_CPU_NAME_)
     #error _CPU_NAME_ needs to be defined.
@@ -3631,8 +2157,9 @@
 */
 static inline void __attribute__((always_inline)) InitLEDsAndButtons(void)
 {
-	// We assume the processor is unlocked, so let's just assert that here
-    // While the processor comes up in the unlocked state after reset it is
+    // volatile int i;
+    // We assume the processor is unlocked, so let's just assert that here
+    // While the processor comes up in the unlocked state after reset it is 
     // possible that the rest code was jumped to after someone locked the system
     // and we need to re-assert the unlock.
     SYSKEY = 0;
@@ -3664,8 +2191,44 @@ static inline void __attribute__((always_inline)) InitLEDsAndButtons(void)
         ANSELC = 0;
     #endif
      
+    #ifdef _ANSELD_w_POSITION
+        ANSELD = 0;
+    #endif
+     
+    #ifdef _ANSELE_w_POSITION
+        ANSELE = 0;
+    #endif
+     
+    #ifdef _ANSELF_w_POSITION
+        ANSELF = 0;
+    #endif
+     
+    #ifdef _ANSELG_w_POSITION
+        ANSELG = 0;
+    #endif
+     
+    #ifdef _ANSELH_w_POSITION
+        ANSELH = 0;
+    #endif
+
     #ifdef _AD1PCFG_w_POSITION
         AD1PCFG = 0xffff;
+    #endif
+
+    #if(JTAG == 1)
+        #ifdef __PIC32MZ__
+            CFGCONbits.JTAGEN = 1;
+//            i = 3;
+        #else
+            DDPCONbits.JTAGEN = 1;
+        #endif
+
+    #else
+        #ifdef __PIC32MZ__
+            CFGCONbits.JTAGEN = 0;
+        #else
+            DDPCONbits.JTAGEN = 0;
+        #endif
     #endif
 
     // wait states flash/cache based on the system clock speed.
@@ -3793,7 +2356,7 @@ static inline void __attribute__((always_inline)) UninitLEDsAndButtons(void)
     	while (USTAbits.URXDA)
     	{
     	    byte value = 0;
-    		value = URXREG;
+            value = URXREG;
     	}
     }
 

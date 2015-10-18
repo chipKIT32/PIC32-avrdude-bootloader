@@ -35,15 +35,16 @@ MEMORY
 {
   kseg1_boot_mem             : ORIGIN = 0xBFC00000, LENGTH = 0x0380
   debug_vectors				 : ORIGIN = 0xBFC00380, LENGTH = 0x110
-  kseg0_boot_mem             : ORIGIN = 0x9FC00490, LENGTH = 0x0
-  kseg0_program_mem    (rx)  : ORIGIN = 0x9FC00490, LENGTH = 0x1B60
+  debug_reset                : ORIGIN = 0x9FC00490, LENGTH = 0x10
+  kseg0_boot_mem             : ORIGIN = 0x9FC004A0, LENGTH = 0x0
+  kseg0_program_mem    (rx)  : ORIGIN = 0x9FC004A0, LENGTH = 0x1B50
   exception_mem              : ORIGIN = 0xBFC01FF0, LENGTH = 0x10
   debug_exec_mem             : ORIGIN = 0xBFC02000, LENGTH = 0xFF0
   config3                    : ORIGIN = 0xBFC02FF0, LENGTH = 0x4
   config2                    : ORIGIN = 0xBFC02FF4, LENGTH = 0x4
   config1                    : ORIGIN = 0xBFC02FF8, LENGTH = 0x4
   config0                    : ORIGIN = 0xBFC02FFC, LENGTH = 0x4
-  kseg1_data_mem       (w!x) : ORIGIN = 0xA0000000, LENGTH = 0x2000
+  kseg1_data_mem       (w!x) : ORIGIN = 0xA0000000, LENGTH = 0x4000
   sfrs                       : ORIGIN = 0xBF800000, LENGTH = 0x100000
   configsfrs                 : ORIGIN = 0xBFC02FF0, LENGTH = 0x10
 }

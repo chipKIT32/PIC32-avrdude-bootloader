@@ -123,7 +123,7 @@ int main()  // we're called directly by Crt0.S
     ASSERT(sizeof(byte) == 1);
     ASSERT(sizeof(uint16) == 2);
     ASSERT(sizeof(uint32) == 4);
- 
+
     ramHeader.rcon = RCON;
     InitLEDsAndButtons();
 
@@ -151,24 +151,24 @@ int main()  // we're called directly by Crt0.S
 	// Always clear out RCON after 'using' it's values, so it doesn't screw things up next time
     // This must occur after the WaitForFinalReset() and checking our program buttons states
     ClearVirtualProgramButton();
-	RCON = 0;	
-
+    RCON = 0;
+	
     // If we are just going to immediately load from flash
     // don't even init the UART or USB, just load the application
     if (fLoadProgramFromFlash && LISTEN_BEFORE_LOAD == 0)
-	{
+    {
         // launch the application!
         ExecuteApp();
     }
 
     tLoopStart = _CP0_GET_COUNT();
     tLastBlink = tLoopStart;
-            
+
     // at this point we know that we either are going to wait
     // for something to be download, or are going to wait indefinitly for
     // for a download, in any case we need to enable the the interface for the download
     InitStk500v2Interface();
-   
+
     // forever...
     for (;;) {
         tLoopTime = _CP0_GET_COUNT();
@@ -181,7 +181,7 @@ int main()  // we're called directly by Crt0.S
             
             // blink the heartbeat LED
             BootLED_Toggle();
-            
+
             // set up for the next blink
             tLastBlink = tLoopTime;
         }
@@ -760,7 +760,7 @@ static void finshFlashProcessingAfterLoad(void)
 
 /***    void flashOperation(uint32 nvmop, uint32 addr, uint32 data)
 **
-**    Synopsis:   
+**    Synopsis:
 **      Performs either a page erase, word write, or row write
 **
 **    Parameters:
