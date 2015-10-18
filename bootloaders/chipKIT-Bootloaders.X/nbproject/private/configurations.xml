@@ -1,207 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="62">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>0</defaultConf>
+  <defaultConf>19</defaultConf>
   <confs>
-    <conf name="MX1_EXAMPLE_UART" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="UDB32_MX2_DIP" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CMOD_CK1" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CHIPKIT_DP32" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CHIPKIT_UNO32" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_MX3CK_128" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="UDB32_PIM" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CHIPKIT_UC32" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_MX3CK_512" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_32MX4" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_32MX4_USB" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_MX4CK" type="2">
+    <conf name="EXAMPLE_MX1" type="2">
       <platformToolSN></platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
       <mdbdebugger version="1">
@@ -237,151 +39,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="CHIPKIT_WF32" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CHIPKIT_ZUNO" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CHIPKIT_WIFIRE" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="Fubarino_SDZ_UART" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CHIPKIT_MAX32" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_32MX7" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_32MX7_USB" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_32MX7_USB_SPLIT" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CEREBOT_MX7CK" type="2">
+    <conf name="FUBARINO_SDZ_UART" type="2">
       <platformToolSN></platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
       <mdbdebugger version="1">
@@ -400,24 +58,6 @@
       </runprofile>
     </conf>
     <conf name="UBW32_MX795_USB" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
-      <mdbdebugger version="1">
-        <placeholder1>place holder 1</placeholder1>
-        <placeholder2>place holder 2</placeholder2>
-      </mdbdebugger>
-      <runprofile version="6">
-        <args></args>
-        <rundir></rundir>
-        <buildfirst>true</buildfirst>
-        <console-type>0</console-type>
-        <terminal-type>0</terminal-type>
-        <remove-instrumentation>0</remove-instrumentation>
-        <environment>
-        </environment>
-      </runprofile>
-    </conf>
-    <conf name="CHIPKIT_FG32" type="2">
       <platformToolSN></platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
       <mdbdebugger version="1">
@@ -507,7 +147,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="FUBARINO_MINI_USB_48MHz" type="2">
+    <conf name="FUBARINO_MINI_USB_48MHZ" type="2">
       <platformToolSN></platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
       <mdbdebugger version="1">
@@ -525,7 +165,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="FUBARINO_MINI_USB_50MHz" type="2">
+    <conf name="FUBARINO_MINI_USB_50MHZ" type="2">
       <platformToolSN></platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc32\v1.40\bin</languageToolchainDir>
       <mdbdebugger version="1">
