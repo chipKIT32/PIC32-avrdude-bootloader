@@ -340,7 +340,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
@@ -805,7 +805,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -1146,7 +1146,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -1543,7 +1543,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -1883,7 +1883,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -2210,7 +2210,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <ICD3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -2536,7 +2536,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <RealICEPlatformTool>
         <property key="ADC 1" value="true"/>
@@ -2891,7 +2891,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -3220,7 +3220,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -3549,7 +3549,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -3878,7 +3878,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -4209,7 +4209,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -4580,7 +4580,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -4951,7 +4951,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <ICD3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -5290,7 +5290,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -5619,7 +5619,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -5999,7 +5999,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <ICD3PlatformTool>
         <property key="ADC 1" value="true"/>
@@ -6338,7 +6338,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <RealICEPlatformTool>
         <property key="ADC 1" value="true"/>
@@ -6693,7 +6693,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <RealICEPlatformTool>
         <property key="ADC 1" value="true"/>
@@ -7045,7 +7045,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -7398,7 +7398,7 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-fno-toplevel-reorder"/>
+        <appendMe value="-ftoplevel-reorder"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
