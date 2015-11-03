@@ -329,10 +329,14 @@ avrbl_message(byte *request, int size)
 //    parameters[0x41] = VEND >> 8;
 //    parameters[0x42] = PROD;
 //    parameters[0x43] = PROD >> 8;
-    parameters[0x44] = DEVIDbits.DEVID;
-    parameters[0x45] = DEVIDbits.DEVID >> 8;
-    parameters[0x46] = DEVIDbits.DEVID >> 16;
-    parameters[0x47] = DEVIDbits.DEVID >> 24;
+
+// These four are the ones that are really wanted, but memory is just too tight on
+// the MX1/2 boards. When we have found enough room then enable them again.
+//    parameters[0x44] = DEVIDbits.DEVID;
+//    parameters[0x45] = DEVIDbits.DEVID >> 8;
+//    parameters[0x46] = DEVIDbits.DEVID >> 16;
+//    parameters[0x47] = DEVIDbits.DEVID >> 24;
+
 //    parameters[0x48] = DEVIDbits.VER;
     
     uint32 i;
