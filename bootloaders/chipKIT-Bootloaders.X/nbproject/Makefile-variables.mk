@@ -11,6 +11,13 @@ CND_ARTIFACT_PATH_EXAMPLE_MX1=dist/EXAMPLE_MX1/production/chipKIT-Bootloaders.X.
 CND_PACKAGE_DIR_EXAMPLE_MX1=${CND_DISTDIR}/EXAMPLE_MX1/package
 CND_PACKAGE_NAME_EXAMPLE_MX1=chipkit-bootloaders.x.tar
 CND_PACKAGE_PATH_EXAMPLE_MX1=${CND_DISTDIR}/EXAMPLE_MX1/package/chipkit-bootloaders.x.tar
+# UDB32_MX2_DIP configuration
+CND_ARTIFACT_DIR_UDB32_MX2_DIP=dist/UDB32_MX2_DIP/production
+CND_ARTIFACT_NAME_UDB32_MX2_DIP=chipKIT-Bootloaders.X.production.hex
+CND_ARTIFACT_PATH_UDB32_MX2_DIP=dist/UDB32_MX2_DIP/production/chipKIT-Bootloaders.X.production.hex
+CND_PACKAGE_DIR_UDB32_MX2_DIP=${CND_DISTDIR}/UDB32_MX2_DIP/package
+CND_PACKAGE_NAME_UDB32_MX2_DIP=chipkit-bootloaders.x.tar
+CND_PACKAGE_PATH_UDB32_MX2_DIP=${CND_DISTDIR}/UDB32_MX2_DIP/package/chipkit-bootloaders.x.tar
 # UBW32_MX460_USB configuration
 CND_ARTIFACT_DIR_UBW32_MX460_USB=dist/UBW32_MX460_USB/production
 CND_ARTIFACT_NAME_UBW32_MX460_USB=chipKIT-Bootloaders.X.production.hex
