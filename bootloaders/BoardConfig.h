@@ -1030,6 +1030,76 @@
     #define FLASH_PAGE_SIZE             1024						// In bytes
 
 //************************************************************************
+#elif defined(_BOARD_OLIMEX_PIC32_PINGUINO_UART_57600_)
+ 
+#if defined(PUT_CONFIG_BITS_HERE)
+
+    //* Oscillator Settings
+    #pragma config FNOSC    = PRIPLL                                // Oscillator selection
+    #pragma config POSCMOD  = HS                                    // Primary oscillator mode
+    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
+    #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
+    #pragma config FPLLODIV = DIV_1                                 // PLL output divider
+    #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
+    #pragma config FSOSCEN  = OFF                                   // Secondary oscillator enable
+    
+    //* Clock control settings
+    #pragma config IESO     = OFF                                   // Internal/external clock switchover
+    #pragma config FCKSM    = CSECME                                // Clock switching (CSx)/Clock monitor (CMx)
+    #pragma config OSCIOFNC = OFF                                   // Clock output on OSCO pin enable
+    
+    //* USB Settings
+    #pragma config UPLLEN   = ON                                    // USB PLL enable
+    #pragma config UPLLIDIV = DIV_2                                 // USB PLL input divider
+    
+    //* Other Peripheral Device settings
+    #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
+    #pragma config WDTPS    = PS1024                                // Watchdog timer postscaler
+    #pragma config WINDIS   = OFF
+    #pragma config JTAGEN   = OFF                          			// JTAG port disabled
+   
+    //* Code Protection settings
+    #pragma config CP       = OFF                                   // Code protection
+    #pragma config BWP      = OFF                                   // Boot flash write protect
+    #pragma config PWP      = OFF                                   // Program flash write protect
+    
+    //* Debug settings
+    #pragma config ICESEL   = ICS_PGx2                              // ICE pin selection
+    //#pragma config DEBUG    = ON                          		// DO NOT SET THIS CONFIG BIT, it will break debugging
+#endif    
+    #define CAPABILITIES    (blCapBootLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+
+    // BTN / LED sense
+    #define LedOn       High
+    #define BntOn       Low
+
+    // Boot LED
+    #define BLedLat     G
+    #define BLedBit     6
+
+    // Virtual program button
+    #define VPBntLat    D
+    #define VPBntBit    0
+
+    // Program button
+    #define PBntPort    D
+    #define PBntBit     0
+ 
+    // Other capabilities
+    #define BOOTLOADER_UART             2                           // avrdude program UART
+    #define BAUDRATE                    57600                       // avrdude baudrate
+
+    #define _CPU_NAME_                  "32MX440F256H"
+    #define VEND                        vendOlimex
+    #define PROD                        prodOlimex_PIC32_Pinguino
+    #define F_CPU                       80000000UL
+    #define F_PBUS                      F_CPU
+
+    #define FLASH_BYTES                 0x40000-0x1000              // 256K
+    #define FLASH_PAGE_SIZE             4096
+    #define LoadFlashWaitStates()       (CHECON = 2)                // 0 for 0-30Mhz, 1 for 31-60Mhz, 2 for 61-80Mhz
+
+//************************************************************************
 #elif defined(_BOARD_OLIMEX_PIC32_PINGUINO_)
  
 #if defined(PUT_CONFIG_BITS_HERE)
