@@ -85,6 +85,7 @@
 #define     vend4DSystems       0x0008
 #define     vendMajenko         0x0009
 #define     vendOpenBCI         0x000A
+#define     vendMikroE          0x000B
 #define     vendExperimental    0x8000
 
 #define     prodUnassigned      0xFFFF
@@ -132,6 +133,7 @@
 #include "configs/examples.h"
 #include "configs/fubarino.h"
 #include "configs/majenko.h"
+#include "configs/mikroe.h"
 #include "configs/olimex.h"
 #include "configs/openbci.h"
 #include "configs/pontech.h"

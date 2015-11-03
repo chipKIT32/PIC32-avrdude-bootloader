@@ -204,6 +204,16 @@ DEF_ebbv3-usb=-D_BOARD_EBBV3_USB_
 LKR_ebbv3-usb=MX1-2-USB-boot-linkerscript.ld
 CFL_ebbv3-usb=-mips16
 
+# MikroE configurations
+
+BIN_mikroe-clicker=MIKROE_PIC32MX_CLICKER
+OBJ_mikroe-clicker=main.o usb.o cdcacm.o
+CRT_mikroe-clicker=crt0.S
+MCU_mikroe-clicker=32MX534F064H
+DEF_mikroe-clicker=-D_BOARD_MIKROE_PIC32MX_CLICKER_
+LKR_mikroe-clicker=MX3-7-boot-linkerscript.ld
+CFL_mikroe-clicker=-mips16
+
 CFLAGS=-mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
 ASFLAGS=-Wa,--gdwarf-2 -mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
 LDFLAGS=-mprocessor=${MCU_${BOARD}} -nostdlib -nostartfiles ${CFL_${BOARD}} -mno-float -T ${LKR_${BOARD}} -Wl,--gc-sections -ffunction-sections -fdata-sections
