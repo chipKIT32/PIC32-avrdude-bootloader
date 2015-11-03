@@ -717,8 +717,7 @@ static inline void __attribute__((always_inline)) UninitLEDsAndButtons(void)
     	//*	ok, the serial port is initialized, clear any data that may be there
     	while (USTAbits.URXDA)
     	{
-    	    byte value = 0;
-            value = URXREG;
+            (void)URXREG;
     	}
     }
 

@@ -111,7 +111,7 @@ enum {
 // forward references to the avrbl code
 // needed by serial.h in BoardConfig.h
 void avrbl_state_machine(byte b);
-static void avrbl_run(void);
+//static void avrbl_run(void);
 static void avrbl_message(byte *request, int size);
 
 #include "BoardConfig.h"
