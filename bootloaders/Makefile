@@ -7,6 +7,8 @@ LD=${BINPREFIX}ld
 AS=${BINPREFIX}as
 BIN2HEX=${BINPREFIX}bin2hex
 
+BOARDS=$(shell grep '^BIN_' Makefile | cut -f2 -d'_' | cut -f1 -d'=' | xargs echo)
+
 # 4D configurations
 
 BIN_4d-picadillo=PICADILLO_35T
@@ -33,7 +35,7 @@ CRT_chipkit-pi-usb=crt0.S
 MCU_chipkit-pi-usb=32MX250F128B
 DEF_chipkit-pi-usb=-D_BOARD_CHIPKIT_PI_USB_
 LKR_chipkit-pi-usb=MX1-2-USB-boot-linkerscript.ld
-CFL_chipkot-pi-usb=-mips16
+CFL_chipkit-pi-usb=-mips16
 
 # Example configurations
 
@@ -48,12 +50,12 @@ CFL_example-mx1=-mips16
 # Fubarino configurations
 
 BIN_fubarino-sdz=Fubarino_SDZ_UART
-OBJ_fubarino-sdz=main.o
+OBJ_fubarino-sdz=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
 CRT_fubarino-sdz=crt0MZ.S
 MCU_fubarino-sdz=32MZ2048ECG064
 DEF_fubarino-sdz=-D_BOARD_FUBARINO_SDZ_UART_
 LKR_fubarino-sdz=MZ-boot-linkerscript.ld
-CFL_fubarino-sdz=
+CFL_fubarino-sdz=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
 BIN_fubarino-sd14=FUBARINO_SD_USB
 OBJ_fubarino-sd14=main.o usb.o cdcacm.o
@@ -115,12 +117,12 @@ LKR_majenko-sdau=MX3-7-boot-linkerscript.ld
 CFL_majenko-sdau=-mips16
 
 BIN_majenko-sdzl=MAJENKO_SDZL
-OBJ_majenko-sdzl=main.o 
+OBJ_majenko-sdzl=main.o  pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
 CRT_majenko-sdzl=crt0MZ.S
 MCU_majenko-sdzl=32MZ2048ECG064
 DEF_majenko-sdzl=-D_BOARD_MAJENKO_SDZL_
 LKR_majenko-sdzl=MZ-boot-linkerscript.ld
-CFL_majenko-sdzl=
+CFL_majenko-sdzl=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
 BIN_majenko-ultranano=MAJENKO_ULTRANANO
 OBJ_majenko-ultranano=main.o usb.o cdcacm.o
@@ -178,19 +180,19 @@ CFL_pontech-quick240=-mips16
 
 # Schmalzhaus configurations
 
-BIN_ubw32-mx795=UBW32-MX460_USB
-OBJ_ubw32-mx795=main.o usb.o cdcacm.o
-CRT_ubw32-mx795=crt0.S
-MCU_ubw32-mx795=32MX460F512L
-DEF_ubw32-mx795=-D_BOARD_UBW32_MX460_USB_
-LKR_ubw32-mx795=MX3-7-boot-linkerscript.ld
-CFL_ubw32-mx795=-mips16
+BIN_ubw32-mx460=UBW32-MX460_USB
+OBJ_ubw32-mx460=main.o usb.o cdcacm.o
+CRT_ubw32-mx460=crt0.S
+MCU_ubw32-mx460=32MX460F512L
+DEF_ubw32-mx460=-D_BOARD_UBW32_MX460_USB_
+LKR_ubw32-mx460=MX3-7-boot-linkerscript.ld
+CFL_ubw32-mx460=-mips16
 
-BIN_ubw32-mx795=UBW32-MX460_USB
+BIN_ubw32-mx795=UBW32-MX795_USB
 OBJ_ubw32-mx795=main.o usb.o cdcacm.o
 CRT_ubw32-mx795=crt0.S
-MCU_ubw32-mx795=32MX460F512L
-DEF_ubw32-mx795=-D_BOARD_UBW32_MX460_USB_
+MCU_ubw32-mx795=32MX795F512L
+DEF_ubw32-mx795=-D_BOARD_UBW32_MX795_USB_
 LKR_ubw32-mx795=MX3-7-boot-linkerscript.ld
 CFL_ubw32-mx795=-mips16
 
@@ -202,42 +204,19 @@ DEF_ebbv3-usb=-D_BOARD_EBBV3_USB_
 LKR_ebbv3-usb=MX1-2-USB-boot-linkerscript.ld
 CFL_ebbv3-usb=-mips16
 
-
-
 CFLAGS=-mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
+ASFLAGS=-Wa,--gdwarf-2 -mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
 LDFLAGS=-mprocessor=${MCU_${BOARD}} -nostdlib -nostartfiles ${CFL_${BOARD}} -mno-float -T ${LKR_${BOARD}}
 
 # Default target will list all the available targets
 all:
 	@echo "Specify a board to build for:"
-	@echo "    make 4d-picadillo"
-	@echo "    make chipkit-pi      (UART config)"
-	@echo "    make chipkit-pi-usb  (USB config)"
-	@echo "    make example-mx1"
-	@echo "    make fubarino-sdz    (UART config)"
-	@echo "    make fubarino-sd14   (MX440 V1.4)"
-	@echo "    make fubarino-sd15   (MX795 V1.5)"
-	@echo "    make fubarino-mini"
-	@echo "    make fubarino-mini48 (48MHz version)"
-	@echo "    make fubarino-mini50 (50MHz version)"
-	@echo "    make majenko-sdxl"
-	@echo "    make majenko-sdau"
-	@echo "    make majenko-sdzl"
-	@echo "    make majenko-ultranano"
-	@echo "    make olimex-pinguino"
-	@echo "    make olimex-duinomite"
-	@echo "    make openbci-udb32"
-	@echo "    make pontech-uav100"
-	@echo "    make pontech-quick240"
-	@echo "    make ubw32-mx460"
-	@echo "    make ubw32-mx795"
-	@echo "    make ebbv3-usb"
+	@for B in ${BOARDS}; do \
+		echo "    make " $$B; \
+	done
 
 
-.PHONY: 4d-picadillo chipkit-pi chipkit-pi-usb example-mx1 fubarino-sdz fubarino-sd14 fubarino-sd15 \
-		fubarino-mini fubarino-mini48 fubarino-mini50 majenko-sdxl majenko-sdau majenko-sdzl \
-		majenko-ultranano olimex-pinguino olimex-duinomite openbci-udb32 pontech-uav100 \
-		pontech-quick240 ubw32-mx460 ubw32-mx795
+.PHONY: ${BOARDS}
 
 # This is where the actual work is done:
 
@@ -255,71 +234,13 @@ clean:
 distclean:
 	rm -f *.o *.elf *.hex
 
-# Stubs to convert targets into BOARD variables:
+everything:
+	for B in ${BOARDS}; do \
+		echo $$B; \
+		make -s clean; \
+		make -s $$B; \
+	done
+	
 
-4d-picadillo:
+${BOARDS}:
 	${MAKE} compile BOARD=$@
-
-chipkit-pi:
-	${MAKE} compile BOARD=$@
-
-chipkit-pi-usb:
-	${MAKE} compile BOARD=$@
-
-example-mx1:
-	${MAKE} compile BOARD=$@
-
-fubarino-sdz:
-	${MAKE} compile BOARD=$@
-
-fubarino-sd14:
-	${MAKE} compile BOARD=$@
-
-fubarino-sd15:
-	${MAKE} compile BOARD=$@
-
-fubarino-mini:
-	${MAKE} compile BOARD=$@
-
-fubarino-mini48:
-	${MAKE} compile BOARD=$@
-
-fubarino-mini50:
-	${MAKE} compile BOARD=$@
-
-majenko-sdxl:
-	${MAKE} compile BOARD=$@
-
-majenko-sdau:
-	${MAKE} compile BOARD=$@
-
-majenko-sdzl:
-	${MAKE} compile BOARD=$@
-
-majenko-ultranano:
-	${MAKE} compile BOARD=$@
-
-olimex-pinguino:
-	${MAKE} compile BOARD=$@
-
-olimex-duinomite:
-	${MAKE} compile BOARD=$@
-
-openbci-udb32:
-	${MAKE} compile BOARD=$@
-
-pontech-uav100:
-	${MAKE} compile BOARD=$@
-
-pontech-quick240:
-	${MAKE} compile BOARD=$@
-
-ubw32-mx460:
-	${MAKE} compile BOARD=$@
-
-ubw32-mx795:
-	${MAKE} compile BOARD=$@
-
-ebbv3-usb:
-	${MAKE} compile BOARD=$@
-
