@@ -134,6 +134,22 @@ CFL_majenko-ultranano=-mips16
 
 # Olimex configurations
 
+BIN_olimex-pinguino-micro-uart=Olimex_Pinguino_Micro_UART
+OBJ_olimex-pinguino-micro-uart=main.o
+CRT_olimex-pinguino-micro-uart=crt0.S
+MCU_olimex-pinguino-micro-uart=32MX440F256H
+DEF_olimex-pinguino-micro-uart=-D_BOARD_OLIMEX_PINGUINO_MICRO_UART_
+LKR_olimex-pinguino-micro-uart=MX3-7-boot-linkerscript.ld
+CFL_olimex-pinguino-micro-uart=-mips16
+
+BIN_olimex-pinguino-micro-uart-57600=Olimex_Pinguino_Micro_UART_57600
+OBJ_olimex-pinguino-micro-uart-57600=main.o
+CRT_olimex-pinguino-micro-uart-57600=crt0.S
+MCU_olimex-pinguino-micro-uart-57600=32MX440F256H
+DEF_olimex-pinguino-micro-uart-57600=-D_BOARD_OLIMEX_PINGUINO_MICRO_UART_57600_
+LKR_olimex-pinguino-micro-uart-57600=MX3-7-boot-linkerscript.ld
+CFL_olimex-pinguino-micro-uart-57600=-mips16
+
 BIN_olimex-pinguino=Olimex_PIC32_Pinguino
 OBJ_olimex-pinguino=main.o usb.o cdcacm.o
 CRT_olimex-pinguino=crt0.S
