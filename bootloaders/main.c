@@ -343,7 +343,7 @@ avrbl_message(byte *request, int size)
     uint32 nbytes;
     uint32 nbytesAligned;
     uint32 endAddr;
-    uint32 address;
+    // uint32 address;
     int rawi;
     byte raw[64];
 
@@ -365,7 +365,7 @@ avrbl_message(byte *request, int size)
             active = true;
             erased = false;
             reply[replyi++] = 8;
-            ilstrcpy(reply+replyi, "STK500_2");
+            ilstrcpy((char *)(reply+replyi), "STK500_2");
             replyi += 8;
             DownloadLED_On();
             break;
@@ -400,13 +400,13 @@ avrbl_message(byte *request, int size)
            } else if ((request[4] == 0x20) || (request[4] == 0x28)) {
 
 /* this is never called, but lets just lie and say 0xFF
-                //* read one byte from flash
-                //* 0x20 is read odd byte
-                //* 0x28 is read even byte
+                // read one byte from flash
+                // 0x20 is read odd byte
+                // 0x28 is read even byte
 
-                //* read the even address
+                // read the even address
                 address = (request[5]<<8)|(request[6]);
-                //* the address is in 16 bit words
+                // the address is in 16 bit words
                 address = address<<1;
 
                 if (request[4] == 0x20) {
@@ -488,7 +488,7 @@ avrbl_message(byte *request, int size)
 
         case CMD_READ_FLASH_ISP:
 
-            endAddr = load_address + ((request[1])<<8)|(request[2]);
+            endAddr = load_address + (((request[1])<<8)|(request[2]));
 
 			// do this page by page as we might have to lie to avrdude.
 			while(load_address < endAddr)
@@ -1004,7 +1004,7 @@ static void flashWriteUint32(uint32 addrUint32, uint32 *rgu32Data, uint32 cu32Da
 static void justInTimeFlashErase(uint32 addrLow, uint32 addrHigh)
 {
 	uint32 addrCurPage 		= startOfFlashPage(addrLow);
-	uint32 addrLastPage 	= nextFlashPage(addrHigh - 1);
+	uint32 addrLastPage 	= nextFlashPage((addrHigh - 1));
 	uint32 iPage 			= getPageIndex(addrCurPage);
 
 	while(addrCurPage < addrLastPage)
