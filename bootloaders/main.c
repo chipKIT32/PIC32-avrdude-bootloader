@@ -320,6 +320,21 @@ avrbl_message(byte *request, int size)
     static byte parameters[256];  // track stk500v2 parameters (we ignore them all)
 	static bool fGetBaseAddress = true;
 
+    // Override some special parameters with board and chip
+    // identification data.
+    
+    // We just don't have the flash on the smaller chips to do all these,
+    // so we will leave the board identification and chip revision out for now
+//    parameters[0x40] = VEND;
+//    parameters[0x41] = VEND >> 8;
+//    parameters[0x42] = PROD;
+//    parameters[0x43] = PROD >> 8;
+    parameters[0x44] = DEVIDbits.DEVID;
+    parameters[0x45] = DEVIDbits.DEVID >> 8;
+    parameters[0x46] = DEVIDbits.DEVID >> 16;
+    parameters[0x47] = DEVIDbits.DEVID >> 24;
+//    parameters[0x48] = DEVIDbits.VER;
+    
     uint32 i;
     uint32 nbytes;
     uint32 nbytesAligned;
