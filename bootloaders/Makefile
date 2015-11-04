@@ -196,7 +196,7 @@ CFL_pontech-quick240=-mips16
 
 # Schmalzhaus configurations
 
-BIN_ubw32-mx460=UBW32-MX460_USB
+BIN_ubw32-mx460=UBW32_MX460_USB
 OBJ_ubw32-mx460=main.o usb.o cdcacm.o
 CRT_ubw32-mx460=crt0.S
 MCU_ubw32-mx460=32MX460F512L
@@ -204,7 +204,7 @@ DEF_ubw32-mx460=-D_BOARD_UBW32_MX460_USB_
 LKR_ubw32-mx460=MX3-7-boot-linkerscript.ld
 CFL_ubw32-mx460=-mips16
 
-BIN_ubw32-mx795=UBW32-MX795_USB
+BIN_ubw32-mx795=UBW32_MX795_USB
 OBJ_ubw32-mx795=main.o usb.o cdcacm.o
 CRT_ubw32-mx795=crt0.S
 MCU_ubw32-mx795=32MX795F512L
@@ -247,6 +247,9 @@ all:
 # This is where the actual work is done:
 
 compile: ${BIN_${BOARD}}.hex
+
+install: ${BIN_${BOARD}}.hex
+	cp ${BIN_${BOARD}}.hex ../BootloadersCurrent-hex
 	
 ${BIN_${BOARD}}.hex: ${BIN_${BOARD}}.elf
 	${BIN2HEX} -a $?
@@ -264,7 +267,8 @@ everything:
 	for B in ${BOARDS}; do \
 		echo $$B; \
 		make -s clean; \
-		make -s $$B; \
+		make -s compile BOARD=$$B; \
+		make -s install BOARD=$$B; \
 	done
 	
 
