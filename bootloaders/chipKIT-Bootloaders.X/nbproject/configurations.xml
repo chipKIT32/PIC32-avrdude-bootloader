@@ -4,6 +4,19 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="configs" displayName="configs" projectFiles="true">
+        <itemPath>../configs/4d.h</itemPath>
+        <itemPath>../configs/digilent.h</itemPath>
+        <itemPath>../configs/element14.h</itemPath>
+        <itemPath>../configs/examples.h</itemPath>
+        <itemPath>../configs/fubarino.h</itemPath>
+        <itemPath>../configs/majenko.h</itemPath>
+        <itemPath>../configs/mikroe.h</itemPath>
+        <itemPath>../configs/olimex.h</itemPath>
+        <itemPath>../configs/openbci.h</itemPath>
+        <itemPath>../configs/pontech.h</itemPath>
+        <itemPath>../configs/schmalzhaus.h</itemPath>
+      </logicalFolder>
       <itemPath>../serial.h</itemPath>
       <itemPath>../util.h</itemPath>
       <itemPath>../BoardConfig.h</itemPath>
@@ -584,12 +597,60 @@
         <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../MX1-2-USB-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../MX3-7-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../MX3-7-split-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../MZ-boot-linkerscript.ld" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../cdcacm.c" ex="true" overriding="false">
         <C32>
@@ -606,6 +667,18 @@
         </C32Global>
       </item>
       <item path="../cdcacm.h" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../crt0MZ.S" ex="true" overriding="false">
         <C32>
@@ -664,6 +737,18 @@
         </C32Global>
       </item>
       <item path="../usb.h" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <C32>
         <property key="additional-warnings" value="false"/>

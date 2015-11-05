@@ -1,0 +1,6 @@
+BootloadersCurrent-hex-new
+build
+debug
+dist
+/bootloaders/chipKIT-Bootloaders.X/nbproject/*.mk
+/bootloaders/chipKIT-Bootloaders.X/nbproject/*.bash
