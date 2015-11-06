@@ -43,7 +43,7 @@
     //#pragma config DEBUG    = ON                          		// DO NOT SET THIS CONFIG BIT, it will break debugging
 #endif
     
-    #define CAPABILITIES    (blCapBootLED | blCapSplitFlashBootloader | blCapUARTInterface | blCapAutoResetListening | CAPCOMMON)
+    #define CAPABILITIES    (blCapProgramButton | blCapVirtualProgramButton | blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUARTInterface | blCapAutoResetListening | CAPCOMMON)
 
     // BTN / LED sense
     #define LedOn       High
@@ -53,13 +53,17 @@
     #define BLedLat     G
     #define BLedBit     6
 
+    // Download LED
+    #define DLedLat     D
+    #define DLedBit     1
+
     // Virtual program button
     #define VPBntLat    D
-    #define VPBntBit    0
+    #define VPBntBit    4
 
     // Program button
     #define PBntPort    D
-    #define PBntBit     0
+    #define PBntBit     4
 
     #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
     #define BOOTLOADER_UART             2                   // avrdude program UART
