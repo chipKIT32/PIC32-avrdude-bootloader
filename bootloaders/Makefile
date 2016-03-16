@@ -132,6 +132,14 @@ DEF_majenko-ultranano=-D_BOARD_MAJENKO_ULTRANANO_
 LKR_majenko-ultranano=MX1-2-USB-boot-linkerscript.ld
 CFL_majenko-ultranano=-mips16
 
+BIN_majenko-lenny=MAJENKO_LENNY
+OBJ_majenko-lenny=main.o usb.o cdcacm.o
+CRT_majenko-lenny=crt0.S
+MCU_majenko-lenny=32MX270F256B
+DEF_majenko-lenny=-D_BOARD_MAJENKO_LENNY_
+LKR_majenko-lenny=MX1-2-USB-boot-linkerscript.ld
+CFL_majenko-lenny=-mips16
+
 # Olimex configurations
 
 BIN_olimex-pinguino-micro-uart=Olimex_Pinguino_Micro_UART
