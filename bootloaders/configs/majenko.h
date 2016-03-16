@@ -372,7 +372,7 @@
     #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
 #endif
 
-    #define CAPABILITIES    (blCapBootLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
 
     // BTN / LED sense
     #define LedOn       High
