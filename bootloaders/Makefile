@@ -19,6 +19,14 @@ DEF_4d-picadillo=-D_BOARD_PICADILLO_35T_
 LKR_4d-picadillo=MX3-7-boot-linkerscript.ld
 CFL_4d-picadillo=-mips16
 
+BIN_4d-picaso-replacement=PICASO_REPLACEMENT
+OBJ_4d-picaso-replacement=main.o 
+CRT_4d-picaso-replacement=crt0.S
+MCU_4d-picaso-replacement=32MX370F512H
+DEF_4d-picaso-replacement=-D_BOARD_PICASO_REPLACEMENT_
+LKR_4d-picaso-replacement=MX3-7-boot-linkerscript.ld
+CFL_4d-picaso-replacement=-mips16
+
 # Element 14 configurations
 
 BIN_chipkit-pi=CHIPKIT_PI
@@ -132,13 +140,21 @@ DEF_majenko-ultranano=-D_BOARD_MAJENKO_ULTRANANO_
 LKR_majenko-ultranano=MX1-2-USB-boot-linkerscript.ld
 CFL_majenko-ultranano=-mips16
 
-BIN_majenko-lenny=MAJENKO_LENNY
+BIN_majenko-lenny=MAJENKO_LENNY_40MHZ
 OBJ_majenko-lenny=main.o usb.o cdcacm.o
 CRT_majenko-lenny=crt0.S
 MCU_majenko-lenny=32MX270F256B
 DEF_majenko-lenny=-D_BOARD_MAJENKO_LENNY_
 LKR_majenko-lenny=MX1-2-USB-boot-linkerscript.ld
 CFL_majenko-lenny=-mips16
+
+BIN_majenko-lenny48=MAJENKO_LENNY_48MHZ
+OBJ_majenko-lenny48=main.o usb.o cdcacm.o
+CRT_majenko-lenny48=crt0.S
+MCU_majenko-lenny48=32MX270F256B
+DEF_majenko-lenny48=-D_BOARD_MAJENKO_LENNY48_
+LKR_majenko-lenny48=MX1-2-USB-boot-linkerscript.ld
+CFL_majenko-lenny48=-mips16
 
 # Olimex configurations
 
