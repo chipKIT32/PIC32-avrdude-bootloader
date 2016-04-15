@@ -104,6 +104,9 @@
 #define blCapAutoResetListening                         0x00000100ul        // There is a short listening delay after reset for avrdude to upload a sketch before automatically loading the in flash sketch              
 #define blCapProgramButton                              0x00000200ul        // A program button is suppored  
 #define blCapVirtualProgramButton                       0x00000400ul        // A virtual program button is suppored
+
+#define blCapUSBSerialNumber                            0x00001000ul        // Generate a unique serial number from the USERID
+
 #define blCapLkInstrFullFlashEraseLess4KEEProm          0x00010000ul        // The original bootloader method of erasing all of program flash except the last 4K reserved for eeprom
 #define blCapLkInstrJustInTimeFlashErase                0x00020000ul        // Only flash pages written too needed by the sketch is erased
 #define blCapLkInstrFlashErase                          0x00040000ul        // The linker defines the flash range to erase
@@ -183,6 +186,7 @@
     (__32MX270F256C__)  ||      \
     (__32MX270F256D__)  ||      \
     (__32MX350F256H__)  ||      \
+    (__32MX370F512H__)  ||      \
     (__32MZ0256ECE064__) ||     \
     (__32MZ0512ECE064__) ||     \
     (__32MZ1024ECE064__) ||     \
