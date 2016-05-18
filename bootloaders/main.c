@@ -125,6 +125,12 @@ int main()  // we're called directly by Crt0.S
     ASSERT(sizeof(uint32) == 4);
 
     ramHeader.rcon = RCON;
+
+#if ((CAPABILITIES & blCapUSBSerialNumber) == blCapUSBSerialNumber)
+    extern void cdcacm_init_serial();
+    cdcacm_init_serial();
+#endif
+
     InitLEDsAndButtons();
 
     // sometimes there is a debugger circuit on the board that needs to intialize and will

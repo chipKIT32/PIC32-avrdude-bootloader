@@ -372,7 +372,7 @@
     #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
 #endif
 
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+    #define CAPABILITIES    ( blCapUSBSerialNumber | blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
 
     // BTN / LED sense
     #define LedOn       High
@@ -385,6 +385,11 @@
     // Boot LED
     #define DLedLat     A
     #define DLedBit     8
+
+    #define USBManufacturerLen 40
+    #define USBManufacturer 'M',0,'a',0,'j',0,'e',0,'n',0,'k',0,'o',0,' ',0,'T',0,'e',0,'c',0,'h',0,'n',0,'o',0,'l',0,'o',0,'g',0,'i',0,'e',0,'s',0
+    #define USBProductLen 26
+    #define USBProduct 'c',0,'h',0,'i',0,'p',0,'K',0,'I',0,'T',0,' ',0,'L',0,'e',0,'n',0,'n',0,'y',0
 
 
     // Virtual program button
@@ -450,7 +455,7 @@
     #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
 #endif
 
-    #define CAPABILITIES    (blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
+    #define CAPABILITIES    ( blCapUSBSerialNumber | blCapBootLED | blCapDownloadLED | blCapSplitFlashBootloader | blCapUSBInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
 
     // BTN / LED sense
     #define LedOn       High
@@ -463,6 +468,11 @@
     // Boot LED
     #define DLedLat     A
     #define DLedBit     8
+
+    #define USBManufacturerLen 40
+    #define USBManufacturer 'M',0,'a',0,'j',0,'e',0,'n',0,'k',0,'o',0,' ',0,'T',0,'e',0,'c',0,'h',0,'n',0,'o',0,'l',0,'o',0,'g',0,'i',0,'e',0,'s',0
+    #define USBProductLen 26
+    #define USBProduct 'c',0,'h',0,'i',0,'p',0,'K',0,'I',0,'T',0,' ',0,'L',0,'e',0,'n',0,'n',0,'y',0
 
 
     // Virtual program button

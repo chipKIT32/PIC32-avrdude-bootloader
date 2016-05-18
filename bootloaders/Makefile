@@ -145,7 +145,7 @@ OBJ_majenko-lenny=main.o usb.o cdcacm.o
 CRT_majenko-lenny=crt0.S
 MCU_majenko-lenny=32MX270F256B
 DEF_majenko-lenny=-D_BOARD_MAJENKO_LENNY_
-LKR_majenko-lenny=MX1-2-USB-boot-linkerscript.ld
+LKR_majenko-lenny=MX17-27-USB-boot-linkerscript.ld
 CFL_majenko-lenny=-mips16
 
 BIN_majenko-lenny48=MAJENKO_LENNY_48MHZ
@@ -153,7 +153,7 @@ OBJ_majenko-lenny48=main.o usb.o cdcacm.o
 CRT_majenko-lenny48=crt0.S
 MCU_majenko-lenny48=32MX270F256B
 DEF_majenko-lenny48=-D_BOARD_MAJENKO_LENNY48_
-LKR_majenko-lenny48=MX1-2-USB-boot-linkerscript.ld
+LKR_majenko-lenny48=MX17-27-USB-boot-linkerscript.ld
 CFL_majenko-lenny48=-mips16
 
 # Olimex configurations
