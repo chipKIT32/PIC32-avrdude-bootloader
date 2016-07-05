@@ -55,6 +55,16 @@ DEF_example-mx1=-D_BOARD_EXAMPLE_MX1_
 LKR_example-mx1=MX1-2-boot-linkerscript.ld
 CFL_example-mx1=-mips16
 
+#Microchip 32MZ starter kit.
+BIN_microchip-uart=Microchip_UART
+OBJ_microchip-uart=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_microchip-uart=crt0MZ.S
+MCU_microchip-uart=32MZ2048EFM144
+DEF_microchip-uart=-D_BOARD_MICROCHIP_UART_
+LKR_microchip-uart=MZ-boot-linkerscript.ld
+CFL_microchip-uart=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
+
 # Fubarino configurations
 
 BIN_fubarino-sdz=Fubarino_SDZ_UART

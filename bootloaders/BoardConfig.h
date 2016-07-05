@@ -134,6 +134,7 @@
 #include "configs/digilent.h"
 #include "configs/element14.h"
 #include "configs/examples.h"
+#include "configs/microchip.h"
 #include "configs/fubarino.h"
 #include "configs/majenko.h"
 #include "configs/mikroe.h"
