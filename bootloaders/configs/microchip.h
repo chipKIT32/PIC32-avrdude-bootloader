@@ -149,9 +149,9 @@
 
     #pragma config DMTCNT       = 0
 
-    #pragma config PGL1WAY  = ON             // Permission Group Lock One Way Configuration (Allow only one reconfiguration)
-    #pragma config PMDL1WAY = ON             // Peripheral Module Disable Configuration (Allow only one reconfiguration)
-    #pragma config IOL1WAY  = ON             // Peripheral Pin Select Configuration (Allow only one reconfiguration)
+    #pragma config PGL1WAY  = OFF             // Permission Group Lock One Way Configuration (Allow only one reconfiguration)
+    #pragma config PMDL1WAY = OFF            // Peripheral Module Disable Configuration (Allow only one reconfiguration)
+    #pragma config IOL1WAY  = OFF            // Peripheral Pin Select Configuration (Allow only one reconfiguration)
     #pragma config DMTINTV  = WIN_127_128     // DMT Count Window Interval (Window/Interval value is 127/128 counter value)
     #pragma config EJTAGBEN = NORMAL
 
@@ -182,10 +182,10 @@
     #define PBntBit     12
 
     // Other capabilities
-    #define BOOTLOADER_UART             2                   // avrdude program UART
+    #define BOOTLOADER_UART             1                   // avrdude program UART
     #define BAUDRATE                    115200              // avrdude baudrate
-    #define UARTMapRX()                 (U2RXR = 0b1100)    // RPC3 -> U2RX
-    #define UARTMapTX()                 (RPC2R = 0b0010)    // RPC2 -> U2TX
+    #define UARTMapRX()                 (U1RXR = 0b0011)    // RPD10 -> U1RX
+    #define UARTMapTX()                 (RPD15R = 0b0001)    // RPD15 -> U1TX
     
     #define _CPU_NAME_                  "PIC32MZ2048EFM"
     #define VEND                        vendMicrochip
@@ -193,6 +193,6 @@
     #define F_CPU                       200000000UL
     #define F_PBUS                      (F_CPU / (PB2DIVbits.PBDIV + 1))
 
-    #define FLASH_BYTES                 0x200000                    // 2MB
+    #define FLASH_BYTES                 0x200000                  // 2MB
     #define FLASH_PAGE_SIZE             0x4000                      // 16K
 #endif
