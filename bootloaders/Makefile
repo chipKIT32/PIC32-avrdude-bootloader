@@ -118,6 +118,14 @@ CFL_fubarino-mini50=-mips16
 
 # Majenko configurations
 
+BIN_majenko-pkrelay=MAJENKO_PKRELAY
+OBJ_majenko-pkrelay=main.o usb.o cdcacm.o 
+CRT_majenko-pkrelay=crt0.S
+MCU_majenko-pkrelay=32MX470F512H
+DEF_majenko-pkrelay=-D_BOARD_MAJENKO_PKRELAY_
+LKR_majenko-pkrelay=MX3-7-boot-linkerscript.ld
+CFL_majenko-pkrelay=-mips16
+
 BIN_majenko-sdxl=MAJENKO_SDXL
 OBJ_majenko-sdxl=main.o usb.o cdcacm.o
 CRT_majenko-sdxl=crt0.S
