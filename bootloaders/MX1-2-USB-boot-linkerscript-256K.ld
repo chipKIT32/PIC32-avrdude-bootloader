@@ -36,7 +36,7 @@ MEMORY
 {
   kseg1_boot_mem             : ORIGIN = 0xBFC00000, LENGTH = 0x0200
   kseg0_boot_mem             : ORIGIN = 0x9FC00200, LENGTH = 0x0
-  kseg0_program_mem    (rx)  : ORIGIN = 0x9D01EC00, LENGTH = 0x1400
+  kseg0_program_mem    (rx)  : ORIGIN = 0x9D03E800, LENGTH = 0x1800
   exception_mem              : ORIGIN = 0x9FC00480, LENGTH = 0x0
   debug_exec_mem             : ORIGIN = 0x9FC00490, LENGTH = 0x760
   config3                    : ORIGIN = 0xBFC00BF0, LENGTH = 0x4

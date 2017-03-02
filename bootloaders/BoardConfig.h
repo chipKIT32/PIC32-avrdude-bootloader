@@ -121,7 +121,7 @@
 #define CAPCOMMON (blCapLkInstrFullFlashEraseLess4KEEProm | blCapLkInstrJustInTimeFlashErase | blCapLkInstrFlashErase | blCapLkInstrFullFlashErase | blCapLkInstrExecutionJumpAddress | blCapLkInstrExecutionJumpToFirstInFlash | blCapSupportsRamHeaderAndPersistentData)
 
 #if !defined(__PIC32MX__) && !defined(__PIC32MZ__)
-    #error "This project was designed for PIC32MX family devices. Please select the appropriate project for your target device family."
+    #error "This project was designed for PIC32MX or PIC32MZ family devices. Please select the appropriate project for your target device family."
 #endif
 
 // For historical reasons, these must be defined as these specific constants and nothing else
@@ -360,6 +360,14 @@
         #define USTAbits    U5STAbits
         #define UTXREG      U5TXREG
         #define URXREG      U5RXREG
+    #elif(BOOTLOADER_UART == 6)
+        #define UMODE       U6MODE
+        #define USTA        U6STA
+        #define UBRG        U6BRG
+        #define UMODEbits   U6MODEbits
+        #define USTAbits    U6STAbits
+        #define UTXREG      U6TXREG
+        #define URXREG      U6RXREG
     #else
         #error a UART 1 thru 5 must be specified.
     #endif  // UART number
