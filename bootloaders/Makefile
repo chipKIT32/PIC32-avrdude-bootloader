@@ -1,5 +1,5 @@
 
-BINPREFIX=xc32-
+BINPREFIX=/opt/microchip/xc32/v1.42/bin/xc32-
 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
@@ -150,6 +150,30 @@ DEF_majenko-sdzl=-D_BOARD_MAJENKO_SDZL_
 LKR_majenko-sdzl=MZ-boot-linkerscript.ld
 CFL_majenko-sdzl=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
+BIN_majenko-motion=MAJENKO_MOTION
+OBJ_majenko-motion=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o configs/majenko/mt/hooks.o 
+CRT_majenko-motion=crt0MZ.S
+MCU_majenko-motion=32MZ2048EFG100
+DEF_majenko-motion=-D_BOARD_MAJENKO_MOTION_TRACKER_
+LKR_majenko-motion=MZ-boot-linkerscript.ld
+CFL_majenko-motion=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
+BIN_majenko-fx-base=MAJENKO_FX_BASE
+OBJ_majenko-fx-base=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o 
+CRT_majenko-fx-base=crt0MZ.S
+MCU_majenko-fx-base=32MZ2048EFG100
+DEF_majenko-fx-base=-D_BOARD_MAJENKO_FX_BASE_
+LKR_majenko-fx-base=MZ-boot-linkerscript.ld
+CFL_majenko-fx-base=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
+BIN_majenko-mod-prog=MAJENKO_MOD_PROG
+OBJ_majenko-mod-prog=main.o usb.o cdcacm.o
+CRT_majenko-mod-prog=crt0.S
+MCU_majenko-mod-prog=32MX270F256B
+DEF_majenko-mod-prog=-D_BOARD_MAJENKO_MOD_PROG_
+LKR_majenko-mod-prog=MX1-2-USB-boot-linkerscript.ld
+CFL_majenko-mod-prog=-mips16
+
 BIN_majenko-ultranano=MAJENKO_ULTRANANO
 OBJ_majenko-ultranano=main.o usb.o cdcacm.o
 CRT_majenko-ultranano=crt0.S
@@ -157,6 +181,14 @@ MCU_majenko-ultranano=32MX250F128B
 DEF_majenko-ultranano=-D_BOARD_MAJENKO_ULTRANANO_
 LKR_majenko-ultranano=MX1-2-USB-boot-linkerscript.ld
 CFL_majenko-ultranano=-mips16
+
+BIN_boxtec-hk32bot=BOXTEC_HK32BOT
+OBJ_boxtec-hk32bot=main.o usb.o cdcacm.o
+CRT_boxtec-hk32bot=crt0.S
+MCU_boxtec-hk32bot=32MX270F256D
+DEF_boxtec-hk32bot=-D_BOARD_BOXTEC_HK32BOT_
+LKR_boxtec-hk32bot=MX17-27-USB-boot-linkerscript.ld
+CFL_boxtec-hk32bot=-mips16
 
 BIN_majenko-lenny=MAJENKO_LENNY_40MHZ
 OBJ_majenko-lenny=main.o usb.o cdcacm.o

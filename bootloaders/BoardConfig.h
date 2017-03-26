@@ -86,6 +86,7 @@
 #define     vendMajenko         0x0009
 #define     vendOpenBCI         0x000A
 #define     vendMikroE          0x000B
+#define     vendBoxtec          0x000C
 #define     vendExperimental    0x8000
 
 #define     prodUnassigned      0xFFFF
@@ -142,6 +143,7 @@
 #include "configs/openbci.h"
 #include "configs/pontech.h"
 #include "configs/schmalzhaus.h"
+#include "configs/boxtec.h"
 
 #ifndef _CONFIG_VALID_
     #error    Board/CPU combination not defined

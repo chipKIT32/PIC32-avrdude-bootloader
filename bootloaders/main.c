@@ -120,6 +120,7 @@ static uint32 cbSkipRam = ((uint32) &_RAM_SKIP_SIZE);
 
 int main()  // we're called directly by Crt0.S
 {
+
     ASSERT(sizeof(byte) == 1);
     ASSERT(sizeof(uint16) == 2);
     ASSERT(sizeof(uint32) == 4);
@@ -174,6 +175,10 @@ int main()  // we're called directly by Crt0.S
     // for something to be download, or are going to wait indefinitly for
     // for a download, in any case we need to enable the the interface for the download
     InitStk500v2Interface();
+
+    #ifdef HOOK_INIT
+        HOOK_INIT
+    #endif
 
     // forever...
     for (;;) {
@@ -374,6 +379,9 @@ avrbl_message(byte *request, int size)
             ilstrcpy((char *)(reply+replyi), "STK500_2");
             replyi += 8;
             DownloadLED_On();
+            #ifdef HOOK_CMD_SIGNON
+                HOOK_CMD_SIGNON
+            #endif
             break;
         case CMD_SET_BAUD:
             baudRateChange = request[1] | (request[2] << 8) | (request[3] << 16) | (request[4] << 24);
@@ -489,6 +497,11 @@ avrbl_message(byte *request, int size)
             // program the words
             ASSERT((load_address & 3) == 0);    // this will assert if we got off DWORD alignment
             flashWriteUint32(load_address, (uint32 *)(request+10), nbytesAligned/4);
+
+            #ifdef HOOK_PROGRAM_FLASH_ISP
+                HOOK_PROGRAM_FLASH_ISP
+            #endif
+
             load_address += nbytes;             // we tell the truth even if we are not DWORD aligned
             break;                              // this will cause an assert if we do not get a new load address the next time
 
