@@ -162,25 +162,29 @@ static byte cdcacm_string_descriptor[] = {
 
     30,
     0x03, // String with all 0 to start with. To be filled in later.
-    'C', 0, 'K', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0
+#ifdef USBSerialTemplate
+    USBSerialTemplate
+#else
+    'C', 0, 'K', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0
+#endif
 };
 
 #define D2H(X) ((X & 0xF) < 10 ? '0' + (X & 0xF) : 'A' - 10 + (X & 0xF))
 
 void cdcacm_init_serial() {
     int offset = 4 + USBManufacturerLen + 2 + USBProductLen + 2 + 6;
-    cdcacm_string_descriptor[offset + 0] = D2H(DEVID >> 28);
-    cdcacm_string_descriptor[offset + 2] = D2H(DEVID >> 24);
-    cdcacm_string_descriptor[offset + 4] = D2H(DEVID >> 20);
-    cdcacm_string_descriptor[offset + 6] = D2H(DEVID >> 16);
-    cdcacm_string_descriptor[offset + 8] = D2H(DEVID >> 12);
-    cdcacm_string_descriptor[offset + 10] = D2H(DEVID >> 8);
-    cdcacm_string_descriptor[offset + 12] = D2H(DEVID >> 4);
-    cdcacm_string_descriptor[offset + 14] = D2H(DEVID);
-    cdcacm_string_descriptor[offset + 16] = D2H(DEVCFG3 >> 12);
-    cdcacm_string_descriptor[offset + 18] = D2H(DEVCFG3 >> 8);
-    cdcacm_string_descriptor[offset + 20] = D2H(DEVCFG3 >> 4);
-    cdcacm_string_descriptor[offset + 22] = D2H(DEVCFG3);
+    if (cdcacm_string_descriptor[offset + 0] == '*') cdcacm_string_descriptor[offset + 0] = D2H(DEVID >> 28);
+    if (cdcacm_string_descriptor[offset + 2] == '*') cdcacm_string_descriptor[offset + 2] = D2H(DEVID >> 24);
+    if (cdcacm_string_descriptor[offset + 4] == '*') cdcacm_string_descriptor[offset + 4] = D2H(DEVID >> 20);
+    if (cdcacm_string_descriptor[offset + 6] == '*') cdcacm_string_descriptor[offset + 6] = D2H(DEVID >> 16);
+    if (cdcacm_string_descriptor[offset + 8] == '*') cdcacm_string_descriptor[offset + 8] = D2H(DEVID >> 12);
+    if (cdcacm_string_descriptor[offset + 10] == '*') cdcacm_string_descriptor[offset + 10] = D2H(DEVID >> 8);
+    if (cdcacm_string_descriptor[offset + 12] == '*') cdcacm_string_descriptor[offset + 12] = D2H(DEVID >> 4);
+    if (cdcacm_string_descriptor[offset + 14] == '*') cdcacm_string_descriptor[offset + 14] = D2H(DEVID);
+    if (cdcacm_string_descriptor[offset + 16] == '*') cdcacm_string_descriptor[offset + 16] = D2H(DEVCFG3 >> 12);
+    if (cdcacm_string_descriptor[offset + 18] == '*') cdcacm_string_descriptor[offset + 18] = D2H(DEVCFG3 >> 8);
+    if (cdcacm_string_descriptor[offset + 20] == '*') cdcacm_string_descriptor[offset + 20] = D2H(DEVCFG3 >> 4);
+    if (cdcacm_string_descriptor[offset + 22] == '*') cdcacm_string_descriptor[offset + 22] = D2H(DEVCFG3);
 }
 
 
