@@ -1,5 +1,5 @@
 
-BINPREFIX=xc32-
+BINPREFIX=/opt/microchip/xc32/v1.42/bin/xc32-
 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
@@ -18,6 +18,14 @@ MCU_4d-picadillo=32MX795F512L
 DEF_4d-picadillo=-D_BOARD_PICADILLO_35T_
 LKR_4d-picadillo=MX3-7-boot-linkerscript.ld
 CFL_4d-picadillo=-mips16
+
+BIN_4d-picaso-replacement=PICASO_REPLACEMENT
+OBJ_4d-picaso-replacement=main.o 
+CRT_4d-picaso-replacement=crt0.S
+MCU_4d-picaso-replacement=32MX370F512H
+DEF_4d-picaso-replacement=-D_BOARD_PICASO_REPLACEMENT_
+LKR_4d-picaso-replacement=MX3-7-boot-linkerscript.ld
+CFL_4d-picaso-replacement=-mips16
 
 # Element 14 configurations
 
@@ -46,6 +54,16 @@ MCU_example-mx1=32MX120F032D
 DEF_example-mx1=-D_BOARD_EXAMPLE_MX1_
 LKR_example-mx1=MX1-2-boot-linkerscript.ld
 CFL_example-mx1=-mips16
+
+#Microchip 32MZ starter kit.
+BIN_microchip-uart=Microchip_UART
+OBJ_microchip-uart=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_microchip-uart=crt0MZ.S
+MCU_microchip-uart=32MZ2048EFM144
+DEF_microchip-uart=-D_BOARD_MICROCHIP_UART_
+LKR_microchip-uart=MZ-boot-linkerscript.ld
+CFL_microchip-uart=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
 
 # Fubarino configurations
 
@@ -100,6 +118,14 @@ CFL_fubarino-mini50=-mips16
 
 # Majenko configurations
 
+BIN_majenko-pkrelay=MAJENKO_PKRELAY
+OBJ_majenko-pkrelay=main.o usb.o cdcacm.o 
+CRT_majenko-pkrelay=crt0.S
+MCU_majenko-pkrelay=32MX470F512H
+DEF_majenko-pkrelay=-D_BOARD_MAJENKO_PKRELAY_
+LKR_majenko-pkrelay=MX3-7-boot-linkerscript.ld
+CFL_majenko-pkrelay=-mips16
+
 BIN_majenko-sdxl=MAJENKO_SDXL
 OBJ_majenko-sdxl=main.o usb.o cdcacm.o
 CRT_majenko-sdxl=crt0.S
@@ -124,6 +150,30 @@ DEF_majenko-sdzl=-D_BOARD_MAJENKO_SDZL_
 LKR_majenko-sdzl=MZ-boot-linkerscript.ld
 CFL_majenko-sdzl=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
+BIN_majenko-motion=MAJENKO_MOTION
+OBJ_majenko-motion=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o configs/majenko/mt/hooks.o 
+CRT_majenko-motion=crt0MZ.S
+MCU_majenko-motion=32MZ2048EFG100
+DEF_majenko-motion=-D_BOARD_MAJENKO_MOTION_TRACKER_
+LKR_majenko-motion=MZ-boot-linkerscript.ld
+CFL_majenko-motion=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
+BIN_majenko-fx-base=MAJENKO_FX_BASE
+OBJ_majenko-fx-base=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o 
+CRT_majenko-fx-base=crt0MZ.S
+MCU_majenko-fx-base=32MZ2048EFG100
+DEF_majenko-fx-base=-D_BOARD_MAJENKO_FX_BASE_
+LKR_majenko-fx-base=MZ-boot-linkerscript.ld
+CFL_majenko-fx-base=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
+BIN_majenko-mod-prog=MAJENKO_MOD_PROG
+OBJ_majenko-mod-prog=main.o usb.o cdcacm.o
+CRT_majenko-mod-prog=crt0.S
+MCU_majenko-mod-prog=32MX270F256B
+DEF_majenko-mod-prog=-D_BOARD_MAJENKO_MOD_PROG_
+LKR_majenko-mod-prog=MX1-2-USB-boot-linkerscript.ld
+CFL_majenko-mod-prog=-mips16
+
 BIN_majenko-ultranano=MAJENKO_ULTRANANO
 OBJ_majenko-ultranano=main.o usb.o cdcacm.o
 CRT_majenko-ultranano=crt0.S
@@ -132,7 +182,47 @@ DEF_majenko-ultranano=-D_BOARD_MAJENKO_ULTRANANO_
 LKR_majenko-ultranano=MX1-2-USB-boot-linkerscript.ld
 CFL_majenko-ultranano=-mips16
 
+BIN_boxtec-hk32bot=BOXTEC_HK32BOT
+OBJ_boxtec-hk32bot=main.o usb.o cdcacm.o
+CRT_boxtec-hk32bot=crt0.S
+MCU_boxtec-hk32bot=32MX270F256D
+DEF_boxtec-hk32bot=-D_BOARD_BOXTEC_HK32BOT_
+LKR_boxtec-hk32bot=MX17-27-USB-boot-linkerscript.ld
+CFL_boxtec-hk32bot=-mips16
+
+BIN_majenko-lenny=MAJENKO_LENNY_40MHZ
+OBJ_majenko-lenny=main.o usb.o cdcacm.o
+CRT_majenko-lenny=crt0.S
+MCU_majenko-lenny=32MX270F256B
+DEF_majenko-lenny=-D_BOARD_MAJENKO_LENNY_
+LKR_majenko-lenny=MX17-27-USB-boot-linkerscript.ld
+CFL_majenko-lenny=-mips16
+
+BIN_majenko-lenny48=MAJENKO_LENNY_48MHZ
+OBJ_majenko-lenny48=main.o usb.o cdcacm.o
+CRT_majenko-lenny48=crt0.S
+MCU_majenko-lenny48=32MX270F256B
+DEF_majenko-lenny48=-D_BOARD_MAJENKO_LENNY48_
+LKR_majenko-lenny48=MX17-27-USB-boot-linkerscript.ld
+CFL_majenko-lenny48=-mips16
+
 # Olimex configurations
+
+BIN_olimex-pinguino-micro-uart=Olimex_Pinguino_Micro_UART
+OBJ_olimex-pinguino-micro-uart=main.o
+CRT_olimex-pinguino-micro-uart=crt0.S
+MCU_olimex-pinguino-micro-uart=32MX440F256H
+DEF_olimex-pinguino-micro-uart=-D_BOARD_OLIMEX_PINGUINO_MICRO_UART_
+LKR_olimex-pinguino-micro-uart=MX3-7-boot-linkerscript.ld
+CFL_olimex-pinguino-micro-uart=-mips16
+
+BIN_olimex-pinguino-micro-uart-57600=Olimex_Pinguino_Micro_UART_57600
+OBJ_olimex-pinguino-micro-uart-57600=main.o
+CRT_olimex-pinguino-micro-uart-57600=crt0.S
+MCU_olimex-pinguino-micro-uart-57600=32MX440F256H
+DEF_olimex-pinguino-micro-uart-57600=-D_BOARD_OLIMEX_PINGUINO_MICRO_UART_57600_
+LKR_olimex-pinguino-micro-uart-57600=MX3-7-boot-linkerscript.ld
+CFL_olimex-pinguino-micro-uart-57600=-mips16
 
 BIN_olimex-pinguino=Olimex_PIC32_Pinguino
 OBJ_olimex-pinguino=main.o usb.o cdcacm.o
@@ -180,7 +270,7 @@ CFL_pontech-quick240=-mips16
 
 # Schmalzhaus configurations
 
-BIN_ubw32-mx460=UBW32-MX460_USB
+BIN_ubw32-mx460=UBW32_MX460_USB
 OBJ_ubw32-mx460=main.o usb.o cdcacm.o
 CRT_ubw32-mx460=crt0.S
 MCU_ubw32-mx460=32MX460F512L
@@ -188,7 +278,7 @@ DEF_ubw32-mx460=-D_BOARD_UBW32_MX460_USB_
 LKR_ubw32-mx460=MX3-7-boot-linkerscript.ld
 CFL_ubw32-mx460=-mips16
 
-BIN_ubw32-mx795=UBW32-MX795_USB
+BIN_ubw32-mx795=UBW32_MX795_USB
 OBJ_ubw32-mx795=main.o usb.o cdcacm.o
 CRT_ubw32-mx795=crt0.S
 MCU_ubw32-mx795=32MX795F512L
@@ -231,6 +321,9 @@ all:
 # This is where the actual work is done:
 
 compile: ${BIN_${BOARD}}.hex
+
+install: ${BIN_${BOARD}}.hex
+	cp ${BIN_${BOARD}}.hex ../BootloadersCurrent-hex
 	
 ${BIN_${BOARD}}.hex: ${BIN_${BOARD}}.elf
 	${BIN2HEX} -a $?
@@ -248,7 +341,8 @@ everything:
 	for B in ${BOARDS}; do \
 		echo $$B; \
 		make -s clean; \
-		make -s $$B; \
+		make -s compile BOARD=$$B; \
+		make -s install BOARD=$$B; \
 	done
 	
 
