@@ -1,5 +1,5 @@
 
-BINPREFIX=/opt/microchip/xc32/v1.42/bin/xc32-
+BINPREFIX=/opt/microchip/xc32/v1.44/bin/xc32-
 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
@@ -303,6 +303,14 @@ MCU_mikroe-clicker=32MX534F064H
 DEF_mikroe-clicker=-D_BOARD_MIKROE_PIC32MX_CLICKER_
 LKR_mikroe-clicker=MX3-7-boot-linkerscript.ld
 CFL_mikroe-clicker=-mips16
+
+BIN_mikroe-flipnclickmz=MIKROE_FLIPNCLICK_MZ
+OBJ_mikroe-flipnclickmz=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_mikroe-flipnclickmz=crt0MZ.S
+MCU_mikroe-flipnclickmz=32MZ2048EFH100
+DEF_mikroe-flipnclickmz=-D_BOARD_MIKROE_PIC32MZ_FLIP_N_CLICK_
+LKR_mikroe-flipnclickmz=MZ-boot-linkerscript.ld
+CFL_mikroe-flipnclickmz=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
 CFLAGS=-mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
 ASFLAGS=-Wa,--gdwarf-2 -mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
