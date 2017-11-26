@@ -1,5 +1,5 @@
 
-BINPREFIX=/opt/microchip/xc32/v1.42/bin/xc32-
+BINPREFIX=/opt/microchip/xc32/v1.44/bin/xc32-
 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
@@ -56,14 +56,22 @@ LKR_example-mx1=MX1-2-boot-linkerscript.ld
 CFL_example-mx1=-mips16
 
 #Microchip 32MZ starter kit.
-BIN_microchip-uart=Microchip_UART
-OBJ_microchip-uart=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
-CRT_microchip-uart=crt0MZ.S
-MCU_microchip-uart=32MZ2048EFM144
-DEF_microchip-uart=-D_BOARD_MICROCHIP_UART_
-LKR_microchip-uart=MZ-boot-linkerscript.ld
-CFL_microchip-uart=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+BIN_microchip-eth-sk-uart=Microchip_Eth_Starter_Kit_UART
+OBJ_microchip-eth-sk-uart=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_microchip-eth-sk-uart=crt0MZ.S
+MCU_microchip-eth-sk-uart=32MZ2048EFM144
+DEF_microchip-eth-sk-uart=-D_BOARD_MICROCHIP_ETH_START_KIT_UART_
+LKR_microchip-eth-sk-uart=MZ-boot-linkerscript.ld
+CFL_microchip-eth-sk-uart=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
+#Microchip 32MZ Curiosity.
+BIN_microchip-curiosity-uart=Microchip_Curiosity_UART
+OBJ_microchip-curiosity-uart=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_microchip-curiosity-uart=crt0MZ.S
+MCU_microchip-curiosity-uart=32MZ2048EFM144
+DEF_microchip-curiosity-uart=-D_BOARD_MICROCHIP_CURIOSITY_UART_
+LKR_microchip-curiosity-uart=MZ-boot-linkerscript.ld
+CFL_microchip-curiosity-uart=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
 # Fubarino configurations
 
@@ -303,6 +311,14 @@ MCU_mikroe-clicker=32MX534F064H
 DEF_mikroe-clicker=-D_BOARD_MIKROE_PIC32MX_CLICKER_
 LKR_mikroe-clicker=MX3-7-boot-linkerscript.ld
 CFL_mikroe-clicker=-mips16
+
+BIN_mikroe-flipnclickmz=MIKROE_FLIPNCLICK_MZ
+OBJ_mikroe-flipnclickmz=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_mikroe-flipnclickmz=crt0MZ.S
+MCU_mikroe-flipnclickmz=32MZ2048EFH100
+DEF_mikroe-flipnclickmz=-D_BOARD_MIKROE_PIC32MZ_FLIP_N_CLICK_
+LKR_mikroe-flipnclickmz=MZ-boot-linkerscript.ld
+CFL_mikroe-flipnclickmz=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
 CFLAGS=-mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
 ASFLAGS=-Wa,--gdwarf-2 -mprocessor=${MCU_${BOARD}} ${DEF_${BOARD}} ${CFL_${BOARD}} -Os -mno-float -I.
