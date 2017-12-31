@@ -35,10 +35,6 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/configs/fubarino.h</file>
-            <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/BoardConfig.h</file>
-            <file>file:/D:/Projects/PIC32-avrdude-bootloader/bootloaders/configs/schmalzhaus.h</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

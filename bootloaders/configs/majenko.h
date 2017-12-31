@@ -11,9 +11,74 @@
 #define     prodUltraNano               0x0004
 #define     prodLenny                   0x0005
 #define     prodPKRelay                 0x0007
+#define     prodDSMini                  0x0008
 #define     prodModProg                 0x1001
 #define     prodFXBase                  0x1002
 #define     prodMotionTracker           0x1003
+
+#if defined(_BOARD_MAJENKO_DSMINI_)
+#define _CONFIG_VALID_
+
+#if defined(PUT_CONFIG_BITS_HERE)
+
+    //* Oscillator Settings
+    #pragma config FNOSC    = PRIPLL                                // Oscillator selection
+    #pragma config POSCMOD  = EC                                    // Primary oscillator mode
+    #pragma config FPLLIDIV = DIV_2                                 // PLL input divider
+    #pragma config FPLLMUL  = MUL_20                                // PLL multiplier
+    #pragma config FPLLODIV = DIV_2                                 // PLL output divider
+    #pragma config FPBDIV   = DIV_1                                 // Peripheral bus clock divider
+    #pragma config FSOSCEN  = OFF                                   // Secondary oscillator enable
+
+    //* Clock control settings
+    #pragma config IESO     = OFF                                   // Internal/external clock switchover
+    #pragma config FCKSM    = CSECME                                // Clock switching (CSx)/Clock monitor (CMx)
+    #pragma config OSCIOFNC = OFF                                   // Clock output on OSCO pin enable
+
+    //* Other Peripheral Device settings
+    #pragma config FWDTEN   = OFF                                   // Watchdog timer enable
+    #pragma config WDTPS    = PS1024                                // Watchdog timer postscaler
+    #pragma config WINDIS   = OFF
+    #pragma config JTAGEN   = OFF                                   // JTAG port disabled
+
+    //* Code Protection settings
+    #pragma config CP       = OFF                                   // Code protection
+    #pragma config BWP      = OFF                                   // Boot flash write protect
+    #pragma config PWP      = OFF                                   // Program flash write protect
+
+    //*    Debug settings
+    #pragma config ICESEL   = ICS_PGx3                              // ICE/ICD Comm Channel Select
+    //#pragma config DEBUG    = ON                                  // DO NOT SET THIS CONFIG BIT, it will break debugging
+
+    #pragma config PMDL1WAY = OFF                                   // Allow multiple reconfigurations
+    #pragma config IOL1WAY  = OFF                                   // Allow multiple reconfigurations
+#endif
+
+    #define CAPABILITIES    (blCapBootLED | blCapUARTInterface | blCapAutoResetListening | CAPCOMMON)
+
+    // BTN / LED sense
+    #define LedOn       High
+    #define BntOn       Low
+
+    // Boot LED
+    #define BLedLat     C
+    #define BLedBit     3
+
+    #define _CPU_NAME_                  "32MX150F128C"
+    #define VEND                        vendMajenko
+    #define PROD                        prodDSMini
+    #define F_CPU                       40000000UL
+    #define F_PBUS                      F_CPU
+
+    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
+    #define BOOTLOADER_UART             1                   // avrdude program UART
+    #define BAUDRATE                    115200              // avrdude baudrate
+    #define UARTMapRX()                 (U1RXR = 0b0110)    // RPB7 -> U2RX (A9)
+    #define UARTMapTX()                 (RPC0R = 0b0001)    // RPB6 -> U2TX (A8)
+
+    #define FLASH_BYTES                 (0x20000-0x1000)            // Leave room 4 pages (for bootloader!)
+    #define FLASH_PAGE_SIZE             1024                                // In bytes
+#endif
 
 #if defined(_BOARD_MAJENKO_SDXL_)
 #define _CONFIG_VALID_
