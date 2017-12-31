@@ -135,23 +135,77 @@ static const byte cdcacm_configuration_descriptor[] = {
     0x00,  // interval (ms)
 };
 
+#if (!defined(USBManufacturer) || !defined(USBManufacturerLen))
+    #define USBManufacturerLen 32
+    #define USBManufacturer     'w', 0, 'w', 0, 'w', 0, '.', 0, 'c', 0, 'p', 0, 'u', 0, 's', 0, 't', 0, 'i', 0, 'c', 0, 'k', 0, '.', 0, 'c', 0, 'o', 0, 'm', 0
+#endif
+
+#if (!defined(USBProduct) || !defined(USBProductLen))
+    #define USBProductLen 16
+    #define USBProduct 'S', 0, 't', 0, 'k', 0, '5', 0, '0', 0, '0', 0, 'v', 0, '2', 0
+#endif
+
+#if ((CAPABILITIES & blCapUSBSerialNumber) == blCapUSBSerialNumber)
+
+static byte cdcacm_string_descriptor[] = {
+    4,  // length
+    0x03, // string descriptor
+    0x09, 0x04,  // english (usa)
+
+    USBManufacturerLen + 2,  // length
+    0x03,  // string descriptor
+    USBManufacturer,
+
+    USBProductLen + 2,  // length
+    0x03,  // string descriptor
+    USBProduct,
+
+    30,
+    0x03, // String with all 0 to start with. To be filled in later.
+#ifdef USBSerialTemplate
+    USBSerialTemplate
+#else
+    'C', 0, 'K', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0, '*', 0
+#endif
+};
+
+#define D2H(X) ((X & 0xF) < 10 ? '0' + (X & 0xF) : 'A' - 10 + (X & 0xF))
+
+void cdcacm_init_serial() {
+    int offset = 4 + USBManufacturerLen + 2 + USBProductLen + 2 + 6;
+    if (cdcacm_string_descriptor[offset + 0] == '*') cdcacm_string_descriptor[offset + 0] = D2H(DEVID >> 28);
+    if (cdcacm_string_descriptor[offset + 2] == '*') cdcacm_string_descriptor[offset + 2] = D2H(DEVID >> 24);
+    if (cdcacm_string_descriptor[offset + 4] == '*') cdcacm_string_descriptor[offset + 4] = D2H(DEVID >> 20);
+    if (cdcacm_string_descriptor[offset + 6] == '*') cdcacm_string_descriptor[offset + 6] = D2H(DEVID >> 16);
+    if (cdcacm_string_descriptor[offset + 8] == '*') cdcacm_string_descriptor[offset + 8] = D2H(DEVID >> 12);
+    if (cdcacm_string_descriptor[offset + 10] == '*') cdcacm_string_descriptor[offset + 10] = D2H(DEVID >> 8);
+    if (cdcacm_string_descriptor[offset + 12] == '*') cdcacm_string_descriptor[offset + 12] = D2H(DEVID >> 4);
+    if (cdcacm_string_descriptor[offset + 14] == '*') cdcacm_string_descriptor[offset + 14] = D2H(DEVID);
+    if (cdcacm_string_descriptor[offset + 16] == '*') cdcacm_string_descriptor[offset + 16] = D2H(DEVCFG3 >> 12);
+    if (cdcacm_string_descriptor[offset + 18] == '*') cdcacm_string_descriptor[offset + 18] = D2H(DEVCFG3 >> 8);
+    if (cdcacm_string_descriptor[offset + 20] == '*') cdcacm_string_descriptor[offset + 20] = D2H(DEVCFG3 >> 4);
+    if (cdcacm_string_descriptor[offset + 22] == '*') cdcacm_string_descriptor[offset + 22] = D2H(DEVCFG3);
+}
+
+
+#else
 static const byte cdcacm_string_descriptor[] = {
     4,  // length
     0x03, // string descriptor
     0x09, 0x04,  // english (usa)
 
-    34,  // length
+    USBManufacturerLen + 2,  // length
     0x03,  // string descriptor
-    'w', 0, 'w', 0, 'w', 0, '.', 0, 'c', 0, 'p', 0, 'u', 0, 's', 0, 't', 0, 'i', 0, 'c', 0, 'k', 0, '.', 0, 'c', 0, 'o', 0, 'm', 0,
+    USBManufacturer,
 
-    18,  // length
+    USBProductLen + 2,  // length
     0x03,  // string descriptor
-    'S', 0, 't', 0, 'k', 0, '5', 0, '0', 0, '0', 0, 'v', 0, '2', 0,
+    USBProduct,
 
     2,
     0x03, // Empty string descriptor for no serial
 };
-
+#endif
 bool cdcacm_active;
 
 static cdcacm_reset_cbfn reset_cbfn;
@@ -168,6 +222,8 @@ static byte rx_in;
 static byte rx_out;
 
 static bool discard;  // true when we don't think anyone is listening
+
+
 
 
 // this function waits for space to be available in the transport

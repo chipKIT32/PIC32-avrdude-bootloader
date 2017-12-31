@@ -120,11 +120,18 @@ static uint32 cbSkipRam = ((uint32) &_RAM_SKIP_SIZE);
 
 int main()  // we're called directly by Crt0.S
 {
+
     ASSERT(sizeof(byte) == 1);
     ASSERT(sizeof(uint16) == 2);
     ASSERT(sizeof(uint32) == 4);
 
     ramHeader.rcon = RCON;
+
+#if ((CAPABILITIES & blCapUSBSerialNumber) == blCapUSBSerialNumber)
+    extern void cdcacm_init_serial();
+    cdcacm_init_serial();
+#endif
+
     InitLEDsAndButtons();
 
     // sometimes there is a debugger circuit on the board that needs to intialize and will
@@ -168,6 +175,10 @@ int main()  // we're called directly by Crt0.S
     // for something to be download, or are going to wait indefinitly for
     // for a download, in any case we need to enable the the interface for the download
     InitStk500v2Interface();
+
+    #ifdef HOOK_INIT
+        HOOK_INIT
+    #endif
 
     // forever...
     for (;;) {
@@ -320,11 +331,30 @@ avrbl_message(byte *request, int size)
     static byte parameters[256];  // track stk500v2 parameters (we ignore them all)
 	static bool fGetBaseAddress = true;
 
+    // Override some special parameters with board and chip
+    // identification data.
+    
+    // We just don't have the flash on the smaller chips to do all these,
+    // so we will leave the board identification and chip revision out for now
+//    parameters[0x40] = VEND;
+//    parameters[0x41] = VEND >> 8;
+//    parameters[0x42] = PROD;
+//    parameters[0x43] = PROD >> 8;
+
+// These four are the ones that are really wanted, but memory is just too tight on
+// the MX1/2 boards. When we have found enough room then enable them again.
+//    parameters[0x44] = DEVIDbits.DEVID;
+//    parameters[0x45] = DEVIDbits.DEVID >> 8;
+//    parameters[0x46] = DEVIDbits.DEVID >> 16;
+//    parameters[0x47] = DEVIDbits.DEVID >> 24;
+
+//    parameters[0x48] = DEVIDbits.VER;
+    
     uint32 i;
     uint32 nbytes;
     uint32 nbytesAligned;
     uint32 endAddr;
-    uint32 address;
+    // uint32 address;
     int rawi;
     byte raw[64];
 
@@ -346,9 +376,12 @@ avrbl_message(byte *request, int size)
             active = true;
             erased = false;
             reply[replyi++] = 8;
-            ilstrcpy(reply+replyi, "STK500_2");
+            ilstrcpy((char *)(reply+replyi), "STK500_2");
             replyi += 8;
             DownloadLED_On();
+            #ifdef HOOK_CMD_SIGNON
+                HOOK_CMD_SIGNON
+            #endif
             break;
         case CMD_SET_BAUD:
             baudRateChange = request[1] | (request[2] << 8) | (request[3] << 16) | (request[4] << 24);
@@ -381,13 +414,13 @@ avrbl_message(byte *request, int size)
            } else if ((request[4] == 0x20) || (request[4] == 0x28)) {
 
 /* this is never called, but lets just lie and say 0xFF
-                //* read one byte from flash
-                //* 0x20 is read odd byte
-                //* 0x28 is read even byte
+                // read one byte from flash
+                // 0x20 is read odd byte
+                // 0x28 is read even byte
 
-                //* read the even address
+                // read the even address
                 address = (request[5]<<8)|(request[6]);
-                //* the address is in 16 bit words
+                // the address is in 16 bit words
                 address = address<<1;
 
                 if (request[4] == 0x20) {
@@ -464,12 +497,17 @@ avrbl_message(byte *request, int size)
             // program the words
             ASSERT((load_address & 3) == 0);    // this will assert if we got off DWORD alignment
             flashWriteUint32(load_address, (uint32 *)(request+10), nbytesAligned/4);
+
+            #ifdef HOOK_PROGRAM_FLASH_ISP
+                HOOK_PROGRAM_FLASH_ISP
+            #endif
+
             load_address += nbytes;             // we tell the truth even if we are not DWORD aligned
             break;                              // this will cause an assert if we do not get a new load address the next time
 
         case CMD_READ_FLASH_ISP:
 
-            endAddr = load_address + ((request[1])<<8)|(request[2]);
+            endAddr = load_address + (((request[1])<<8)|(request[2]));
 
 			// do this page by page as we might have to lie to avrdude.
 			while(load_address < endAddr)
@@ -985,7 +1023,7 @@ static void flashWriteUint32(uint32 addrUint32, uint32 *rgu32Data, uint32 cu32Da
 static void justInTimeFlashErase(uint32 addrLow, uint32 addrHigh)
 {
 	uint32 addrCurPage 		= startOfFlashPage(addrLow);
-	uint32 addrLastPage 	= nextFlashPage(addrHigh - 1);
+	uint32 addrLastPage 	= nextFlashPage((addrHigh - 1));
 	uint32 iPage 			= getPageIndex(addrCurPage);
 
 	while(addrCurPage < addrLastPage)

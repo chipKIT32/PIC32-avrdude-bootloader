@@ -37,7 +37,7 @@ MEMORY
   kseg1_boot_mem             : ORIGIN = 0xBFC00000, LENGTH = 0x0200
   kseg0_boot_mem             : ORIGIN = 0x9FC00200, LENGTH = 0x0
   kseg0_program_mem    (rx)  : ORIGIN = 0x9FC00200, LENGTH = 0x9F0
-  split_program_mem    (rx)  : ORIGIN = 0x9D01F000, LENGTH = 0x1000
+  split_program_mem    (rx)  : ORIGIN = 0x9D03F000, LENGTH = 0x1000
   exception_mem              : ORIGIN = 0x9FC00480, LENGTH = 0x0
   debug_exec_mem             : ORIGIN = 0x9FC00490, LENGTH = 0x0
   /* debug_exec_mem             : ORIGIN = 0x9FC00490, LENGTH = 0x760 */
