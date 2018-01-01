@@ -11,10 +11,10 @@
 #define     prodUltraNano               0x0004
 #define     prodLenny                   0x0005
 #define     prodPKRelay                 0x0007
-#define     prodDSMini                  0x0008
 #define     prodModProg                 0x1001
 #define     prodFXBase                  0x1002
 #define     prodMotionTracker           0x1003
+#define     prodDSMini                  0x2001
 
 #if defined(_BOARD_MAJENKO_DSMINI_)
 #define _CONFIG_VALID_
