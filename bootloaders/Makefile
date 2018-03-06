@@ -1,5 +1,5 @@
 
-BINPREFIX=/opt/microchip/xc32/v1.44/bin/xc32-
+BINPREFIX=/opt/microchip/xc32/v1.43/bin/xc32-
 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
@@ -201,15 +201,47 @@ CFL_boxtec-hk32bot=-mips16
 BIN_majenko-lenny=MAJENKO_LENNY_40MHZ
 OBJ_majenko-lenny=main.o usb.o cdcacm.o
 CRT_majenko-lenny=crt0.S
-MCU_majenko-lenny=32MX270F256B
+MCU_majenko-lenny=32MX270F256D
 DEF_majenko-lenny=-D_BOARD_MAJENKO_LENNY_
 LKR_majenko-lenny=MX17-27-USB-boot-linkerscript.ld
 CFL_majenko-lenny=-mips16
 
+BIN_majenko-libus-spinner=MAJENKO_LIBUS_SPINNER
+OBJ_majenko-libus-spinner=main.o usb.o cdcacm.o
+CRT_majenko-libus-spinner=crt0.S
+MCU_majenko-libus-spinner=32MX270F256B
+DEF_majenko-libus-spinner=-D_BOARD_MAJENKO_LIBUS_SPINNER_
+LKR_majenko-libus-spinner=MX17-27-USB-boot-linkerscript.ld
+CFL_majenko-libus-spinner=-mips16
+
+BIN_majenko-libus-general=MAJENKO_LIBUS_GENERAL
+OBJ_majenko-libus-general=main.o usb.o cdcacm.o
+CRT_majenko-libus-general=crt0.S
+MCU_majenko-libus-general=32MX270F256B
+DEF_majenko-libus-general=-D_BOARD_MAJENKO_LIBUS_GENERAL_
+LKR_majenko-libus-general=MX17-27-USB-boot-linkerscript.ld
+CFL_majenko-libus-general=-mips16
+
+BIN_majenko-libus-strip=MAJENKO_LIBUS_STRIP
+OBJ_majenko-libus-strip=main.o usb.o cdcacm.o
+CRT_majenko-libus-strip=crt0.S
+MCU_majenko-libus-strip=32MX270F256B
+DEF_majenko-libus-strip=-D_BOARD_MAJENKO_LIBUS_STRIP_
+LKR_majenko-libus-strip=MX17-27-USB-boot-linkerscript.ld
+CFL_majenko-libus-strip=-mips16
+
+BIN_majenko-libus-dualled=MAJENKO_LIBUS_DUALLED_
+OBJ_majenko-libus-dualled=main.o usb.o cdcacm.o
+CRT_majenko-libus-dualled=crt0.S
+MCU_majenko-libus-dualled=32MX270F256B
+DEF_majenko-libus-dualled=-D_BOARD_MAJENKO_LIBUS_DUALLED_
+LKR_majenko-libus-dualled=MX17-27-USB-boot-linkerscript.ld
+CFL_majenko-libus-dualled=-mips16
+
 BIN_majenko-lenny48=MAJENKO_LENNY_48MHZ
 OBJ_majenko-lenny48=main.o usb.o cdcacm.o
 CRT_majenko-lenny48=crt0.S
-MCU_majenko-lenny48=32MX270F256B
+MCU_majenko-lenny48=32MX270F256D
 DEF_majenko-lenny48=-D_BOARD_MAJENKO_LENNY48_
 LKR_majenko-lenny48=MX17-27-USB-boot-linkerscript.ld
 CFL_majenko-lenny48=-mips16
