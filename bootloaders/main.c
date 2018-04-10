@@ -159,6 +159,44 @@ int main()  // we're called directly by Crt0.S
     // This must occur after the WaitForFinalReset() and checking our program buttons states
     ClearVirtualProgramButton();
     RCON = 0;
+
+
+#if ((CAPABILITIES & blVBusPowerSensePin) == blVBusPowerSensePin)
+
+#define VTRIS CAT_5(TRIS, VPwrPort, bits.TRIS, VPwrPort, VPwrBit)
+#define VANSEL CAT_5(ANSEL, VPwrPort, bits.ANSEL, VPwrPort, VPwrBit)
+#define VPU CAT_5(CNPU, VPwrPort, bits.CNPU, VPwrPort, VPwrBit)
+#define VPD CAT_5(CNPD, VPwrPort, bits.CNPD, VPwrPort, VPwrBit)
+#define VPORT CAT_5(PORT, VPwrPort, bits.PORT, VPwrPort, VPwrBit)
+
+#define EnableVPowerPin() (CAT_3(TRIS,VPwrPort,SET) = (1 << VPwrBit)); \
+                          (CAT_3(ANSEL,VPwrPort,CLR) = (1 << VPwrBit)); \
+                          (CAT_3(CNPU,VPwrPort,CLR) = (1 << VPwrBit)); \
+                          (CAT_3(CNPD,VPwrPort,SET) = (1 << VPwrBit))
+
+#define TestVPowerPin()   (CAT_2(PORT,VPwrPort) & (1 << VPwrBit))
+
+    EnableVPowerPin();
+
+    int i = 0;
+
+    for (i = 0; i < 500; i++) {
+        asm volatile("nop");
+    }
+
+    i = 0;
+
+    while (TestVPowerPin() == 0) {
+        asm volatile("nop");
+        i++;
+        if (i == 10000) break;
+    }
+
+    if (TestVPowerPin() == 0) {
+        ExecuteApp();
+    }
+
+#endif
 	
     // If we are just going to immediately load from flash
     // don't even init the UART or USB, just load the application

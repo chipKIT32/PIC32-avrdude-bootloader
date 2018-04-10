@@ -112,6 +112,7 @@
 #define blCapLkInstrJustInTimeFlashErase                0x00020000ul        // Only flash pages written too needed by the sketch is erased
 #define blCapLkInstrFlashErase                          0x00040000ul        // The linker defines the flash range to erase
 #define blCapLkInstrFullFlashErase                      0x00080000ul        // All of flash is erased
+#define blVBusPowerSensePin                             0x00100000ul        // Only listen if the VPwr* pin is HIGH. Includes delay for power rise
 #define blCapLkInstrExecutionJumpAddress                0x01000000ul        // the bootloader will jump to the execution jump address immediately after programming
 #define blCapLkInstrExecutionJumpToFirstInFlash         0x02000000ul        // the bootloader will jump to the first sketch loaded in flash ignoring the execution jump address immediately after programming
 #define blCapSupportsRamHeaderAndPersistentData         0x10000000ul        // This checks and clears the Ram Header and adds RAM header data like the RCON value
