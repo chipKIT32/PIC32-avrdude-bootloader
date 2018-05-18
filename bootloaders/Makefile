@@ -206,6 +206,14 @@ DEF_majenko-lenny=-D_BOARD_MAJENKO_LENNY_
 LKR_majenko-lenny=MX17-27-USB-boot-linkerscript.ld
 CFL_majenko-lenny=-mips16
 
+BIN_majenko-lenny-plus=MAJENKO_LENNY_PLUS
+OBJ_majenko-lenny-plus=main.o usb.o cdcacm.o
+CRT_majenko-lenny-plus=crt0.S
+MCU_majenko-lenny-plus=32MX274F256D
+DEF_majenko-lenny-plus=-D_BOARD_MAJENKO_LENNY_PLUS_
+LKR_majenko-lenny-plus=MX274-USB-boot-linkerscript.ld
+CFL_majenko-lenny-plus=-mips16
+
 BIN_majenko-libus-spinner=MAJENKO_LIBUS_SPINNER
 OBJ_majenko-libus-spinner=main.o usb.o cdcacm.o
 CRT_majenko-libus-spinner=crt0.S
