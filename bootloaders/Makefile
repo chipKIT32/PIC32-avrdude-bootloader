@@ -107,6 +107,14 @@ DEF_fubarino-mini=-D_BOARD_FUBARINO_MINI_USB_
 LKR_fubarino-mini=MX1-2-USB-boot-linkerscript.ld
 CFL_fubarino-mini=-mips16
 
+BIN_fubarino-mini-2=FUBARINO_MINI_2_0_USB
+OBJ_fubarino-mini-2=main.o usb.o cdcacm.o
+CRT_fubarino-mini-2=crt0.S
+MCU_fubarino-mini-2=32MX270F256D
+DEF_fubarino-mini-2=-D_BOARD_FUBARINO_MINI_2_0_USB_
+LKR_fubarino-mini-2=MX17-27-USB-boot-linkerscript.ld
+CFL_fubarino-mini-2=-mips16
+
 BIN_fubarino-mini48=FUBARINO_MINI_USB_48MHZ
 OBJ_fubarino-mini48=main.o usb.o cdcacm.o
 CRT_fubarino-mini48=crt0.S
