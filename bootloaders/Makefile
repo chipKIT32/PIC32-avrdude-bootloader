@@ -107,6 +107,14 @@ DEF_fubarino-mini=-D_BOARD_FUBARINO_MINI_USB_
 LKR_fubarino-mini=MX1-2-USB-boot-linkerscript.ld
 CFL_fubarino-mini=-mips16
 
+BIN_fubarino-mini-2=FUBARINO_MINI_2_0_USB
+OBJ_fubarino-mini-2=main.o usb.o cdcacm.o
+CRT_fubarino-mini-2=crt0.S
+MCU_fubarino-mini-2=32MX270F256D
+DEF_fubarino-mini-2=-D_BOARD_FUBARINO_MINI_2_0_USB_
+LKR_fubarino-mini-2=MX17-27-USB-boot-linkerscript.ld
+CFL_fubarino-mini-2=-mips16
+
 BIN_fubarino-mini48=FUBARINO_MINI_USB_48MHZ
 OBJ_fubarino-mini48=main.o usb.o cdcacm.o
 CRT_fubarino-mini48=crt0.S
@@ -158,6 +166,14 @@ DEF_majenko-sdzl=-D_BOARD_MAJENKO_SDZL_
 LKR_majenko-sdzl=MZ-boot-linkerscript.ld
 CFL_majenko-sdzl=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
+BIN_majenko-gamma=MAJENKO_GAMMA
+OBJ_majenko-gamma=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_majenko-gamma=crt0MZ.S
+MCU_majenko-gamma=32MZ2048EFG100
+DEF_majenko-gamma=-D_BOARD_MAJENKO_GAMMA_
+LKR_majenko-gamma=MZ-boot-linkerscript.ld
+CFL_majenko-gamma=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
 BIN_majenko-motion=MAJENKO_MOTION
 OBJ_majenko-motion=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o configs/majenko/mt/hooks.o 
 CRT_majenko-motion=crt0MZ.S
@@ -205,6 +221,14 @@ MCU_majenko-lenny=32MX270F256D
 DEF_majenko-lenny=-D_BOARD_MAJENKO_LENNY_
 LKR_majenko-lenny=MX17-27-USB-boot-linkerscript.ld
 CFL_majenko-lenny=-mips16
+
+BIN_majenko-lenny-plus=MAJENKO_LENNY_PLUS
+OBJ_majenko-lenny-plus=main.o usb.o cdcacm.o
+CRT_majenko-lenny-plus=crt0.S
+MCU_majenko-lenny-plus=32MX274F256D
+DEF_majenko-lenny-plus=-D_BOARD_MAJENKO_LENNY_PLUS_
+LKR_majenko-lenny-plus=MX274-USB-boot-linkerscript.ld
+CFL_majenko-lenny-plus=-mips16
 
 BIN_majenko-libus-spinner=MAJENKO_LIBUS_SPINNER
 OBJ_majenko-libus-spinner=main.o usb.o cdcacm.o
