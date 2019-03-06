@@ -12,6 +12,7 @@
 #define     prodLenny                   0x0005
 #define     prodLennyPlus               0x0006
 #define     prodPKRelay                 0x0007
+#define     prodGamma                   0x0008
 #define     prodModProg                 0x1001
 #define     prodFXBase                  0x1002
 #define     prodMotionTracker           0x1003
@@ -1064,6 +1065,87 @@
 
     #define FLASH_BYTES                 (0x40000-0x1000)            // Leave room 4 pages (for bootloader!)
     #define FLASH_PAGE_SIZE             1024                                // In bytes
+#endif
+
+#if defined(_BOARD_MAJENKO_GAMMA_)
+#define _CONFIG_VALID_
+
+#if defined(PUT_CONFIG_BITS_HERE)
+
+     //*    Oscillator Settings
+    // works with proper timing
+    #pragma config POSCMOD      = EC                                // External Clock
+
+    #pragma config FPLLIDIV     = DIV_3                             // 8 MHz
+    #pragma config FPLLICLK     = PLL_POSC                          // 8MHz Posc
+
+    #pragma config FNOSC        = SPLL                              // Oscillator selection
+    #pragma config FPLLMULT     = MUL_50                            // 400 MHz
+    #pragma config FPLLODIV     = DIV_2                             // 200 MHz or 80 MHz, depending
+
+    #pragma config FPLLRNG      = RANGE_5_10_MHZ                    // 5-10Mhz
+    #pragma config FSOSCEN      = OFF                               // Secondary oscillator enable
+    #pragma config UPLLFSEL     = FREQ_24MHZ                        // USB PLL Input Frequency Selection (USB PLL input is 24 MHz)
+
+    //*    Clock control settings
+    #pragma config IESO         = ON                                // Internal/external clock switchover
+    #pragma config FCKSM        = CSDCMD                            // Clock switching (CSx)/Clock monitor (CMx)
+    #pragma config OSCIOFNC     = OFF                               // Clock output on OSCO pin enable
+
+    //*    Other Peripheral Device settings
+    #pragma config FWDTEN       = OFF                               // Watchdog timer enable
+    #pragma config WDTPS        = PS1048576                         // Watchdog timer postscaler
+    #pragma config WDTSPGM      = STOP                              // Watchdog Timer Stop During Flash Programming (WDT stops during Flash programming)
+    #pragma config WINDIS       = NORMAL                            // Watchdog Timer Window Mode (Watchdog Timer is in non-Window mode)
+    #pragma config FWDTWINSZ    = WINSZ_25                          // Watchdog Timer Window Size (Window size is 25%)
+    #pragma config FDMTEN       = OFF                               // Deadman Timer Enable (Deadman Timer is disabled)
+
+    //*    Code Protection settings
+    #pragma config CP           = OFF                               // Code protection
+
+    //*    Debug settings
+//    #pragma config DEBUG       = ON                               // turn debugging on
+    #pragma config ICESEL       = ICS_PGx2                          // ICE pin selection
+
+    #pragma config FETHIO       = ON                                // Standard/alternate ETH pin select (OFF=Alt)
+    #pragma config FMIIEN       = OFF                               // MII/RMII select (OFF=RMII)
+
+    #pragma config BOOTISA  = MIPS32
+
+    //*    USB Settings
+    #pragma config FUSBIDIO     = OFF                               // USBID pin control
+
+    #pragma config DMTCNT       = 0
+
+#pragma config PGL1WAY  = OFF             // Permission Group Lock One Way Configuration (Allow only one reconfiguration)
+#pragma config PMDL1WAY = OFF             // Peripheral Module Disable Configuration (Allow only one reconfiguration)
+#pragma config IOL1WAY  = OFF             // Peripheral Pin Select Configuration (Allow only one reconfiguration)
+#pragma config DMTINTV  = WIN_127_128     // DMT Count Window Interval (Window/Interval value is 127/128 counter value)
+#pragma config EJTAGBEN = NORMAL
+#pragma config DBGPER   = PG_ALL
+#pragma config FSLEEP   = OFF
+#pragma config FECCCON  = OFF_UNLOCKED
+#pragma config TRCEN    = OFF
+
+#endif
+
+    #define CAPABILITIES    ( blCapUARTInterface | blCapAutoResetListening | CAPCOMMON)
+
+    // Other capabilities
+    #define LISTEN_BEFORE_LOAD          2000                // no less than 2 seconds
+    #define BOOTLOADER_UART             2                   // avrdude program UART
+    #define BAUDRATE                    115200              // avrdude baudrate
+    #define UARTMapRX()                 (U2RXR = 0b0100)    // RPD4 -> U2RX
+    #define UARTMapTX()                 (RPD5R = 0b0010)    // RPB6 -> U2TX (A8)
+
+    #define _CPU_NAME_                  "PIC32MZ2048EFG"
+    #define VEND                        vendMajenko
+    #define PROD                        prodGamma
+    #define F_CPU                       200000000UL
+    #define F_PBUS                      (F_CPU / (PB2DIVbits.PBDIV + 1))
+
+    #define FLASH_BYTES                 0x200000                    // 2MB
+    #define FLASH_PAGE_SIZE             0x4000                      // 16K
 #endif
 
 

@@ -158,6 +158,14 @@ DEF_majenko-sdzl=-D_BOARD_MAJENKO_SDZL_
 LKR_majenko-sdzl=MZ-boot-linkerscript.ld
 CFL_majenko-sdzl=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
 
+BIN_majenko-gamma=MAJENKO_GAMMA
+OBJ_majenko-gamma=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
+CRT_majenko-gamma=crt0MZ.S
+MCU_majenko-gamma=32MZ2048EFG100
+DEF_majenko-gamma=-D_BOARD_MAJENKO_GAMMA_
+LKR_majenko-gamma=MZ-boot-linkerscript.ld
+CFL_majenko-gamma=-DPIC32MZ -DINIT_MMU_MZ_FIXED -DINIT_SSX -DINIT_L1_CACHE -DINIT_DSPR2 -DPIC32_SRS_SET_COUNT=8
+
 BIN_majenko-motion=MAJENKO_MOTION
 OBJ_majenko-motion=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o configs/majenko/mt/hooks.o 
 CRT_majenko-motion=crt0MZ.S
